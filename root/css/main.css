@@ -1,0 +1,133 @@
+:root {
+  /* font family */
+  --primary-font: "Montserrat", sans-serif;
+  --headline-font: "Source Serif 4", serif;
+  /* font weight */
+  --fw-l: 300;
+  --fw-m: 500;
+  --fw-b: 700;
+  /* font size */
+  --fs-base: 10px;
+  --fs-body: calc(var(--fs-base) * 1.6);
+  --fs-h1: calc(var(--fs-base) * 4);
+  --fs-h2: calc(var(--fs-base) * 3);
+  --fs-h3: calc(var(--fs-base) * 2.4);
+  --fs-p: calc(var(--fs-base) * 1.6);
+
+  /* colors */
+  --primary-color: #fdecdf;
+  --secondary-color: #b44e05;
+  --tertiary-color: #e66406;
+  --neutral-lt-color: #ffffff;
+  --neutral-mid-color: #6c6b7a;
+  --neutral-dk-color: #000000;
+  --accent-color: #dff0fd;
+  --grey-color: #f4f4f4;
+
+  /* helper */
+  --spacer: 1rem;
+  /* double spacing */
+  --spacer-dbl: calc(var(--spacer) * 2);
+  /* border radius */
+  --border-radius: 10px;
+  /* box shadow */
+  --shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+
+  /* max width */
+  --max-width: 1200px;
+}
+
+/* ==============================
+   GLOBAL STYLES
+   ============================== */
+
+html {
+  font-size: 10px;
+}
+
+body {
+  /* new design system theming with css variables */
+  --bg: var(--primary-color);
+  --heading: var(--neutral-mid-color);
+  --heading-bg: var(--neutral-lt-color);
+  --text-color: var(--neutral-dk-color);
+  --btn-bg: var(--tertiary-color);
+  --btn-text: var(--neutral-lt-color);
+  --btn-hover-bg: var(--accent-color);
+  --btn-hover-text: var(--neutral-mid-color);
+
+  background-color: var(--bg);
+  color: var(--text-color);
+  font-family: var(--primary-font);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-l);
+  height: 100vh;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--headline-font);
+  color: var(--heading);
+  margin: calc(var(--spacer) / 2) 0 var(--spacer) 0;
+}
+
+h1 {
+  font-size: var(--fs-h1);
+}
+
+h2 {
+  font-size: var(--fs-h2);
+}
+
+h3 {
+  font-size: var(--fs-h3);
+}
+
+/* ==============================
+   HOME PAGE STYLES
+   ============================== */
+
+/* -------- header section------  */
+/* -------- hero section------  */
+
+/* -------- branding section------  */
+
+/* -------- menu section------  */
+
+/* -------- contact section------  */
+
+/* -------- footer section------  */
+
+/* ==============================
+   ABOUT US STYLES
+   ============================== */
+
+/* ==============================
+   Contact US STYLES
+   ============================== */
+
+/* ==============================
+   MENU PAGE STYLES
+   ============================== */
+
+/* ==============================
+   Lunch PAGE STYLES
+   ============================== */
+
+/* ==============================
+   Dinner PAGE STYLES
+   ============================== */
+
+/* ==============================
+   Beers PAGE STYLES
+   ============================== */
+
+/* ==============================
+   Dessert PAGE STYLES
+   ============================== */
