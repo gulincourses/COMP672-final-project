@@ -131,3 +131,74 @@ h3 {
 /* ==============================
    Dessert PAGE STYLES
    ============================== */
+
+
+    /* Styles for PDC_EVENTS SECTION */
+
+/* Mobile styles for PDC_EVENTS SECTION -- ADJUST WIDTH TO SUIT GLOBAL PROJECT PREF.
+EVENTS PAGE DESIGNED TO DISPLAY SINGLE COLUMN MOBILE, 3X2 GRID "DESKTOP"*/
+@media only screen and (max-width: 767px) {
+  .events-section {
+    display: flex; /* Make the container a flex container */
+    flex-direction: column; /* Stack the child elements vertically */
+    align-items: center; /* Center the child elements horizontally */
+  }
+  .events {
+    display: block; /* Make the container a block-level element */
+    width: 100%; /* Set a width to the container */
+    margin-top: 2vh; /* Add responsive spacing between the events section and the section above */
+  }
+  .events img {
+    display: block;
+    max-width: 90%; /* Reduce the max-width to create space on the sides */
+    height: auto;
+    margin: 2vw auto !important;/* Add responsive margin */
+    border: calc(1px + 0.5vw) solid white; /* 'reponsive' white border */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+  }
+}
+
+
+ /* Desktop styles for PDC_EVENTS SECTION 768+ width ADJUST WIDTH TO SUIT GLOBAL PROJECT PREF.*/
+ @media only screen and (min-width: 768px) {
+
+  .events-section {
+    display: block; /* Make the container a block-level element */
+    width: 100%; /* Set a width to the container */
+    margin-top: 2vh; /* Add responsive spacing between the events section and the section above */
+  }
+  .events {
+    display: grid; /* Make each article a grid */
+    grid-template-columns: repeat(3, 1fr); /* Create three columns */
+    grid-template-rows: auto 1fr; /* Create two rows, first row takes as much space as it needs, second row takes the remaining space */
+    justify-items: center; /* Center items horizontally */
+    row-gap: 0.01vw; /* Add space only between rows */
+    column-gap: 3vw; /* Add space between columns */
+    width: 90%; /* Reduce the size of the grid display by 90% */
+    margin: auto; /* Add margin between screen edge and the grid */
+    margin-top: 2vh; /* Add responsive spacing between the events section and the section above */
+  }
+}
+
+.events a {
+  grid-row: 1 / 2; /* Place all a elements in the first row */
+  display: block; /* Make the a elements block-level */
+  text-align: center; /* Center the h2 a elements */
+  margin: .1vw; /* Responsive margin around the a elements */
+  padding: .1vw; /* Responsive padding inside the a elements */
+  text-decoration: none; /* Remove underline from the a elements */
+  align-self: end; /* Align the a elements to the end of the grid cell along the column axis */
+}
+ 
+   .events img {
+     grid-row: 2 / 3; /* Place all img elements in the second row */
+     width: 100%; /* Make the image fill its container */
+     height: auto;
+     margin: .5vw auto; /* Add responsive margin */
+     padding: 0; /* Remove all padding */
+     border: calc(1px + 0.5vw) solid white; /* 'reponsive' white border */
+     box-sizing: border-box; /* Include padding and border in element's total width and height */
+   }
+
+
+ 
