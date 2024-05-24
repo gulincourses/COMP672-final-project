@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beers</title>
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" />
+
+    <!-- google fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- google fonts end -->
+
+    <!-- font awesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      type="text/css"
+    />
+    <!-- end font awesome icons -->
+    <link rel="stylesheet" href="../css/main.css" type="text/css" />
+  </head>
+  <body class="beers-page">
+    <p id="banner">7304 Parkway Drive S, Hanover, MD 21076</p>
+    <header class="header-section">
+      <section class="menuWrap">
+        <img src="../images/logo.svg" class="logo" alt="logo" />
+        <input type="checkbox" id="checkbox" />
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li>
+              <a href="#">Menu</a>
+              <ul class="sub-menu">
+                <li><a href="#">Lunch</a></li>
+                <li><a href="#">Dinner</a></li>
+                <li><a href="#">Beers</a></li>
+                <li><a href="#">Desserts</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Order Now</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+        </nav>
+        <label for="checkbox">
+          <i class="fa-solid fa-bars menuIcon"></i>
+          <i class="fa-solid fa-xmark menuClose"></i>
+        </label>
+      </section>
+    </header>
+    <main>
+      <section class="hero">
+        <section class="hero-center">
+          <h1>Beers</h1>
+        </section>
+      </section>
+      <section class="beers-menu-container">
+        <!-- Lagers -->
+        <section class="menu-group lagers">
+          <h2>
+            <img
+              class="menu-group-icon"
+              src="../images/icons/icon-beer.svg"
+              alt="beer icon"
+            />Lagers
+          </h2>
+
+          <article class="menu-item">
+            <header>
+              <h3>Rhine Valley Pilsner</h3>
+              <p class="price">$10</p>
+            </header>
+            <p>
+              Crisp and refreshing, this German-style pilsner features a clean
+              bitterness and a touch of floral hop aroma, perfect for quenching
+              your thirst
+            </p>
+          </article>
+          <article class="menu-item">
+            <header>
+              <h3>Swabian Helles</h3>
+              <p class="price">$10</p>
+            </header>
+            <p>
+              A bright and golden lager with a mild malt sweetness and a
+              balanced hop bitterness
+            </p>
+          </article>
+          <article class="menu-item">
+            <header>
+              <h3>Rheinland Kölsch</h3>
+              <p class="price">$10</p>
+            </header>
+            <p>
+              A crisp and clean ale with a subtle fruity aroma and a dry finish
+            </p>
+          </article>
+        </section>
+
+        <!-- Wheat Beers (Weizen) -->
+        <section class="menu-group wheat">
+          <h2>
+            <img
+              class="menu-group-icon"
+              src="../images/icons/icon-beer2.svg"
+              alt="beer icon"
+            />Weizen
+          </h2>
+
+          <article class="menu-item">
+            <header>
+              <h3>Bavarian Hefeweizen</h3>
+              <p class="price">$10</p>
+            </header>
+            <p>
+              A classic wheat beer hailing from Bavaria, known for its cloudy
+              appearance and flavors of banana, clove, and a hint of citrus
+            </p>
+          </article>
+          <article class="menu-item">
+            <header>
+              <h3>Bavarian Dunkelweizen</h3>
+              <p class="price">$12</p>
+            </header>
+            <p>A dark wheat beer with flavors of caramel, banana, and clove</p>
+          </article>
+          <article class="menu-item">
+            <header>
+              <h3>Württemberg Weizenbock</h3>
+              <p class="price">$13</p>
+            </header>
+            <p>
+              A strong wheat beer with flavors of banana, clove, and caramelized
+              malt
+            </p>
+          </article>
+        </section>
+
+        <!-- Dark Beers (Dunkel) -->
+        <section class="menu-group dunkel">
+          <h2>
+            <img
+              class="menu-group-icon"
+              src="../images/icons/icon-beer3.svg"
+              alt="beer icon"
+            />Dunkel
+          </h2>
+
+          <article class="menu-item">
+            <header>
+              <h3>Schwarzwald Dunkel</h3>
+              <p class="price">$10</p>
+            </header>
+            <p>
+              A rich and malty dark lager, brewed with roasted barley and
+              caramel malts
+            </p>
+          </article>
+          <article class="menu-item">
+            <header>
+              <h3>Baltic Porter</h3>
+              <p class="price">$10</p>
+            </header>
+            <p>
+              A robust and full-bodied porter originating from the Baltic Sea
+              region, with flavors of dark chocolate, caramelized sugar, and a
+              warming alcohol finish
+            </p>
+          </article>
+          <article class="menu-item">
+            <header>
+              <h3>Saxon Schwarzbier</h3>
+              <p class="price">$10</p>
+            </header>
+            <p>
+              A smooth and roasty black lager with hints of dark chocolate and
+              toffee
+            </p>
+          </article>
+        </section>
+
+        <!-- Smoked Beers (Rauchbier) -->
+        <section class="menu-group smoked">
+          <h2>
+            <img
+              class="menu-group-icon"
+              src="../images/icons/icon-beer4.svg"
+              alt="beer icon"
+            />Rauchbier
+          </h2>
+
+          <article class="menu-item">
+            <header>
+              <h3>Franconian Rauchbier</h3>
+              <p class="price">$10</p>
+            </header>
+            <p>
+              A unique smoked beer from Franconia, brewed with malt smoked over
+              beechwood fires, imparting a distinctive smoky aroma
+            </p>
+          </article>
+          <article class="menu-item">
+            <header>
+              <h3>Thuringian Rauchweizen</h3>
+              <p class="price">$12</p>
+            </header>
+            <p>
+              A unique smoked wheat beer with a subtle smokiness and a hint of
+              banana and clove
+            </p>
+          </article>
+        </section>
+
+        <!-- Specialty Beers -->
+        <section class="menu-group specialty">
+          <h2>
+            <img
+              class="menu-group-icon"
+              src="../images/icons/icon-beer5.svg"
+              alt="beer icon"
+            />Specialty Beers
+          </h2>
+
+          <article class="menu-item">
+            <header>
+              <h3>Alpine Märzen</h3>
+              <p class="price">$10</p>
+            </header>
+            <p>
+              A traditional Märzen beer brewed in the Alpine region,
+              characterized by its amber color, balanced malt sweetness, and
+              subtle hop bitterness
+            </p>
+          </article>
+          <article class="menu-item">
+            <header>
+              <h3>Brandenburg Märzen</h3>
+              <p class="price">$11</p>
+            </header>
+            <p>
+              A classic amber lager with toasty malt flavors and a clean, dry
+              finish
+            </p>
+          </article>
+          <article class="menu-item">
+            <header>
+              <h3>Saxony Saison</h3>
+              <p class="price">$10</p>
+            </header>
+            <p>
+              Inspired by Belgian farmhouse ales, this German take on the saison
+              style offers a fruity and spicy yeast character, with a dry and
+              refreshing finish
+            </p>
+          </article>
+          <article class="menu-item">
+            <header>
+              <h3>Black Forest Stout</h3>
+              <p class="price">$11</p>
+            </header>
+            <p>
+              A rich and creamy stout with notes of chocolate, coffee, and
+              roasted malt
+            </p>
+          </article>
+          <article class="menu-item">
+            <header>
+              <h3>Berliner Weisse</h3>
+              <p class="price">$9</p>
+            </header>
+            <p>A light and tart wheat beer with a refreshing citrusy flavor</p>
+          </article>
+          <article class="menu-item">
+            <header>
+              <h3>Hessian Altbier</h3>
+              <p class="price">$10</p>
+            </header>
+            <p>
+              A traditional amber ale with flavors of caramel, nuts, and a touch
+              of fruitiness
+            </p>
+          </article>
+        </section>
+      </section>
+    </main>
+    <footer class="footer-section">
+      <section class="footerMenuWrap">
+        <ul class="footer-links">
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">Policies</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Membership</a></li>
+          <li><a href="#">Gift Cards</a></li>
+        </ul>
+        <ul class="social-media-icons">
+          <li>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-facebook-messenger"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </li>
+        </ul>
+      </section>
+    </footer>
+    <p id="rights">&copy; 2024 Bavarian Brauhaus. All rights reserved.</p>
+  </body>
+</html>
