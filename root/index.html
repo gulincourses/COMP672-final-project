@@ -14,6 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
       rel="stylesheet"
     />
+    <!-- google fonts end -->
 
     <!-- font awesome icons -->
     <link
@@ -22,130 +23,205 @@
       type="text/css"
     />
     <!-- end font awesome icons -->
-    <!-- material icons -->
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round|Material+Icons+Sharp|Material+Icons+Two+Tone"
-      rel="stylesheet"
-    />
-    <!-- material icons end -->
 
-    <!-- fonts end -->
+    <!-- slick slider -->
+
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+
+    <!-- slick slider end -->
 
     <link rel="stylesheet" href="css/main.css" type="text/css" />
   </head>
-  <body>
-    <header>
-      <p class="banner">7304 Parkway Drive S, Hanover, MD 21076</p>
-      <nav>
-        <img src="images/logo.png" alt="logo" />
-        <ul>
-          <li><a href="index.html">About us</a></li>
-          <li><a href="menu.html">Menu</a></li>
-          <li><a href="about.html">Order Now</a></li>
-          <li><a href="contact.html">Events</a></li>
-          <li><a href="pages/contactUs.html">Contact us</a></li>
-        </ul>
-      </nav>
+  <body class="home-page">
+    <p id="banner">7304 Parkway Drive S, Hanover, MD 21076</p>
+    <header class="header-section">
+      <section class="menuWrap">
+        <img src="images/logo.svg" class="logo" alt="logo" />
+        <input type="checkbox" id="checkbox" />
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li>
+              <a href="#">Menu</a>
+              <ul class="sub-menu">
+                <li><a href="#">Lunch</a></li>
+                <li><a href="#">Dinner</a></li>
+                <li><a href="#">Beers</a></li>
+                <li><a href="#">Desserts</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Order Now</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+        </nav>
+        <label for="checkbox">
+          <i class="fa-solid fa-bars menuIcon"></i>
+          <i class="fa-solid fa-xmark menuClose"></i>
+        </label>
+      </section>
     </header>
     <main>
       <section class="hero-section">
         <!-- image slider -->
-        <div class="slider">
-          <img src="images/hero.png" alt="slider1" />
-          <img src="images/slider2.jpg" alt="slider2" />
-          <img src="images/slider3.jpg" alt="slider3" />
-        </div>
+        <article class="slider">
+          <img
+            src="images/dishes/hero-dish.jpg"
+            alt="hero dish"
+            sizes="(min-width: 36em) 33.3vw, 100vw"
+          />
+          <img src="images/dishes/Apfelstrudel.png" alt="apfelstrudel" />
+          <img src="images/dishes/Kartoffelpuffer.png" alt="kartoffelpuffer" />
+          <img src="images/dishes/Sauerbraten.png" alt="Sauerbraten" />
+          <img src="images/dishes/Schnitzel.png" alt="Schnitzel" />
+        </article>
       </section>
       <section class="branding-section">
         <h1>Bavarian Brauhaus</h1>
         <blockquote>
           Eating and Drinking Holds Body and Soul Together
         </blockquote>
-        <a href="#" class="btn">Reserve a Table</a>
-        <a href="#" class="btn">Order Now</a>
+        <article class="btn-group">
+          <a href="#" class="btn">Reserve a Table</a>
+          <a href="#" class="btn">Order Now</a>
+        </article>
       </section>
       <section class="menu-section">
-        <h2>Our Delicious Menu</h2>
+        <h1>Our Delicious Menu</h1>
         <article class="menus">
           <figure class="menu-category">
             <figcaption class="ribbon">Lunch</figcaption>
-            <img src="images/lunch.jpg" alt="lunch" />
+            <img src="images/menu/lunch.jpg" alt="lunch" />
           </figure>
           <figure class="menu-category">
             <figcaption class="ribbon">Dinner</figcaption>
-            <img src="images/dinner.jpg" alt="dinner" />
+            <img src="images/menu/dinner.jpg" alt="dinner" />
           </figure>
           <figure class="menu-category">
             <figcaption class="ribbon">Beers</figcaption>
-            <img src="images/beers.jpg" alt="beers" />
+            <img src="images/menu/beers.jpg" alt="beers" />
           </figure>
           <figure class="menu-category">
             <figcaption class="ribbon">Desserts</figcaption>
-            <img src="images/desserts.jpg" alt="desserts" />
+            <img src="images/menu/desserts.jpg" alt="desserts" />
           </figure>
         </article>
       </section>
       <section class="contact-section">
-        <!--Sneha-->
-        <h2>How to reach us</h2>
-        <article>
+        <h1>How to Reach Us</h1>
+        <article class="location">
           <header>
             <i class="fa-solid fa-location-dot"></i>
-            <h3>Location</h3>
+            <h2>Location</h2>
           </header>
-          <p>7304 Parkway Drive S, Hanover, MD 21076</p>
-          <p>(Old Dorsey Road off Coca Cola Drive Exit via Route #100)</p>
+          <ul>
+            <li>
+              <p>7304 Parkway Drive S, Hanover, MD 21076</p>
+            </li>
+            <li>
+              <p>(Old Dorsey Road off Coca Cola Drive Exit via Route #100)</p>
+            </li>
+          </ul>
           <a href="#" class="btn">Get Directions</a>
         </article>
-        <article>
+        <article class="hours">
           <header>
-            <i class="fa-solid fa-clock"></i>
-            <h3>Hours</h3>
+            <i class="fa-regular fa-clock"></i>
+            <h2>Hours</h2>
           </header>
-          <p><span>Tuesday - Saturday:</span></p>
-          <p>Open 3pm - 9pm</p>
-          <p><span>Sunday & Monday:</span></p>
-          <p>Closed</p>
-          <p><span>Hour in the Bar</span></p>
-          <p><span>Tuesday - Friday:</span></p>
-          <p>3pm - 7pm</p>
+          <ul>
+            <li>
+              <p><strong>Tuesday - Saturday:</strong> Open 3 pm - 9 pm</p>
+            </li>
+            <li>
+              <p><strong>Sunday & Monday:</strong> Closed</p>
+            </li>
+            <li>
+              <h3>Happy Hour In the Bar</h3>
+              <p><strong>Tuesday - Friday:</strong> 3 pm - 7 pm</p>
+            </li>
+          </ul>
         </article>
-        <article>
+        <article class="contact">
           <header>
-            <i class="fa-solid fa-envelope"></i>
-            <h3>Contact us</h3>
+            <i class="fa-solid fa-square-phone"> </i>
+            <h2>Contact us</h2>
           </header>
-          <p>Phone: 410-712-0300</p>
-          <p>Email: support@bavarian.com</p>
-          <p>Click here to send us a message</p>
+          <ul>
+            <li>
+              <p>Phone: 410-712-0300</p>
+            </li>
+            <li>
+              <p>
+                Email:
+                <a href="mailto:support@bariaian.com">support@bariaian.com</a>
+              </p>
+            </li>
+            <li>
+              <p>click here to send us a message</p>
+            </li>
+          </ul>
           <a href="#" class="btn">Get in Touch</a>
         </article>
       </section>
     </main>
-    <footer>
-      <nav>
-        <ul>
+    <footer class="footer-section">
+      <section class="footerMenuWrap">
+        <ul class="footer-links">
           <li><a href="#">FAQ</a></li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">Order Now</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Gallery</a></li>
           <li><a href="#">Events</a></li>
-          <li><a href="pages/contactUs.html">Contact us</a></li>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">Policies</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Membership</a></li>
+          <li><a href="#">Gift Cards</a></li>
         </ul>
-      </nav>
-      <ul class="logos">
-        <li>
-          <a href="#"><i class="fab fa-facebook"></i></a>
-        </li>
-        <li>
-          <a href="#"><i class="fa-brands fa-facebook-messenger"></i></a>
-        </li>
-        <li>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-        </li>
-        <li>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-        </li>
-      </ul>
+        <ul class="social-media-icons">
+          <li>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-facebook-messenger"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </li>
+        </ul>
+      </section>
     </footer>
+    <p id="rights">&copy; 2024 Bavarian Brauhaus. All rights reserved.</p>
+
+    <!-- load jquery lib -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.slider').slick({
+          dots: true,
+          infinite: true,
+          speed: 500,
+          fade: true,
+          cssEase: 'linear'
+        });
+      });
+    </script>
   </body>
 </html>
