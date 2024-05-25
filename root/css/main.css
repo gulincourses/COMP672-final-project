@@ -713,25 +713,27 @@ blockquote {
    ============================== */
 .contactInfo-section {
       padding: 50px 10px 0;
+      width: 90%;
+      margin: auto;
    }
-   .contactInfo-section h2 {
+   .contactInfo-section h1 {
     text-align: center;
     margin-bottom: 50px;
-    font-weight: var(--fw-m);
-    color: var(--secondary-color);
    }
    .contactDetails p {
     font-size: var(--fs-p);
     color: var(--text-color);
     text-align: left;
     line-height: 1.4em;
+    font-family: var(--primary-font);
+    font-weight: var(--fw-m);
   }
   #formInfo {
     margin: 50px 0;
     color: var(--text-color);
     font-size: var(--fs-p);
     font-family: var(--primary-font);
-    font-weight: var(--fw-l);
+    font-weight: var(--fw-m);
   }
   fieldset {
     border: 1px solid var(--neutral-dk-color); 
@@ -739,10 +741,11 @@ blockquote {
     margin-bottom: 20px;
   }
   legend {
-    font-size: var(--fs-p);
+    font-size: var(--fs-h3);
     color: var(--tertiary-color);
     margin: 10px;
     font-weight: var(--fw-m);
+    font-family: var(--headline-font);
   }
   .namefield li{
     width: 48%;
@@ -773,7 +776,7 @@ blockquote {
   display: inline-block;
   }
   #submitBtn {
-    width: 100%;
+    width: 95%;
     color: var(--btn-text);
     background-color: var(--btn-bg);
     border-radius: var( --border-radius);
@@ -785,7 +788,7 @@ blockquote {
   }
   .mapWrapper {
       overflow: hidden;
-      margin: 30px 0;
+      margin-top: 30px;
     }
   .mapWrapper iframe {
       width: 100%;
