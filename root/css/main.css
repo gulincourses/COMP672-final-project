@@ -711,6 +711,115 @@ blockquote {
 /* ==============================
    Contact US STYLES
    ============================== */
+   .contactInfo-section {
+    padding: 50px 10px 0;
+    width: 90%;
+    margin: auto;
+ }
+ .contactInfo-section h1 {
+  text-align: center;
+  margin-bottom: 50px;
+ }
+ .contactDetails p {
+  font-size: var(--fs-p);
+  color: var(--text-color);
+  text-align: left;
+  line-height: 1.4em;
+  font-family: var(--primary-font);
+  font-weight: var(--fw-m);
+}
+#formInfo {
+  margin: 50px 0;
+  color: var(--text-color);
+  font-size: var(--fs-p);
+  font-family: var(--primary-font);
+  font-weight: var(--fw-m);
+}
+fieldset {
+  border: 1px solid var(--neutral-dk-color); 
+  padding: 20px 10px;
+  margin-bottom: 20px;
+}
+legend {
+  font-size: var(--fs-h3);
+  color: var(--tertiary-color);
+  margin: 10px;
+  font-weight: var(--fw-m);
+  font-family: var(--headline-font);
+}
+.namefield li{
+  width: 48%;
+  display: inline-block; 
+}
+.inputStyle {
+  display: block;
+  height: 30px;
+  width: 95%;
+  border: solid 1px var(--neutral-mid-color); 
+  color: var(--neutral-mid-color);
+  font-size: var(--fs-p);
+  font-family: var(--primary-font);
+  border-radius: var( --border-radius);
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+#message {
+  height: auto;
+ } 
+ .checklist, .radiolist {
+  margin-bottom: 20px;
+ }
+.checklist li, .radiolist li {
+margin-bottom: 10px;
+margin-top: 10px;
+width: 45%;
+display: inline-block;
+}
+#submitBtn {
+  width: 95%;
+  color: var(--btn-text);
+  background-color: var(--btn-bg);
+  border-radius: var( --border-radius);
+  border: none;
+  font-size: var(--fs-p);
+  padding: 10px 0;
+  font-family: var(--primary-font);
+  cursor: pointer;
+}
+.mapWrapper {
+    overflow: hidden;
+    margin-top: 30px;
+  }
+.mapWrapper iframe {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 750px){
+    .contactInfo-section {
+      display: flex;
+      align-items:first baseline;
+      justify-content: space-between;
+    }
+    .contactDetails {
+      width: 45%;
+    }
+    #formInfo{
+      width: 50%;
+    }
+    .checklist, .radiolist {
+      margin-bottom: 10px;
+     }
+     .checklist li, .radiolist li {
+      margin-bottom: 5px;
+     }
+     #formInfo p {
+      width: 100%;
+     }
+     #formInfo {
+      margin: 0;
+     }
+  }
+
 
 /* ==============================
    MENU PAGE STYLES
