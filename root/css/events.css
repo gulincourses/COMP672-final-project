@@ -1,0 +1,276 @@
+:root {
+  /* font family */
+  --primary-font: "Montserrat", sans-serif;
+  --headline-font: "Source Serif 4", serif;
+  /* font weight */
+  --fw-l: 300;
+  --fw-m: 500;
+  --fw-b: 700;
+  /* font size */
+  --fs-base: 10px;
+  --fs-body: calc(var(--fs-base) * 1.6);
+  --fs-h1: calc(var(--fs-base) * 4);
+  --fs-h2: calc(var(--fs-base) * 3);
+  --fs-h3: calc(var(--fs-base) * 2.4);
+  --fs-p: calc(var(--fs-base) * 1.6);
+
+  /* colors */
+  --primary-color: #fdecdf;
+  --secondary-color: #b44e05;
+  --tertiary-color: #e66406;
+  --neutral-lt-color: #ffffff;
+  --neutral-mid-color: #6c6b7a;
+  --neutral-dk-color: #000000;
+  --accent-color: #dff0fd;
+  --grey-color: #f4f4f4;
+
+  /* helper */
+  --spacer: 1rem;
+  /* double spacing */
+  --spacer-dbl: calc(var(--spacer) * 2);
+  /* border radius */
+  --border-radius: 10px;
+  /* box shadow */
+  --shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+
+  /* max width */
+  --max-width: 1200px;
+}
+
+/* ==============================
+   GLOBAL STYLES
+   ============================== */
+
+html {
+  font-size: 10px;
+}
+
+body {
+  /* new design system theming with css variables */
+  --bg: var(--primary-color);
+  --heading: var(--neutral-mid-color);
+  --heading-bg: var(--neutral-lt-color);
+  --text-color: var(--neutral-dk-color);
+  --btn-bg: var(--tertiary-color);
+  --btn-text: var(--neutral-lt-color);
+  --btn-hover-bg: var(--accent-color);
+  --btn-hover-text: var(--neutral-mid-color);
+
+  background-color: var(--bg);
+  color: var(--text-color);
+  font-family: var(--primary-font);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-l);
+  height: 100vh;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--headline-font);
+  color: var(--heading);
+  margin: calc(var(--spacer) / 2) 0 var(--spacer) 0;
+}
+
+h1 {
+  font-size: var(--fs-h1);
+}
+
+h2 {
+  font-size: var(--fs-h2);
+}
+
+h3 {
+  font-size: var(--fs-h3);
+}
+
+/* ==============================
+   HOME PAGE STYLES
+   ============================== */
+
+/* -------- header section------  */
+/* -------- hero section------  */
+
+/* -------- branding section------  */
+
+/* -------- menu section------  */
+
+/* -------- contact section------  */
+
+/* -------- footer section------  */
+
+/* ==============================
+   ABOUT US STYLES
+   ============================== */
+
+/* ==============================
+   Contact US STYLES
+   ============================== */
+
+/* ==============================
+   MENU PAGE STYLES
+   ============================== */
+
+/* ==============================
+   Lunch PAGE STYLES
+   ============================== */
+
+/* ==============================
+   Dinner PAGE STYLES
+   ============================== */
+
+/* ==============================
+   Beers PAGE STYLES
+   ============================== */
+
+/* ==============================
+   Dessert PAGE STYLES
+   ============================== */
+
+
+    /* Styles for PDC_EVENTS SECTION */
+
+/* Mobile styles for PDC_EVENTS SECTION -- ADJUST WIDTH TO SUIT GLOBAL PROJECT PREF.
+EVENTS PAGE DESIGNED TO DISPLAY SINGLE COLUMN MOBILE, 5X3 GRID "DESKTOP"*/
+@media only screen and (max-width: 767px) {
+  .events-section {
+    display: block;
+    width: 100%;
+    margin-top: 2vh; /* Add responsive spacing between the events section and the section above */
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 4px; /* Add border radius */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Add box shadow */
+    padding: 10px; /* Add some padding so the text isn't too close to the border */
+}
+
+.article.events {
+    display: grid;
+    width: 100%;
+    /* place-items: center; */
+}
+
+.events-section h1, .events-section h2 {
+    text-align: center;
+    letter-spacing: 0.05em; /* Increase letter spacing for readability */
+    line-height: 1; /* Increase line height for readability */
+    text-transform: uppercase; /* Make the text uppercase */
+    margin-bottom: 10px; /* Add some space below the heading */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+  .events-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items vertically in the card */
+    justify-content: center; /* Center items horizontally in the card */
+    margin: 4% 6%; /* Increase left margin */ /* top and bottom margins are 0, left and right margins are 2% */
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s ease;
+  /*width: 98%; /* reduce width to account for the added margins */
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .events-card img, .picture-events img {
+    display: block;
+    width: 100%; /* add this */
+    max-width: 100%;
+    height: auto;
+    margin: 2vw auto;
+    border: calc(1px + 0.5vw) solid white;
+  }
+
+  .events-card:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .events-card h3 a {
+    color: #333;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add drop shadow */
+}
+
+  .events-card figcaption {
+    text-align: left;
+  }
+}
+
+.email-signup-form {
+  margin: .25vh auto; /* Add responsive space above and below the form */
+  width: 90%; /* Adjust the width as needed */
+  max-width: 600px; /* Adjust the maximum width as needed */
+}
+ /* Desktop styles for PDC_EVENTS SECTION 768+ width ADJUST WIDTH TO SUIT GLOBAL PROJECT PREF.*/
+ .events-section {
+  display: block;
+  width: 100%;
+  margin-top: 2vh; /* Add responsive spacing between the events section and the section above */
+  border: 1px solid #ccc; /* Add border */
+  border-radius: 4px; /* Add border radius */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Add box shadow */
+  padding: 10px; /* Add some padding so the text isn't too close to the border */
+}
+
+.article.events {
+  display: grid;
+  width: 100%;
+  /* place-items: center; */
+}
+
+.events-section h1, .events-section h2 {
+  text-align: center;
+  letter-spacing: 0.05em; /* Increase letter spacing for readability */
+  line-height: 1; /* Increase line height for readability */
+  text-transform: uppercase; /* Make the text uppercase */
+  margin-bottom: 10px; /* Add some space below the heading */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+.events-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items vertically in the card */
+  justify-content: center; /* Center items horizontally in the card */
+  margin: 4% 6%; /* Increase left margin */ /* top and bottom margins are 0, left and right margins are 2% */
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease;
+/*width: 98%; /* reduce width to account for the added margins */
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.events-card img, .picture-events img {
+  display: block;
+  width: 100%; /* add this */
+  max-width: 100%;
+  height: auto;
+  margin: 2vw auto;
+  border: calc(1px + 0.5vw) solid white;
+}
+
+.events-card:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.events-card h3 a {
+  color: #333;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add drop shadow */
+}
+
+.events-card figcaption {
+  text-align: left;
+}
