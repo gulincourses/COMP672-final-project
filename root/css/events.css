@@ -136,8 +136,11 @@ h3 {
     /* Styles for PDC_EVENTS SECTION */
 
 /* Mobile styles for PDC_EVENTS SECTION -- ADJUST WIDTH TO SUIT GLOBAL PROJECT PREF.
-EVENTS PAGE DESIGNED TO DISPLAY SINGLE COLUMN MOBILE, 5X3 GRID "DESKTOP"*/
-@media only screen and (max-width: 767px) {
+EVENTS PAGE DESIGNED TO DISPLAY SINGLE COLUMN WITH IMAGES CHANGING TO ACCOMODATE SCREEN SIZE / * 
+/* For mobile devices */
+@media only screen and (max-width: 480px) {
+
+}
   .events-section {
     display: block;
     width: 100%;
@@ -202,7 +205,7 @@ EVENTS PAGE DESIGNED TO DISPLAY SINGLE COLUMN MOBILE, 5X3 GRID "DESKTOP"*/
   .events-card figcaption {
     text-align: left;
   }
-}
+
 
 .email-signup-form {
   margin: .25vh auto; /* Add responsive space above and below the form */
@@ -273,4 +276,28 @@ EVENTS PAGE DESIGNED TO DISPLAY SINGLE COLUMN MOBILE, 5X3 GRID "DESKTOP"*/
 
 .events-card figcaption {
   text-align: left;
+}
+
+
+
+
+/* For mobile devices */
+@media only screen and (max-width: 480px) {
+  .events-card img, .picture-events img {
+    max-width: 100%;
+  }
+}
+
+/* For tablet devices */
+@media only screen and (min-width: 481px) and (max-width: 800px) {
+  .events-card img, .picture-events img {
+    max-width: 100%;
+  }
+}
+
+/* For desktop devices */
+@media only screen and (min-width: 801px) {
+  .events-card img, .picture-events img {
+    max-width: 100%;
+  }
 }
