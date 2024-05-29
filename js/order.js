@@ -92,8 +92,8 @@ $(document).ready(function () {
     // let quantity = $(this).siblings(".button-group").find(".quantity").val();
     let quantity = $(this).closest(".menu-item-card").find(".quantity").val();
 
-    // Alert the user
-    alert(`Added to cart: ${title} (Quantity: ${quantity})`);
     $(this).closest(".modal").hide();
+    // Alert the user
+    // alert(`Added to cart: ${title} (Quantity: ${quantity})`);
   });
 });
