@@ -883,6 +883,7 @@ blockquote {
 .beers-page .reserve-btn,
 .desserts-page .reserve-btn {
   font-size: var(--fs-btn);
+  font-weight: var(--fw-m);
   text-decoration: none;
   display: block;
   text-align: center;
