@@ -88,9 +88,9 @@ $(document).ready(function () {
     // Get the product name from data attribute
     let title = $(this).find("h3").text().toLowerCase();
     // Get the quantity from the sibling input
-    let quantity = $(this).siblings(".button-group").find(".quantity").val();
-
-    // Alert the user
-    alert(`Added to cart: ${title} (Quantity: ${quantity})`);
+    // let quantity = $(this).siblings(".button-group").find(".quantity").val();
+    let quantity =
+      // Alert the user
+      alert(`Added to cart: ${title} (Quantity: ${quantity})`);
   });
 });
