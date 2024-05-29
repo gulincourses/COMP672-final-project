@@ -94,6 +94,6 @@ $(document).ready(function () {
 
     $(this).closest(".modal").hide();
     // Alert the user
-    // alert(`Added to cart: ${title} (Quantity: ${quantity})`);
+    alert(`Added to cart: ${title} (Quantity: ${quantity})`);
   });
 });
