@@ -759,7 +759,7 @@ blockquote {
 @media screen and (max-width: 600px) {
   .home-page .footer-section {
     /* todo */
-    margin-bottom: 25px;
+    margin-bottom: 80px;
   }
 
   /* reserve and order buttons stick to bottom */
