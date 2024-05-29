@@ -1,0 +1,1825 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Online</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      type="text/css"
+    />
+
+    <!-- css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+
+    <!-- js -->
+
+    <!-- flatpickr -->
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- reset and main css -->
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" />
+    <link rel="stylesheet" href="../css/main.css" type="text/css" />
+  </head>
+  <body class="order-page" id="order-page-top">
+    <p id="banner">7304 Parkway Drive S, Hanover, MD 21076</p>
+    <header class="header-section">
+      <section class="menuWrap">
+        <img src="../images/logo.svg" class="logo" alt="logo" />
+        <input type="checkbox" id="checkbox" />
+        <nav>
+          <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li>
+              <a href="#">Menu</a>
+              <ul class="sub-menu">
+                <li><a href="lunch.html" target="_blank">Lunch</a></li>
+                <li>
+                  <a href="dinner.html" target="_blank">Dinner</a>
+                </li>
+                <li><a href="beers.html" target="_blank">Beers</a></li>
+                <li>
+                  <a href="desserts.html" target="_blank">Desserts</a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="../pages/order.html">Order Now</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+        </nav>
+        <label for="checkbox">
+          <i class="fa-solid fa-bars menuIcon"></i>
+          <i class="fa-solid fa-xmark menuClose"></i>
+        </label>
+      </section>
+    </header>
+    <main>
+      <header>
+        <ul class="section-nav">
+          <li>
+            <a href="#section-1">Sandwiches and Burgers</a>
+          </li>
+          <li>
+            <a href="#section-2">Soups and Salads</a>
+          </li>
+          <li>
+            <a href="#section-3">Seafood</a>
+          </li>
+          <li>
+            <a href="#section-4">Appetizer</a>
+          </li>
+          <li>
+            <a href="#section-5">Desserts</a>
+          </li>
+          <li>
+            <a href="#section-6">Beverages</a>
+          </li>
+        </ul>
+        <label for="search" class="sr-only">Search</label>
+        <input
+          type="text"
+          name="search"
+          id="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+      </header>
+      <section class="menus-container">
+        <section class="sandburg" id="section-1">
+          <h2>Sandwiches and Burgers</h2>
+          <article class="menu-item-card">
+            <section class="card-main">
+              <img
+                src="../images/thumbnails/tn-Wurst-On-Bun.jpg"
+                alt="Wurst on a Bun"
+                class="thumbnail"
+              />
+              <header>
+                <h3>Wurst on a Bun</h3>
+                <p class="price">$9</p>
+              </header>
+            </section>
+            <!-- modal -->
+            <aside class="modal">
+              <section class="modal-content">
+                <i class="fa-solid fa-xmark close"></i>
+                <h2>Wurst on a Bun</h2>
+                <p class="price">$9</p>
+                <label for="sausage-options-1"
+                  >Choose 1 sausage to enjoy:</label
+                >
+                <select name="sausage-options" id="sausage-options-1">
+                  <option value="apple">Apple Bratwurst</option>
+                  <option value="pork">
+                    Bavarian Bratwurst (Pork Sausage)
+                  </option>
+                  <option value="veal">
+                    Bavarian Weisswurst (Veal Sausage)
+                  </option>
+                  <option value="beef-pork">
+                    Knackwurst (Beef and Pork Sausage flavored with garlic)
+                  </option>
+                  <option value="smoke-beef">
+                    Bavarian Bauernwurst (Smoked Beef Sausage)
+                  </option>
+                  <option value="spicy">Debreziner (Spicy Smoked Beef)</option>
+                </select>
+                <label>Special Instructions:</label>
+                <textarea
+                  class="special-instructions"
+                  placeholder="Additions may be charged extra"
+                  maxlength="200"
+                  rows="4"
+                ></textarea>
+                <ul class="button-group">
+                  <!-- quantity group and add to cart button -->
+                  <li>
+                    <label>Quantity:</label>
+                    <div
+                      class="quantity-group"
+                      role="group"
+                      aria-label="Button Group"
+                    >
+                      <i class="fa-solid fa-minus quantity-decrease"></i>
+                      <input
+                        type="number"
+                        class="quantity"
+                        name="quantity"
+                        min="1"
+                        max="10"
+                        value="1"
+                      />
+                      <i class="fa-solid fa-plus quantity-increase"></i>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#" class="add-to-cart">Add to Card</a>
+                  </li>
+                </ul>
+              </section>
+            </aside>
+          </article>
+          <article class="menu-item-card">
+            <section class="card-main">
+              <!-- Image -->
+              <img
+                src="../images/thumbnails/tn-Grilled-Sausage-Loaf.jpg"
+                alt="Grilled Ofenfrischer Leberkaese"
+                class="thumbnail"
+              />
+              <header>
+                <!-- Name and Price -->
+                <h3>Grilled Ofenfrischer Leberkaese</h3>
+                <p class="price">$8</p>
+              </header>
+            </section>
+            <aside class="modal">
+              <section class="modal-content">
+                <i class="fa-solid fa-xmark close"></i>
+                <!-- Name and Price -->
+                <h2>Grilled Ofenfrischer Leberkaese</h2>
+                <p class="price">$8</p>
+                <!-- Item Details -->
+                <p class="menu-item-details">Bavarian Grilled Sausage Loaf</p>
+                <!-- Special Instructions -->
+                <label>Special Instructions:</label>
+                <textarea
+                  class="special-instructions"
+                  placeholder="Additions may be charged extra"
+                  maxlength="200"
+                  rows="4"
+                ></textarea>
+                <!-- Quantity and Add to Cart -->
+                <ul class="button-group">
+                  <li>
+                    <label>Quantity:</label>
+                    <div class="quantity-group">
+                      <i class="fa-solid fa-minus quantity-decrease"></i>
+                      <input
+                        type="number"
+                        class="quantity"
+                        name="quantity"
+                        min="1"
+                        max="10"
+                        value="1"
+                      />
+                      <i class="fa-solid fa-plus quantity-increase"></i>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#" class="add-to-cart">Add to Cart</a>
+                  </li>
+                </ul>
+              </section>
+            </aside>
+          </article>
+          <article class="menu-item-card">
+            <section class="card-main">
+              <!-- Image -->
+              <img
+                src="../images/thumbnails/tn-club-sandwiches.jpg"
+                alt="Club Sandwich"
+                class="thumbnail"
+              />
+              <header>
+                <!-- Name and Price -->
+                <h3>Club Sandwich</h3>
+                <p class="price">$9</p>
+              </header>
+            </section>
+            <aside class="modal">
+              <section class="modal-content">
+                <i class="fa-solid fa-xmark close"></i>
+                <!-- Name and Price -->
+                <h2>Club Sandwich</h2>
+                <p class="price">$9</p>
+                <!-- Item Details -->
+                <p class="menu-item-details">
+                  Turkey, Bacon, Lettuce and Tomato
+                </p>
+                <!-- Special Instructions -->
+                <label>Special Instructions:</label>
+                <textarea
+                  class="special-instructions"
+                  placeholder="Additions may be charged extra"
+                  maxlength="200"
+                  rows="4"
+                ></textarea>
+                <!-- Quantity and Add to Cart -->
+                <ul class="button-group">
+                  <li>
+                    <label>Quantity:</label>
+                    <div class="quantity-group">
+                      <i class="fa-solid fa-minus quantity-decrease"></i>
+                      <input
+                        type="number"
+                        class="quantity"
+                        name="quantity"
+                        min="1"
+                        max="10"
+                        value="1"
+                      />
+                      <i class="fa-solid fa-plus quantity-increase"></i>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#" class="add-to-cart">Add to Cart</a>
+                  </li>
+                </ul>
+              </section>
+            </aside>
+          </article>
+          <article class="menu-item-card">
+            <section class="card-main">
+              <!-- Image -->
+              <img
+                src="../images/thumbnails/tn-crab-cake-sandwiches.jpg"
+                alt="Crab Cake Sandwich"
+                class="thumbnail"
+              />
+              <header>
+                <!-- Name and Price -->
+                <h3>Crab Cake Sandwich</h3>
+                <p class="price">$15</p>
+              </header>
+            </section>
+            <aside class="modal">
+              <section class="modal-content">
+                <i class="fa-solid fa-xmark close"></i>
+                <!-- Name and Price -->
+                <h2>Crab Cake Sandwich</h2>
+                <p class="price">$15</p>
+                <!-- Item Details -->
+                <p class="menu-item-details">
+                  Served with lettuce, tomato, and a zesty sauce
+                </p>
+                <!-- Special Instructions -->
+                <label>Special Instructions:</label>
+                <textarea
+                  class="special-instructions"
+                  placeholder="Additions may be charged extra"
+                  maxlength="200"
+                  rows="4"
+                ></textarea>
+                <!-- Quantity and Add to Cart -->
+                <ul class="button-group">
+                  <li>
+                    <label>Quantity:</label>
+                    <div class="quantity-group">
+                      <i class="fa-solid fa-minus quantity-decrease"></i>
+                      <input
+                        type="number"
+                        class="quantity"
+                        name="quantity"
+                        min="1"
+                        max="10"
+                        value="1"
+                      />
+                      <i class="fa-solid fa-plus quantity-increase"></i>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#" class="add-to-cart">Add to Cart</a>
+                  </li>
+                </ul>
+              </section>
+            </aside>
+          </article>
+          <article class="menu-item-card">
+            <section class="card-main">
+              <!-- Image  -->
+              <img
+                src="../images/thumbnails/tn-Grilled-Reuben-Sandwich.jpg"
+                alt="Grilled Reuben Sandwich"
+                class="thumbnail"
+              />
+              <header>
+                <!-- Name and Price -->
+                <h3>Grilled Reuben Sandwich</h3>
+                <p class="price">$11</p>
+              </header>
+            </section>
+            <aside class="modal">
+              <section class="modal-content">
+                <i class="fa-solid fa-xmark close"></i>
+                <!-- Name and Price -->
+                <h2>Grilled Reuben Sandwich</h2>
+                <p class="price">$11</p>
+                <!-- Item Details -->
+                <p class="menu-item-details">
+                  Corned Beef, Sauerkraut, Swiss Cheese with Thousand Island
+                  Dressing
+                </p>
+                <!-- Special Instructions -->
+                <label>Special Instructions:</label>
+                <textarea
+                  class="special-instructions"
+                  placeholder="Additions may be charged extra"
+                  maxlength="200"
+                  rows="4"
+                ></textarea>
+                <!-- Quantity and Add to Cart -->
+                <ul class="button-group">
+                  <li>
+                    <label>Quantity:</label>
+                    <div class="quantity-group">
+                      <i class="fa-solid fa-minus quantity-decrease"></i>
+                      <input
+                        type="number"
+                        class="quantity"
+                        name="quantity"
+                        min="1"
+                        max="10"
+                        value="1"
+                      />
+                      <i class="fa-solid fa-plus quantity-increase"></i>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#" class="add-to-cart">Add to Cart</a>
+                  </li>
+                </ul>
+              </section>
+            </aside>
+          </article>
+          <article class="menu-item-card">
+            <section class="card-main">
+              <img
+                src="../images/thumbnails/tn-grilled-chicken-sandwiches.jpg"
+                alt="Grilled Chicken Sandwich"
+                class="thumbnail"
+              />
+              <header>
+                <h3>Grilled Chicken Sandwich</h3>
+                <p class="price">$11</p>
+              </header>
+            </section>
+            <aside class="modal">
+              <section class="modal-content">
+                <i class="fa-solid fa-xmark close"></i>
+                <h2>Grilled Chicken Sandwich</h2>
+                <p class="price">$11</p>
+                <p class="menu-item-details">Served with lettuce and tomato</p>
+                <label>Special Instructions:</label>
+                <textarea
+                  class="special-instructions"
+                  placeholder="Additions may be charged extra"
+                  maxlength="200"
+                  rows="4"
+                ></textarea>
+                <ul class="button-group">
+                  <!-- quantity group and add to cart button -->
+                  <li>
+                    <label>Quantity:</label>
+                    <div class="quantity-group">
+                      <i class="fa-solid fa-minus quantity-decrease"></i>
+                      <input
+                        type="number"
+                        class="quantity"
+                        name="quantity"
+                        min="1"
+                        max="10"
+                        value="1"
+                      />
+                      <i class="fa-solid fa-plus quantity-increase"></i>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#" class="add-to-cart">Add to Cart</a>
+                  </li>
+                </ul>
+              </section>
+            </aside>
+          </article>
+          <article class="menu-item-card">
+            <section class="card-main">
+              <img
+                src="../images/thumbnails/tn-German-Schnitzel-Sandwich.jpg"
+                alt="Schnitzel Sandwich"
+                class="thumbnail"
+              />
+              <header>
+                <h3>Schnitzel Sandwich</h3>
+                <p class="price">$8</p>
+              </header>
+            </section>
+            <aside class="modal">
+              <section class="modal-content">
+                <i class="fa-solid fa-xmark close"></i>
+                <h2>Schnitzel Sandwich</h2>
+                <p class="price">$8</p>
+                <p class="menu-item-details">
+                  Lightly Breaded and fried Pork Cutlet
+                </p>
+                <label>Special Instructions:</label>
+                <textarea
+                  class="special-instructions"
+                  placeholder="Additions may be charged extra"
+                  maxlength="200"
+                  rows="4"
+                ></textarea>
+                <ul class="button-group">
+                  <!-- quantity group and add to cart button -->
+                  <li>
+                    <label>Quantity:</label>
+                    <div class="quantity-group">
+                      <i class="fa-solid fa-minus quantity-decrease"></i>
+                      <input
+                        type="number"
+                        class="quantity"
+                        name="quantity"
+                        min="1"
+                        max="10"
+                        value="1"
+                      />
+                      <i class="fa-solid fa-plus quantity-increase"></i>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#" class="add-to-cart">Add to Cart</a>
+                  </li>
+                </ul>
+              </section>
+            </aside>
+          </article>
+          <article class="menu-item-card">
+            <section class="card-main">
+              <img
+                src="../images/thumbnails/tn-Angus-Beef-Burger.jpg"
+                alt="Angus Beef Burger"
+                class="thumbnail"
+              />
+              <header>
+                <h3>Angus Beef Burger</h3>
+                <p class="price">$9</p>
+              </header>
+            </section>
+            <aside class="modal">
+              <section class="modal-content">
+                <i class="fa-solid fa-xmark close"></i>
+                <h2>Angus Beef Burger</h2>
+                <p class="price">$9</p>
+                <label for="additional-items"
+                  >Additional Items ($1 each):</label
+                >
+                <select id="additional-items" name="additional-items" multiple>
+                  <option value="cheese">Cheese</option>
+                  <option value="bacon">Bacon</option>
+                  <option value="sauteed-onions">Sauteed Onions</option>
+                  <option value="mushroom-gravy">Mushroom Gravy</option>
+                </select>
+                <label>Special Instructions:</label>
+                <textarea
+                  class="special-instructions"
+                  placeholder="Additions may be charged extra"
+                  maxlength="200"
+                  rows="4"
+                ></textarea>
+                <ul class="button-group">
+                  <!-- quantity group and add to cart button -->
+                  <li>
+                    <label>Quantity:</label>
+                    <div class="quantity-group">
+                      <i class="fa-solid fa-minus quantity-decrease"></i>
+                      <input
+                        type="number"
+                        class="quantity"
+                        name="quantity"
+                        min="1"
+                        max="10"
+                        value="1"
+                      />
+                      <i class="fa-solid fa-plus quantity-increase"></i>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#" class="add-to-cart">Add to Cart</a>
+                  </li>
+                </ul>
+              </section>
+            </aside>
+          </article>
+        </section>
+
+        <section class="soupsalad" id="section-2">
+          <h2>Soups and Salads</h2>
+          <!-- each menu-item-card has a card and aside for modal -->
+          <article class="menu-item-card">
+            <section class="card-main">
+              <img
+                src="../images/thumbnails/tn-cheddar-soup.jpg"
+                alt="Bierkasesuppe Cheddar Beer Soup"
+                class="thumbnail"
+              />
+              <header>
+                <h3>Bierkasesuppe Cheddar Beer Soup</h3>
+                <p class="price">$5</p>
+              </header>
+            </section>
+            <aside class="modal">
+              <section class="modal-content">
+                <i class="fa-solid fa-xmark close"></i>
+                <h2>Bierkasesuppe Cheddar Beer Soup</h2>
+                <p class="price">$5</p>
+                <label for="soup-size-1">Choose your size:</label>
+                <select id="soup-size-1" name="soup-size">
+                  <option value="cup">Cup - $4.99</option>
+                  <option value="bowl">Bowl - $7.99</option>
+                </select>
+                <label for="bacon-request">Bacon on request:</label>
+                <select id="bacon-request" name="bacon-request">
+                  <option value="no-bacon">No Bacon</option>
+                  <option value="with-bacon">With Bacon</option>
+                </select>
+                <label>Special Instructions:</label>
+                <textarea
+                  class="special-instructions"
+                  placeholder="Additions may be charged extra"
+                  maxlength="200"
+                  rows="4"
+                ></textarea>
+                <ul class="button-group">
+                  <!-- quantity group and add to cart button -->
+                  <li>
+                    <label>Quantity:</label>
+                    <div class="quantity-group">
+                      <i class="fa-solid fa-minus quantity-decrease"></i>
+                      <input
+                        type="number"
+                        class="quantity"
+                        name="quantity"
+                        min="1"
+                        max="10"
+                        value="1"
+                      />
+                      <i class="fa-solid fa-plus quantity-increase"></i>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#" class="add-to-cart">Add to Cart</a>
+                  </li>
+                </ul>
+              </section>
+            </aside>
+          </article>
+          <article class="menu-item-card">
+            <section class="card-main">
+              <img
+                src="../images/thumbnails/tn-crab-soup.jpg"
+                alt="Creamy Crab Soup"
+                class="thumbnail"
+              />
+              <header>
+                <h3>Creamy Crab Soup</h3>
+                <p class="price">$5</p>
+              </header>
+            </section>
+            <aside class="modal">
+              <section class="modal-content">
+                <i class="fa-solid fa-xmark close"></i>
+                <h2>Creamy Crab Soup</h2>
+                <p class="price">$5</p>
+                <p class="menu-item-details">
+                  Seasonal: Maryland Crab or Cream of Crab
+                </p>
+                <label for="soup-size-2">Choose Size:</label>
+                <select name="soup-size" id="soup-size-2">
+                  <option value="cup">$5.99 - Cup</option>
+                  <option value="bowl">$8.99 - Bowl</option>
+                </select>
+                <label>Special Instructions:</label>
+                <textarea
+                  class="special-instructions"
+                  placeholder="Additions may be charged extra"
+                  maxlength="200"
+                  rows="4"
+                ></textarea>
+                <ul class="button-group">
+                  <li>
+                    <label>Quantity:</label>
+                    <div class="quantity-group">
+                      <i class="fa-solid fa-minus quantity-decrease"></i>
+                      <input
+                        type="number"
+                        class="quantity"
+                        name="quantity"
+                        min="1"
+                        max="10"
+                        value="1"
+                      />
+                      <i class="fa-solid fa-plus quantity-increase"></i>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#" class="add-to-cart">Add to Cart</a>
+                  </li>
+                </ul>
+              </section>
+            </aside>
+          </article>
+          <article class="menu-item-card">
+            <section class="card-main">
+              <img
+                src="../images/thumbnails/tn-salad.jpg"
+                alt="Brauhaus Salad"
+                class="thumbnail"
+              />
+              <header>
+                <h3>Brauhaus Salad</h3>
+                <p class="price">$6</p>
+              </header>
+            </section>
+            <aside class="modal">
+              <section class="modal-content">
+                <i class="fa-solid fa-xmark close"></i>
+                <h2>Brauhaus Salad</h2>
+                <p class="price">$6</p>
+                <p class="menu-item-details">
+                  Crisp Romaine Lettuce, Grape Tomatoes, Cucumbers, Carrots, Red
+                  Onion, Croutons
+                </p>
+                <label for="salad-dressing-1">Choose Dressing:</label>
+                <select name="salad-dressing" id="salad-dressing-1">
+                  <option value="no-dressing">No Dressing</option>
+                  <option value="vinaigrette">Vinaigrette</option>
+                  <option value="poppy-seed">Poppy Seed</option>
+                  <option value="ranch">Ranch</option>
+                  <option value="blue-cheese">Blue Cheese</option>
+                  <option value="caesar">Caesar</option>
+                  <option value="oil-vinegar">Oil & Vinegar</option>
+                  <option value="pesto-ranch">Pesto Ranch</option>
+                </select>
+                <label for="salad-additions-1">Additions:</label>
+                <select name="salad-additions" id="salad-additions-1">
+                  <option value="no-addition">No Addition</option>
+                  <option value="grilled-shrimp">Grilled Shrimp - $8.99</option>
+                  <option value="grilled-chicken">
+                    Grilled Chicken - $5.99
+                  </option>
+                  <option value="fresh-crab-meat">
+                    Fresh Crab Meat - $8.99
+                  </option>
+                </select>
+                <label>Special Instructions:</label>
+                <textarea
+                  class="special-instructions"
+                  placeholder="Additions may be charged extra"
+                  maxlength="200"
+                  rows="4"
+                ></textarea>
+                <ul class="button-group">
+                  <li>
+                    <label>Quantity:</label>
+                    <div class="quantity-group">
+                      <i class="fa-solid fa-minus quantity-decrease"></i>
+                      <input
+                        type="number"
+                        class="quantity"
+                        name="quantity"
+                        min="1"
+                        max="10"
+                        value="1"
+                      />
+                      <i class="fa-solid fa-plus quantity-increase"></i>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#" class="add-to-cart">Add to Cart</a>
+                  </li>
+                </ul>
+              </section>
+            </aside>
+          </article>
+          <article class="menu-item-card">
+            <section class="card-main">
+              <img
+                src="../images/thumbnails/tn-caesar-salad.jpg"
+                alt="Caesar Salad"
+                class="thumbnail"
+              />
+              <header>
+                <h3>Caesar Salad</h3>
+                <p class="price">$6</p>
+              </header>
+            </section>
+            <aside class="modal">
+              <section class="modal-content">
+                <i class="fa-solid fa-xmark close"></i>
+                <h2>Caesar Salad</h2>
+                <p class="price">$6</p>
+                <p class="menu-item-details">
+                  Fresh Romaine Lettuce, Shaved Parmesan, Croutons
+                </p>
+                <label for="salad-dressing-2">Choose Dressing:</label>
+                <select name="salad-dressing" id="salad-dressing-2">
+                  <option value="no-dressing">No Dressing</option>
+                  <option value="vinaigrette">Vinaigrette</option>
+                  <option value="poppy-seed">Poppy Seed</option>
+                  <option value="ranch">Ranch</option>
+                  <option value="blue-cheese">Blue Cheese</option>
+                  <option value="caesar">Caesar</option>
+                  <option value="oil-vinegar">Oil & Vinegar</option>
+                  <option value="pesto-ranch">Pesto Ranch</option>
+                </select>
+                <label for="salad-additions-2">Additions:</label>
+                <select name="salad-additions" id="salad-additions-2">
+                  <option value="no-addition">No Addition</option>
+                  <option value="grilled-shrimp">Grilled Shrimp - $8.99</option>
+                  <option value="grilled-chicken">
+                    Grilled Chicken - $5.99
+                  </option>
+                  <option value="fresh-crab-meat">
+                    Fresh Crab Meat - $8.99
+                  </option>
+                </select>
+                <label>Special Instructions:</label>
+                <textarea
+                  class="special-instructions"
+                  placeholder="Additions may be charged extra"
+                  maxlength="200"
+                  rows="4"
+                ></textarea>
+                <ul class="button-group">
+                  <li>
+                    <label>Quantity:</label>
+                    <div class="quantity-group">
+                      <i class="fa-solid fa-minus quantity-decrease"></i>
+                      <input
+                        type="number"
+                        class="quantity"
+                        name="quantity"
+                        min="1"
+                        max="10"
+                        value="1"
+                      />
+                      <i class="fa-solid fa-plus quantity-increase"></i>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#" class="add-to-cart">Add to Cart</a>
+                  </li>
+                </ul>
+              </section>
+            </aside>
+          </article>
+          <article class="menu-item-card">
+            <section class="card-main">
+              <img
+                src="../images/thumbnails/tn-spinich-salad.jpg"
+                alt="Spinach Salad"
+                class="thumbnail"
+              />
+              <header>
+                <h3>Spinach Salad</h3>
+                <p class="price">$6</p>
+              </header>
+            </section>
+            <aside class="modal">
+              <section class="modal-content">
+                <i class="fa-solid fa-xmark close"></i>
+                <h2>Spinach Salad</h2>
+                <p class="price">$6</p>
+                <p class="menu-item-details">
+                  Spinach Salad with Grape Tomatoes, Berries, Sliced Cucumber,
+                  Hard Boiled Egg, Red Onion
+                </p>
+                <label for="salad-dressing-3">Choose Dressing:</label>
+                <select name="salad-dressing" id="salad-dressing-3">
+                  <option value="no-dressing">No Dressing</option>
+                  <option value="vinaigrette">Vinaigrette</option>
+                  <option value="poppy-seed">Poppy Seed</option>
+                  <option value="ranch">Ranch</option>
+                  <option value="blue-cheese">Blue Cheese</option>
+                  <option value="caesar">Caesar</option>
+                  <option value="oil-vinegar">Oil & Vinegar</option>
+                  <option value="pesto-ranch">Pesto Ranch</option>
+                </select>
+                <label for="salad-additions-3">Additions:</label>
+                <select name="salad-additions" id="salad-additions-3">
+                  <option value="no-addition">No Addition</option>
+                  <option value="grilled-shrimp">Grilled Shrimp - $8.99</option>
+                  <option value="grilled-chicken">
+                    Grilled Chicken - $5.99
+                  </option>
+                  <option value="fresh-crab-meat">
+                    Fresh Crab Meat - $8.99
+                  </option>
+                </select>
+                <label>Special Instructions:</label>
+                <textarea
+                  class="special-instructions"
+                  placeholder="Additions may be charged extra"
+                  maxlength="200"
+                  rows="4"
+                ></textarea>
+                <ul class="button-group">
+                  <li>
+                    <label>Quantity:</label>
+                    <div class="quantity-group">
+                      <i class="fa-solid fa-minus quantity-decrease"></i>
+                      <input
+                        type="number"
+                        class="quantity"
+                        name="quantity"
+                        min="1"
+                        max="10"
+                        value="1"
+                      />
+                      <i class="fa-solid fa-plus quantity-increase"></i>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#" class="add-to-cart">Add to Cart</a>
+                  </li>
+                </ul>
+              </section>
+            </aside>
+          </article>
+        </section>
+
+        <section class="seafood" id="section-3">
+          <h2>Seafood</h2>
+          <article class="menu-item-card">
+            <section class="card-main">
+              <img
+                src="../images/thumbnails/tn-crab-cakes.jpg"
+                alt="Crab Cakes"
+                class="thumbnail"
+              />
+              <header>
+                <h3>Crab Cakes</h3>
+                <p class="price">$9</p>
+              </header>
+            </section>
+            <aside class="modal">
+              <section class="modal-content">
+                <i class="fa-solid fa-xmark close"></i>
+                <h2>Crab Cakes</h2>
+                <p class="price">$9</p>
+                <label for="crab-cake-preparation">Preparation:</label>
+                <select id="crab-cake-preparation">
+                  <option value="broiled">Broiled</option>
+                  <option value="fried">Fried</option>
+                </select>
+                <label>Special Instructions:</label>
+                <textarea
+                  class="special-instructions"
+                  placeholder="Additions may be charged extra"
+                  maxlength="200"
+                  rows="4"
+                ></textarea>
+                <ul class="button-group">
+                  <li>
+                    <label>Quantity:</label>
+                    <div class="quantity-group">
+                      <i class="fa-solid fa-minus quantity-decrease"></i>
+                      <input
+                        type="number"
+                        class="quantity"
+                        name="quantity"
+                        min="1"
+                        max="10"
+                        value="1"
+                      />
+                      <i class="fa-solid fa-plus quantity-increase"></i>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#" class="add-to-cart">Add to Cart</a>
+                  </li>
+                </ul>
+              </section>
+            </aside>
+          </article>
+          <article class="menu-item-card">
+            <section class="card-main">
+              <!-- Image -->
+              <img
+                src="../images/thumbnails/tn-Garnelen.jpg"
+                alt="Garnelen"
+                class="thumbnail"
+              />
+              <header>
+                <!-- Title and Price -->
+                <h3>Garnelen</h3>
+                <p class="price">$9</p>
+              </header>
+            </section>
+            <aside class="modal">
+              <section class="modal-content">
+                <i class="fa-solid fa-xmark close"></i>
+                <h2>Garnelen</h2>
+                <p class="price">$9</p>
+                <p>Four Jumbo Shrimp Stuffed with Crab Imperial</p>
+                <!-- Special Instructions -->
+                <label>Special Instructions:</label>
+                <textarea
+                  class="special-instructions"
+                  placeholder="Additions may be charged extra"
+                  maxlength="200"
+                  rows="4"
+                ></textarea>
+                <!-- Quantity Selector -->
+                <ul class="button-group">
+                  <li>
+                    <label>Quantity:</label>
+                    <div class="quantity-group">
+                      <i class="fa-solid fa-minus quantity-decrease"></i>
+                      <input
+                        type="number"
+                        class="quantity"
+                        name="quantity"
+                        min="1"
+                        max="10"
+                        value="1"
+                      />
+                      <i class="fa-solid fa-plus quantity-increase"></i>
+                    </div>
+                  </li>
+                  <li>
+                    <!-- Add to Cart Button -->
+                    <a href="#" class="add-to-cart">Add to Cart</a>
+                  </li>
+                </ul>
+              </section>
+            </aside>
+          </article>
+          <article class="menu-item-card">
+            <section class="card-main">
+              <!-- Image -->
+              <img
+                src="../images/thumbnails/tn-Baked-Flounder.jpg"
+                alt="baked flounder"
+              />
+              <header>
+                <!-- Title and Price -->
+                <h3>Baked Flounder</h3>
+                <p class="price">$9</p>
+              </header>
+            </section>
+            <aside class="modal">
+              <section class="modal-content">
+                <i class="fa-solid fa-xmark close"></i>
+                <h2>Baked Flounder</h2>
+                <p class="price">$9</p>
+                <p>Serve with chive sauce or Crab Imperial</p>
+                <!-- Special Instructions -->
+                <label>Special Instructions:</label>
+                <textarea
+                  class="special-instructions"
+                  placeholder="Additions may be charged extra"
+                  maxlength="200"
+                  rows="4"
+                ></textarea>
+                <!-- Quantity Selector -->
+                <ul class="button-group">
+                  <li>
+                    <label>Quantity:</label>
+                    <div class="quantity-group">
+                      <i class="fa-solid fa-minus quantity-decrease"></i>
+                      <input
+                        type="number"
+                        class="quantity"
+                        name="quantity"
+                        min="1"
+                        max="10"
+                        value="1"
+                      />
+                      <i class="fa-solid fa-plus quantity-increase"></i>
+                    </div>
+                  </li>
+                  <li>
+                    <!-- Add to Cart Button -->
+                    <a href="#" class="add-to-cart">Add to Cart</a>
+                  </li>
+                </ul>
+              </section>
+            </aside>
+          </article>
+          <article class="menu-item-card">
+            <section class="card-main">
+              <img src="../images/thumbnails/tn-Macaroni-Cheese.jpg" alt="" />
+              <!-- If you have an image, insert it here -->
+              <header>
+                <!-- Title and Price -->
+                <h3>Brauhaus Macaroni and Cheese</h3>
+                <p class="price">$9</p>
+              </header>
+            </section>
+            <aside class="modal">
+              <section class="modal-content">
+                <i class="fa-solid fa-xmark close"></i>
+                <h2>Brauhaus Macaroni and Cheese</h2>
+                <p class="price">$9</p>
+                <p>Creamy Cheesy Pasta with Shrimp and Lump Crab</p>
+                <!-- Special Instructions -->
+                <label>Special Instructions:</label>
+                <textarea
+                  class="special-instructions"
+                  placeholder="Additions may be charged extra"
+                  maxlength="200"
+                  rows="4"
+                ></textarea>
+                <!-- Quantity Selector -->
+                <ul class="button-group">
+                  <li>
+                    <label>Quantity:</label>
+                    <div class="quantity-group">
+                      <i class="fa-solid fa-minus quantity-decrease"></i>
+                      <input
+                        type="number"
+                        class="quantity"
+                        name="quantity"
+                        min="1"
+                        max="10"
+                        value="1"
+                      />
+                      <i class="fa-solid fa-plus quantity-increase"></i>
+                    </div>
+                  </li>
+                  <li>
+                    <!-- Add to Cart Button -->
+                    <a href="#" class="add-to-cart">Add to Cart</a>
+                  </li>
+                </ul>
+              </section>
+            </aside>
+          </article>
+          <article class="menu-item-card">
+            <section class="card-main">
+              <!-- Image -->
+              <img src="../images/thumbnails/tn-fry-shrimps.jpg" alt="" />
+              <header>
+                <!-- Title and Price -->
+                <h3>Fried Shrimp</h3>
+                <p class="price">$9</p>
+              </header>
+            </section>
+            <aside class="modal">
+              <section class="modal-content">
+                <i class="fa-solid fa-xmark close"></i>
+                <h2>Fried Shrimp</h2>
+                <p class="price">$9</p>
+                <p>Comes with 10 pieces</p>
+                <!-- Special Instructions -->
+                <label>Special Instructions:</label>
+                <textarea
+                  class="special-instructions"
+                  placeholder="Additions may be charged extra"
+                  maxlength="200"
+                  rows="4"
+                ></textarea>
+                <!-- Quantity Selector -->
+                <ul class="button-group">
+                  <li>
+                    <label>Quantity:</label>
+                    <div class="quantity-group">
+                      <i class="fa-solid fa-minus quantity-decrease"></i>
+                      <input
+                        type="number"
+                        class="quantity"
+                        name="quantity"
+                        min="1"
+                        max="10"
+                        value="1"
+                      />
+                      <i class="fa-solid fa-plus quantity-increase"></i>
+                    </div>
+                  </li>
+                  <li>
+                    <!-- Add to Cart Button -->
+                    <a href="#" class="add-to-cart">Add to Cart</a>
+                  </li>
+                </ul>
+              </section>
+            </aside>
+          </article>
+        </section>
+        <section class="appetitizer" id="section-4">
+          <h2>Appetizer</h2>
+
+          <article class="menu-item-card">
+            <section class="card-main">
+              <img
+                src="../images/thumbnails/tn-Soft-Pretzel.jpg"
+                alt="Wurst on a Bun"
+                class="thumbnail"
+              />
+              <header>
+                <h3>Soft Pretzel with Mustard</h3>
+                <p class="price">$9</p>
+              </header>
+            </section>
+            <aside class="modal">
+              <section class="modal-content">
+                <i class="fa-solid fa-xmark close"></i>
+                <h2>Soft Pretzel with Mustard</h2>
+                <p class="price">$9</p>
+                <p class="menu-item-details">
+                  Served with Bourbon Bacon Cheddar Sauce
+                </p>
+                <label>Special Instructions:</label>
+                <textarea
+                  class="special-instructions"
+                  placeholder="Additions may be charged extra"
+                  maxlength="200"
+                  rows="4"
+                ></textarea>
+                <ul class="button-group">
+                  <!-- quantity group and add to cart button -->
+                  <li>
+                    <label>Quantity:</label>
+                    <div class="quantity-group">
+                      <i class="fa-solid fa-minus quantity-decrease"></i>
+                      <input
+                        type="number"
+                        class="quantity"
+                        name="quantity"
+                        min="1"
+                        max="10"
+                        value="1"
+                      />
+                      <i class="fa-solid fa-plus quantity-increase"></i>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#" class="add-to-cart">Add to Cart</a>
+                  </li>
+                </ul>
+              </section>
+            </aside>
+          </article>
+
+          <article class="menu-item-card">
+            <section class="card-main">
+              <!-- Image -->
+              <img
+                src="../images/thumbnails/tn-battered-onion-rings.jpg"
+                alt="Large Battered Onion Rings"
+                class="thumbnail"
+              />
+              <header>
+                <!-- Name and Price -->
+                <h3>Large Battered Onion Rings</h3>
+                <p class="price">$9</p>
+              </header>
+            </section>
+            <aside class="modal">
+              <section class="modal-content">
+                <i class="fa-solid fa-xmark close"></i>
+                <!-- Name and Price -->
+                <h2>Large Battered Onion Rings</h2>
+                <p class="price">$9</p>
+                <!-- Details -->
+                <p class="menu-item-details">Zweibel Rings</p>
+                <!-- Special Instructions -->
+                <label>Special Instructions:</label>
+                <textarea
+                  class="special-instructions"
+                  placeholder="Additions may be charged extra"
+                  maxlength="200"
+                  rows="4"
+                ></textarea>
+                <ul class="button-group">
+                  <!-- Quantity and Add to Cart -->
+                  <li>
+                    <label>Quantity:</label>
+                    <div class="quantity-group">
+                      <i class="fa-solid fa-minus quantity-decrease"></i>
+                      <input
+                        type="number"
+                        class="quantity"
+                        name="quantity"
+                        min="1"
+                        max="10"
+                        value="1"
+                      />
+                      <i class="fa-solid fa-plus quantity-increase"></i>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#" class="add-to-cart">Add to Cart</a>
+                  </li>
+                </ul>
+              </section>
+            </aside>
+          </article>
+
+          <article class="menu-item-card">
+            <section class="card-main">
+              <!-- Image -->
+              <img
+                src="../images/thumbnails/tn-french-fries.jpg"
+                alt="Basket French Fries"
+                class="thumbnail"
+              />
+              <header>
+                <!-- Name and Price -->
+                <h3>Basket French Fries</h3>
+                <p class="price">$9</p>
+              </header>
+            </section>
+            <aside class="modal">
+              <section class="modal-content">
+                <i class="fa-solid fa-xmark close"></i>
+                <!-- Name and Price -->
+                <h2>Basket French Fries</h2>
+                <p class="price">$9</p>
+                <!-- Details -->
+                <p class="menu-item-details">
+                  Add Bourbon Bacon & Cheddar Sauce
+                </p>
+                <!-- Special Instructions -->
+                <label>Special Instructions:</label>
+                <textarea
+                  class="special-instructions"
+                  placeholder="Additions may be charged extra"
+                  maxlength="200"
+                  rows="4"
+                ></textarea>
+                <ul class="button-group">
+                  <!-- Quantity and Add to Cart -->
+                  <li>
+                    <label>Quantity:</label>
+                    <div class="quantity-group">
+                      <i class="fa-solid fa-minus quantity-decrease"></i>
+                      <input
+                        type="number"
+                        class="quantity"
+                        name="quantity"
+                        min="1"
+                        max="10"
+                        value="1"
+                      />
+                      <i class="fa-solid fa-plus quantity-increase"></i>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#" class="add-to-cart">Add to Cart</a>
+                  </li>
+                </ul>
+              </section>
+            </aside>
+          </article>
+
+          <article class="menu-item-card">
+            <section class="card-main">
+              <!-- Image -->
+              <img
+                src="../images/thumbnails/tn--Spicy-Fried-Chicken-Wings.jpg"
+                alt="Brauhaus Spicy Fried Chicken Wings"
+                class="thumbnail"
+              />
+              <header>
+                <!-- Name and Price -->
+                <h3>Brauhaus Spicy Fried Chicken Wings</h3>
+                <p class="price">$9</p>
+              </header>
+            </section>
+            <aside class="modal">
+              <section class="modal-content">
+                <i class="fa-solid fa-xmark close"></i>
+                <!-- Name and Price -->
+                <h2>Brauhaus Spicy Fried Chicken Wings</h2>
+                <p class="price">$9</p>
+                <!-- Details -->
+                <p class="menu-item-details">
+                  Served with Celery & Carrot Sticks, Bleu Cheese or Ranch
+                  Dressing
+                </p>
+                <!-- Special Instructions -->
+                <label>Special Instructions:</label>
+                <textarea
+                  class="special-instructions"
+                  placeholder="Additions may be charged extra"
+                  maxlength="200"
+                  rows="4"
+                ></textarea>
+                <ul class="button-group">
+                  <!-- Quantity and Add to Cart -->
+                  <li>
+                    <label>Quantity:</label>
+                    <div class="quantity-group">
+                      <i class="fa-solid fa-minus quantity-decrease"></i>
+                      <input
+                        type="number"
+                        class="quantity"
+                        name="quantity"
+                        min="1"
+                        max="10"
+                        value="1"
+                      />
+                      <i class="fa-solid fa-plus quantity-increase"></i>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#" class="add-to-cart">Add to Cart</a>
+                  </li>
+                </ul>
+              </section>
+            </aside>
+          </article>
+          <article class="menu-item-card">
+            <section class="card-main">
+              <!-- Image -->
+              <img
+                src="../images/thumbnails/tn-Wurst-Platter.jpg"
+                alt="Wurst Platter"
+                class="thumbnail"
+              />
+              <header>
+                <!-- Name and Price -->
+                <h3>Wurst Platter</h3>
+                <p class="price">$9</p>
+              </header>
+            </section>
+            <aside class="modal">
+              <section class="modal-content">
+                <i class="fa-solid fa-xmark close"></i>
+                <!-- Name and Price -->
+                <h2>Wurst Platter</h2>
+                <p class="price">$9</p>
+                <!-- Select Options -->
+                <label for="sausage-options-2">Choose 4 sausages:</label>
+                <select name="sausage-options" id="sausage-options-2" multiple>
+                  <option value="brat">Bratwurst</option>
+                  <option value="apple">Apple Bratwurst</option>
+                  <option value="bauern">Bavarian Bauernwurst</option>
+                  <option value="weiss">Bavarian Weisswurst</option>
+                  <option value="knack">Knackwurst</option>
+                  <option value="debreziner">Debreziner</option>
+                </select>
+                <!-- Special Instructions -->
+                <label>Special Instructions:</label>
+                <textarea
+                  class="special-instructions"
+                  placeholder="Additions may be charged extra"
+                  maxlength="200"
+                  rows="4"
+                ></textarea>
+                <!-- Quantity and Add to Cart -->
+                <ul class="button-group">
+                  <li>
+                    <label>Quantity:</label>
+                    <div class="quantity-group">
+                      <i class="fa-solid fa-minus quantity-decrease"></i>
+                      <input
+                        type="number"
+                        class="quantity"
+                        name="quantity"
+                        min="1"
+                        max="10"
+                        value="1"
+                      />
+                      <i class="fa-solid fa-plus quantity-increase"></i>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#" class="add-to-cart">Add to Cart</a>
+                  </li>
+                </ul>
+              </section>
+            </aside>
+          </article>
+        </section>
+        <section class="desserts" id="section-5">
+          <h2>Desserts</h2>
+          <article class="menu-item-card">
+            <section class="card-main">
+              <!-- Image -->
+              <img
+                src="../images/thumbnails/tn-German-Chocolate-Cheesecake.jpg"
+                alt="chocolate cheesecake"
+              />
+              <header>
+                <!-- Title and Price -->
+                <h3>German Chocolate Cheesecake</h3>
+                <p class="price">$6</p>
+              </header>
+            </section>
+            <aside class="modal">
+              <section class="modal-content">
+                <i class="fa-solid fa-xmark close"></i>
+                <h2>German Chocolate Cheesecake</h2>
+                <p class="price">$6</p>
+                <!-- Details -->
+                <p>Black Forest, Apple Strudel</p>
+                <p>
+                  Krapfens Sauerkraut Donuts served warm and dusted with
+                  powdered sugar.
+                </p>
+                <!-- Special Instructions -->
+                <label>Special Instructions:</label>
+                <textarea
+                  class="special-instructions"
+                  placeholder="Additions may be charged extra"
+                  maxlength="200"
+                  rows="4"
+                ></textarea>
+                <!-- Quantity Selector -->
+                <ul class="button-group">
+                  <li>
+                    <label>Quantity:</label>
+                    <div class="quantity-group">
+                      <i class="fa-solid fa-minus quantity-decrease"></i>
+                      <input
+                        type="number"
+                        class="quantity"
+                        name="quantity"
+                        min="1"
+                        max="10"
+                        value="1"
+                      />
+                      <i class="fa-solid fa-plus quantity-increase"></i>
+                    </div>
+                  </li>
+                  <li>
+                    <!-- Add to Cart Button -->
+                    <a href="#" class="add-to-cart">Add to Cart</a>
+                  </li>
+                </ul>
+              </section>
+            </aside>
+          </article>
+          <article class="menu-item-card">
+            <section class="card-main">
+              <!-- Image -->
+              <img
+                src="../images/thumbnails/tn-Kaiserschmarrn.jpg"
+                alt="kaiserschmarrn"
+              />
+              <header>
+                <!-- Title and Price -->
+                <h3>Kaiserschmarrn</h3>
+                <p class="price">$9</p>
+              </header>
+              <!-- Details -->
+            </section>
+            <aside class="modal">
+              <section class="modal-content">
+                <i class="fa-solid fa-xmark close"></i>
+                <h2>Kaiserschmarrn</h2>
+                <p class="price">$9</p>
+                <p>
+                  A fluffy shredded pancake served with powdered sugar, fruit
+                  compote, or preserves, and sometimes topped with whipped cream
+                  or vanilla sauce.
+                </p>
+                <!-- Special Instructions -->
+                <label>Special Instructions:</label>
+                <textarea
+                  class="special-instructions"
+                  placeholder="Additions may be charged extra"
+                  maxlength="200"
+                  rows="4"
+                ></textarea>
+                <!-- Quantity Selector -->
+                <ul class="button-group">
+                  <li>
+                    <label>Quantity:</label>
+                    <div class="quantity-group">
+                      <i class="fa-solid fa-minus quantity-decrease"></i>
+                      <input
+                        type="number"
+                        class="quantity"
+                        name="quantity"
+                        min="1"
+                        max="10"
+                        value="1"
+                      />
+                      <i class="fa-solid fa-plus quantity-increase"></i>
+                    </div>
+                  </li>
+                  <li>
+                    <!-- Add to Cart Button -->
+                    <a href="#" class="add-to-cart">Add to Cart</a>
+                  </li>
+                </ul>
+              </section>
+            </aside>
+          </article>
+          <article class="menu-item-card">
+            <section class="card-main">
+              <!-- Image -->
+              <img
+                src="../images/thumbnails/tn-Berliner.jpg"
+                alt="Jam Doughnut"
+              />
+              <header>
+                <!-- Title and Price -->
+                <h3>Berliner (Jam Doughnut)</h3>
+                <p class="price">$3</p>
+              </header>
+              <!-- Details -->
+            </section>
+            <aside class="modal">
+              <section class="modal-content">
+                <i class="fa-solid fa-xmark close"></i>
+                <h2>Berliner (Jam Doughnut)</h2>
+                <p class="price">$3</p>
+                <p>
+                  A soft, round doughnut filled with jam and dusted with
+                  powdered sugar.
+                </p>
+                <!-- Special Instructions -->
+                <label>Special Instructions:</label>
+                <textarea
+                  class="special-instructions"
+                  placeholder="Additions may be charged extra"
+                  maxlength="200"
+                  rows="4"
+                ></textarea>
+                <!-- Quantity Selector -->
+                <ul class="button-group">
+                  <li>
+                    <label>Quantity:</label>
+                    <div class="quantity-group">
+                      <i class="fa-solid fa-minus quantity-decrease"></i>
+                      <input
+                        type="number"
+                        class="quantity"
+                        name="quantity"
+                        min="1"
+                        max="10"
+                        value="1"
+                      />
+                      <i class="fa-solid fa-plus quantity-increase"></i>
+                    </div>
+                  </li>
+                  <li>
+                    <!-- Add to Cart Button -->
+                    <a href="#" class="add-to-cart">Add to Cart</a>
+                  </li>
+                </ul>
+              </section>
+            </aside>
+          </article>
+          <article class="menu-item-card">
+            <section class="card-main">
+              <!-- Image -->
+              <img src="../images/thumbnails/tn-Stollen.jpg" alt="Stollen" />
+              <header>
+                <!-- Title and Price -->
+                <h3>Stollen</h3>
+                <p class="price">$7</p>
+              </header>
+              <!-- Details -->
+            </section>
+            <aside class="modal">
+              <section class="modal-content">
+                <i class="fa-solid fa-xmark close"></i>
+                <h2>Stollen</h2>
+                <p class="price">$7</p>
+                <p>
+                  A rich and dense fruit bread filled with dried fruits, nuts,
+                  and spices, often enjoyed during the Christmas season.
+                </p>
+                <!-- Special Instructions -->
+                <label>Special Instructions:</label>
+                <textarea
+                  class="special-instructions"
+                  placeholder="Additions may be charged extra"
+                  maxlength="200"
+                  rows="4"
+                ></textarea>
+                <!-- Quantity Selector -->
+                <ul class="button-group">
+                  <li>
+                    <label>Quantity:</label>
+                    <div class="quantity-group">
+                      <i class="fa-solid fa-minus quantity-decrease"></i>
+                      <input
+                        type="number"
+                        class="quantity"
+                        name="quantity"
+                        min="1"
+                        max="10"
+                        value="1"
+                      />
+                      <i class="fa-solid fa-plus quantity-increase"></i>
+                    </div>
+                  </li>
+                  <li>
+                    <!-- Add to Cart Button -->
+                    <a href="#" class="add-to-cart">Add to Cart</a>
+                  </li>
+                </ul>
+              </section>
+            </aside>
+          </article>
+        </section>
+        <section class="beverages" id="section-6">
+          <h2>Beverages</h2>
+          <article class="menu-item-card">
+            <section class="card-main">
+              <!-- Image -->
+              <img src="../images/thumbnails/tn-soda.jpg" alt="soda" />
+              <header>
+                <!-- Title and Price -->
+                <h3>Soda</h3>
+                <p class="price">$3</p>
+              </header>
+            </section>
+            <aside class="modal">
+              <section class="modal-content">
+                <i class="fa-solid fa-xmark close"></i>
+                <h2>Soda</h2>
+                <p class="price">$3</p>
+                <!-- Soda Options -->
+                <label for="soda-options">Choose a Soda:</label>
+                <select id="soda-options">
+                  <option value="coke">Coke</option>
+                  <option value="diet-coke">Diet Coke</option>
+                  <option value="ginger-ale">Ginger Ale</option>
+                  <option value="root-beer">Root Beer</option>
+                  <option value="lemonade">Lemonade</option>
+                  <option value="sprite">Sprite</option>
+                </select>
+                <!-- Special Instructions -->
+                <label>Special Instructions:</label>
+                <textarea
+                  class="special-instructions"
+                  placeholder="Additions may be charged extra"
+                  maxlength="200"
+                  rows="4"
+                ></textarea>
+                <!-- Quantity Selector -->
+                <ul class="button-group">
+                  <li>
+                    <label>Quantity:</label>
+                    <div class="quantity-group">
+                      <i class="fa-solid fa-minus quantity-decrease"></i>
+                      <input
+                        type="number"
+                        class="quantity"
+                        name="quantity"
+                        min="1"
+                        max="10"
+                        value="1"
+                      />
+                      <i class="fa-solid fa-plus quantity-increase"></i>
+                    </div>
+                  </li>
+                  <li>
+                    <!-- Add to Cart Button -->
+                    <a href="#" class="add-to-cart">Add to Cart</a>
+                  </li>
+                </ul>
+              </section>
+            </aside>
+          </article>
+          <article class="menu-item-card">
+            <section class="card-main">
+              <img
+                src="../images/thumbnails/tn-fruit-juice.jpg"
+                alt="fruit juice"
+              />
+
+              <header>
+                <!-- Title and Price -->
+                <h3>Fruit Juice</h3>
+                <p class="price">$4</p>
+              </header>
+            </section>
+            <aside class="modal">
+              <section class="modal-content">
+                <i class="fa-solid fa-xmark close"></i>
+                <h2>Fruit Juice</h2>
+                <p class="price">$4</p>
+                <!-- Juice Options -->
+                <label for="juice-options">Choose a Fruit Juice:</label>
+                <select id="juice-options">
+                  <option value="orange">Orange</option>
+                  <option value="cranberry">Cranberry</option>
+                  <option value="grapefruit">Grapefruit</option>
+                </select>
+                <!-- Special Instructions -->
+                <label>Special Instructions:</label>
+                <textarea
+                  class="special-instructions"
+                  placeholder="Additions may be charged extra"
+                  maxlength="200"
+                  rows="4"
+                ></textarea>
+                <!-- Quantity Selector -->
+                <ul class="button-group">
+                  <li>
+                    <label>Quantity:</label>
+                    <div class="quantity-group">
+                      <i class="fa-solid fa-minus quantity-decrease"></i>
+                      <input
+                        type="number"
+                        class="quantity"
+                        name="quantity"
+                        min="1"
+                        max="10"
+                        value="1"
+                      />
+                      <i class="fa-solid fa-plus quantity-increase"></i>
+                    </div>
+                  </li>
+                  <li>
+                    <!-- Add to Cart Button -->
+                    <a href="#" class="add-to-cart">Add to Cart</a>
+                  </li>
+                </ul>
+              </section>
+            </aside>
+          </article>
+        </section>
+      </section>
+    </main>
+    <a href="#order-page-top" class="top"
+      ><i class="fa-solid fa-circle-arrow-up"></i
+    ></a>
+    <footer class="footer-section">
+      <section class="footerMenuWrap">
+        <ul class="footer-links">
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">Policies</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Membership</a></li>
+          <li><a href="#">Gift Cards</a></li>
+        </ul>
+        <ul class="social-media-icons">
+          <li>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-facebook-messenger"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </li>
+        </ul>
+      </section>
+    </footer>
+    <p id="rights">&copy; 2024 Bavarian Brauhaus. All rights reserved.</p>
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../js/order.js"></script>
+  </body>
+</html>

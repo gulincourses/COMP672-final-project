@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lunch</title>
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" />
+
+    <!-- google fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- google fonts end -->
+
+    <!-- font awesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      type="text/css"
+    />
+    <!-- end font awesome icons -->
+    <link rel="stylesheet" href="../css/main.css" type="text/css" />
+  </head>
+
+  <body class="lunch-page">
+    <p id="banner">7304 Parkway Drive S, Hanover, MD 21076</p>
+    <header class="header-section">
+      <section class="menuWrap">
+        <img src="../images/logo.svg" class="logo" alt="logo" />
+        <input type="checkbox" id="checkbox" />
+        <nav>
+          <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li>
+              <a href="#">Menu</a>
+              <ul class="sub-menu">
+                <li><a href="lunch.html">Lunch</a></li>
+                <li>
+                  <a href="dinner.html" target="_blank">Dinner</a>
+                </li>
+                <li><a href="beers.html" target="_blank">Beers</a></li>
+                <li>
+                  <a href="desserts.html" target="_blank">Desserts</a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="../pages/order.html" target="_blank">Order Now</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+        </nav>
+        <label for="checkbox">
+          <i class="fa-solid fa-bars menuIcon"></i>
+          <i class="fa-solid fa-xmark menuClose"></i>
+        </label>
+      </section>
+    </header>
+    <main>
+      <section class="hero">
+        <section class="hero-center">
+          <!-- <img src="../images/icons/icon-lunch.svg" alt="lunch icon" /> -->
+          <h1>Lunch</h1>
+          <a href="reserve.html" class="reserve-btn">Reserve a Table</a>
+        </section>
+      </section>
+      <section class="lunch-menus-container">
+        <!-- appetizers -->
+        <section class="menu-group appetizers">
+          <h2>
+            <img
+              class="menu-group-icon"
+              src="../images/icons/icon-appetizer.svg"
+              alt="appetizers icon"
+            />Appetizers
+          </h2>
+          <article class="menu-item">
+            <header>
+              <h3>Soft Pretzel with Mustard</h3>
+              <p class="price">$9</p>
+            </header>
+            <p class="menu-item-details">
+              Served with Bourbon Bacon Cheddar Sauce
+            </p>
+          </article>
+          <article class="menu-item">
+            <header>
+              <h3>Large Battered Onion Rings</h3>
+              <p class="price">$9</p>
+            </header>
+            <p class="menu-item-details">Zweibel Rings</p>
+          </article>
+          <article class="menu-item">
+            <header>
+              <h3>Munster Cheese Spread</h3>
+              <p class="price">$9</p>
+            </header>
+            <p class="menu-item-details">Served with Pumpernickel Bread</p>
+          </article>
+          <article class="menu-item">
+            <header>
+              <h3>Basket French Fries</h3>
+              <p class="price">$9</p>
+            </header>
+            <p class="menu-item-details">Add Bourbon Bacon & Cheddar Sauce</p>
+          </article>
+          <article class="menu-item">
+            <header>
+              <h3>Brauhaus Spicy Fried Chicken Wings</h3>
+              <p class="price">$9</p>
+            </header>
+            <p class="menu-item-details">
+              Served with Celery & Carrot Sticks, Bleu Cheese or Ranch Dressing
+            </p>
+          </article>
+          <article class="menu-item">
+            <header>
+              <h3>Brauhaus Special Roasted Pork "Wings"</h3>
+              <p class="price">$9</p>
+            </header>
+            <p class="menu-item-details">With Au Jus</p>
+          </article>
+          <article class="menu-item">
+            <header>
+              <h3>Large Spicy Steamed Shrimp</h3>
+              <p class="price">$9</p>
+            </header>
+            <p class="menu-item-details">
+              Served with Onions, Cocktail Sauce ½ lb. | 1 lb
+            </p>
+          </article>
+          <article class="menu-item">
+            <header>
+              <h3>Brauhaus Brotzeitteller</h3>
+              <p class="price">$9</p>
+            </header>
+            <p class="menu-item-details">Assorted Cold Cut and Cheese Platte</p>
+          </article>
+          <article class="menu-item">
+            <header>
+              <h3>Wurst Platter</h3>
+              <p class="price">$9</p>
+            </header>
+            <p class="menu-item-details">
+              Choice of Any 4 (Brat, Apple Brat, Bauern, Weiss, Knack,
+              Debreziner)
+            </p>
+          </article>
+        </section>
+        <!-- soups -->
+        <section class="menu-group soups">
+          <h2>
+            <img
+              class="menu-group-icon"
+              src="../images/icons/icon-soup.svg"
+              alt="soup icon"
+            />Soups
+          </h2>
+          <article class="menu-item">
+            <header>
+              <h3>Bierkasesuppe Cheddar Beer Soup</h3>
+              <p class="price">$5</p>
+            </header>
+            <p class="menu-item-details">
+              Imported Hofbrau Beer, Bacon on request. Cup $4.99 | Bowl $7.99
+            </p>
+          </article>
+          <article class="menu-item">
+            <header>
+              <h3>Creamy Crab Soup</h3>
+              <p class="price">$5</p>
+            </header>
+            <p class="menu-item-details">
+              Seasonal: Maryland Crab or Cream of Crab. Cup $5.99 | Bowl $8.99
+            </p>
+          </article>
+        </section>
+        <!-- salads -->
+        <section class="menu-group salads">
+          <h2>
+            <img
+              class="menu-group-icon"
+              src="../images/icons/icon-salad.svg"
+              alt="salad icon"
+            />Salads
+          </h2>
+          <article class="menu-item">
+            <header>
+              <h3>Brauhaus Salad</h3>
+              <p class="price">$6</p>
+            </header>
+            <p class="menu-item-details">
+              Crisp Romaine Lettuce, Grape Tomatoes, Cucumbers, Carrots, Red
+              Onion, Croutons
+            </p>
+          </article>
+          <article class="menu-item">
+            <header>
+              <h3>Caesar Salad</h3>
+              <p class="price">$6</p>
+            </header>
+            <p class="menu-item-details">
+              Fresh Romaine Lettuce, Shaved Parmesan, Croutons
+            </p>
+          </article>
+          <article class="menu-item">
+            <header>
+              <h3>Spinat Salad</h3>
+              <p class="price">$6</p>
+            </header>
+            <p class="menu-item-details">
+              Spinach Salad with Grape Tomatoes, Berries, Sliced Cucumber, Hard
+              Boiled Egg, Red Onion
+            </p>
+          </article>
+          <aside class="aside">
+            <p>
+              Dressings: Vinaigrette, Poppy Seed, Ranch, Blue Cheese, Caesar,
+              Oil & Vinegar, Pesto Ranch
+            </p>
+            <p>
+              Add to Any Salad: Grilled Shrimp $8.99 | Grilled Chicken $5.99 |
+              Fresh Crab Meat $8.99
+            </p>
+          </aside>
+        </section>
+        <!-- sandwiches and burgers -->
+        <section class="menu-group sandburg">
+          <h2>
+            <img
+              class="menu-group-icon"
+              src="../images/icons/icon-hamburger.svg"
+              alt="hamburger icon"
+            />Sandwiches & Burgers
+          </h2>
+          <article class="menu-item">
+            <header>
+              <h3>Wurst on a Bun</h3>
+              <p class="price">$7.99</p>
+            </header>
+            <p class="menu-item-details">Choose 1 side to enjoy:</p>
+            <ul class="menu-item-details">
+              <li>Apple Bratwurst</li>
+              <li>Bavarian Bratwurst (Pork Sausage)</li>
+              <li>Bavarian Weisswurst (Veal Sausage)</li>
+              <li>Knackwurst (Beef and Pork Sausage flavored with garlic)</li>
+              <li>Bavarian Bauernwurst (Smoked Beef Sausage)</li>
+              <li>Debreziner (Spicy Smoked Beef)</li>
+            </ul>
+          </article>
+          <article class="menu-item">
+            <header>
+              <h3>Schnitzel Sandwich</h3>
+              <p class="price">$8</p>
+            </header>
+            <p class="menu-item-details">
+              Lightly Breaded and fried Pork Cutlet
+            </p>
+          </article>
+          <article class="menu-item">
+            <header>
+              <h3>Grilled Ofenfrischer Leberkaese</h3>
+              <p class="price">$8</p>
+            </header>
+            <p class="menu-item-details">Bavarian Grilled Sausage Loaf</p>
+          </article>
+          <article class="menu-item">
+            <header>
+              <h3>Club Sandwich</h3>
+              <p class="price">$9</p>
+            </header>
+            <p class="menu-item-details">Turkey, Bacon, Lettuce and Tomato</p>
+          </article>
+          <article class="menu-item">
+            <header>
+              <h3>Angus Beef Burger</h3>
+              <p class="price">$9</p>
+            </header>
+            <p class="menu-item-details">
+              Additional Items $1 each: Cheese, Bacon, Sauteed Onions, Mushroom
+              Gravy
+            </p>
+          </article>
+          <article class="menu-item">
+            <header>
+              <h3>Crab Cake Sandwich</h3>
+              <p class="price">$15</p>
+            </header>
+            <p class="menu-item-details">
+              Served with lettuce, tomato, and a zesty sauce
+            </p>
+          </article>
+          <article class="menu-item">
+            <header>
+              <h3>Grilled Reuben Sandwich</h3>
+              <p class="price">$11</p>
+            </header>
+            <p class="menu-item-details">
+              Corned Beef, Sauerkraut, Swiss Cheese with Thousand Island
+              Dressing
+            </p>
+          </article>
+          <article class="menu-item">
+            <header>
+              <h3>Grilled Chicken Sandwich</h3>
+              <p class="price">$11</p>
+            </header>
+            <p class="menu-item-details">Served with lettuce and tomato</p>
+          </article>
+        </section>
+        <!-- sides -->
+        <section class="menu-group sides">
+          <h2>
+            <img
+              class="menu-group-icon"
+              src="../images/icons/icon-sides.svg"
+              alt="sides icon"
+            />Sides
+          </h2>
+          <p>Choose 1 to enjoy with your Sandwich</p>
+          <article class="menu-item">
+            <header>
+              <h3>Brauhaus Pommes Frites</h3>
+              <p class="price">$3</p>
+            </header>
+            <p class="menu-item-details">French Fries</p>
+          </article>
+          <article class="menu-item">
+            <header>
+              <h3>Bavarian Kartoffelsalat</h3>
+              <p class="price">$3</p>
+            </header>
+            <p class="menu-item-details">Traditional Bavarian potato salad</p>
+          </article>
+          <article class="menu-item">
+            <header>
+              <h3>Red Cabbage</h3>
+              <p class="price">$3</p>
+            </header>
+            <p class="menu-item-details">
+              Shredded red cabbage with vinegar and spices
+            </p>
+          </article>
+          <article class="menu-item">
+            <header>
+              <h3>Cole Slaw</h3>
+              <p class="price">$3</p>
+            </header>
+            <p class="menu-item-details">
+              Shredded cabbage and carrots, mixed with a creamy dressing
+            </p>
+          </article>
+        </section>
+      </section>
+    </main>
+    <footer class="footer-section">
+      <section class="footerMenuWrap">
+        <ul class="footer-links">
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">Policies</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Membership</a></li>
+          <li><a href="#">Gift Cards</a></li>
+        </ul>
+        <ul class="social-media-icons">
+          <li>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-facebook-messenger"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </li>
+        </ul>
+      </section>
+    </footer>
+    <p id="rights">&copy; 2024 Bavarian Brauhaus. All rights reserved.</p>
+  </body>
+</html>

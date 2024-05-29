@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reservation</title>
+
+    <!-- css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+
+    <!-- google fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- google fonts end -->
+
+    <!-- font awesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      type="text/css"
+    />
+    <!-- end font awesome icons -->
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- flatpickr -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- reset and main css -->
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" />
+    <link rel="stylesheet" href="../css/main.css" type="text/css" />
+  </head>
+  <body class="reservation-page">
+    <p id="banner">7304 Parkway Drive S, Hanover, MD 21076</p>
+    <header class="header-section">
+      <section class="menuWrap">
+        <img src="../images/logo.svg" class="logo" alt="logo" />
+        <input type="checkbox" id="checkbox" />
+        <nav>
+          <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li>
+              <a href="#">Menu</a>
+              <ul class="sub-menu">
+                <li><a href="lunch.html" target="_blank">Lunch</a></li>
+                <li>
+                  <a href="dinner.html" target="_blank">Dinner</a>
+                </li>
+                <li><a href="beers.html" target="_blank">Beers</a></li>
+                <li>
+                  <a href="desserts.html" target="_blank">Desserts</a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="../pages/order.html" target="_blank">Order Now</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+        </nav>
+        <label for="checkbox">
+          <i class="fa-solid fa-bars menuIcon"></i>
+          <i class="fa-solid fa-xmark menuClose"></i>
+        </label>
+      </section>
+    </header>
+    <main>
+      <section class="reserve-section">
+        <article class="time-open">
+          <h1>Hours</h1>
+          <ul>
+            <li>
+              <p><strong>Tuesday - Saturday</strong></p>
+              <p>3 pm - 9 pm</p>
+            </li>
+            <li>
+              <p><strong>Sunday & Monday</strong></p>
+              <p>Closed</p>
+            </li>
+            <li>
+              <h3>Happy Hour In the Bar</h3>
+              <p><strong>Tuesday - Friday</strong></p>
+              <p>3 pm - 7 pm</p>
+            </li>
+          </ul>
+        </article>
+        <article>
+          <h1>Reserve a Table</h1>
+          <form action="#" id="reservation-form">
+            <ul>
+              <li>
+                <label for="name">Your Name:</label>
+                <input
+                  type="text"
+                  id="name"
+                  class="formControl"
+                  placeholder="John Smith"
+                  required
+                />
+              </li>
+              <li>
+                <label for="email">Email:</label>
+                <input
+                  type="email"
+                  id="email"
+                  class="formControl"
+                  placeholder="example@example.com"
+                  required
+                />
+              </li>
+              <li>
+                <label for="date">Date:</label>
+                <input
+                  type="text"
+                  id="date"
+                  class="formControl"
+                  placeholder="mm/dd/yyyy"
+                  required
+                />
+              </li>
+              <li>
+                <label for="time">Time:</label>
+                <input
+                  type="text"
+                  id="time"
+                  class="formControl"
+                  placeholder="3:00 PM"
+                  required
+                />
+              </li>
+              <li>
+                <label for="people">How many people: </label>
+                <!-- dropdown -->
+                <select name="people" id="people" class="formControl" required>
+                  <option value="1">1 people</option>
+                  <option value="2" selected>2 people</option>
+                  <option value="3">3 people</option>
+                  <option value="4">4 people</option>
+                  <option value="5">5 people</option>
+                  <option value="6">6 people</option>
+                  <option value="7">7 people</option>
+                  <option value="8">8 people</option>
+                  <option value="9">9 people</option>
+                  <option value="10">10 people</option>
+                </select>
+              </li>
+            </ul>
+            <input type="submit" class="submit" value="Reserve Now" />
+          </form>
+        </article>
+      </section>
+    </main>
+    <footer class="footer-section">
+      <section class="footerMenuWrap">
+        <ul class="footer-links">
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">Policies</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Membership</a></li>
+          <li><a href="#">Gift Cards</a></li>
+        </ul>
+        <ul class="social-media-icons">
+          <li>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-facebook-messenger"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </li>
+        </ul>
+      </section>
+    </footer>
+    <p id="rights">&copy; 2024 Bavarian Brauhaus. All rights reserved.</p>
+    <script src="../js/reserve.js"></script>
+  </body>
+</html>
