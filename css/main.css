@@ -108,9 +108,6 @@ body {
   /* body styles */
   background-color: var(--bg);
   color: var(--text-color);
-  /* font-family: var(--primary-font);
-  font-size: var(--fs-body);
-  font-weight: var(--fw-l); */
   font: var(--fw-l) var(--fs-body) var(--primary-font);
 
   height: 100vh;
@@ -123,7 +120,7 @@ img {
   object-fit: cover;
 }
 
-/* todo group selector */
+/* todo selector group selector */
 h1,
 h2,
 h3 {
@@ -145,9 +142,18 @@ h3 {
   font-size: var(--fs-h3);
 }
 
+/* links */
+
+ul li a {
+  display: block;
+  text-decoration: none;
+  padding: var(--spacer);
+  color: var(--nav-text);
+}
+
 /* a buttons */
 
-/* todo class selector */
+/* todo selector class selector */
 .btn {
   display: inline-block;
   background-color: var(--btn-bg);
@@ -165,8 +171,7 @@ h3 {
 }
 
 /* top address banner, bottom rights banner */
-
-/* todo ID selector */
+/* todo selector ID selector */
 #banner,
 #rights {
   height: var(--height-banner);
@@ -180,18 +185,6 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-/* common category group h2 styles */
-
-/* todo direct children selector */
-.menu-group > h2,
-.menus-container > section > h2 {
-  text-align: center;
-  /* text-transform: capitalize; */
-  grid-column: 1 / -1;
-  font-size: calc(var(--fs-h2) * 1.5);
-  font-weight: var(--fw-b);
 }
 
 /* ==============================
@@ -223,14 +216,18 @@ h3 {
   align-items: center;
   position: fixed;
   z-index: 30;
+  padding: var(--spacer);
 }
 
 .menuWrap {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 var(--spacer);
+  /* margin: 0 var(--spacer); */
+  /* padding: 0 var(--spacer); */
   width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
 }
 
 .menuIcon,
@@ -240,7 +237,7 @@ h3 {
   margin-right: var(--spacer);
 }
 
-/* todo descendant selector */
+/* todo selector descendant selector */
 .header-section nav {
   position: absolute;
   top: 142px;
@@ -264,21 +261,20 @@ nav ul.nav-links > li {
 }
 
 nav ul.nav-links {
+  /* hide the nav links */
   max-height: 0;
   overflow: hidden;
   transition: all 0.3s;
 }
 
 /* when checkbox check and open */
-
-/* todo general sibling selector */
+/* todo selector general sibling selector */
 #checkbox:checked ~ nav ul.nav-links {
   max-height: 100%;
   transition: all 0.3s;
 }
 
 /* toggle the hamburg menu and Xmark */
-
 #checkbox:checked ~ label .menuIcon {
   display: none;
 }
@@ -292,7 +288,6 @@ nav ul.nav-links li {
 }
 
 /* sub menus for menu */
-
 .sub-menu {
   display: none;
   position: absolute;
@@ -310,7 +305,6 @@ nav ul.nav-links li {
 }
 
 .sub-menu li a {
-  display: block;
   padding: calc(1.2 * var(--spacer));
   color: var(--sub-nav-text);
 }
@@ -334,8 +328,6 @@ header ul li {
 
 footer ul li,
 header ul li {
-  /* padding: var(--spacer); */
-
   font-weight: var(--fw-m);
 }
 
@@ -345,10 +337,7 @@ footer ul li {
 
 footer ul a,
 header ul a {
-  text-decoration: none;
-  display: block;
-  color: var(--nav-text);
-  padding: var(--spacer);
+  white-space: nowrap;
 }
 
 .footer-section {
@@ -367,7 +356,6 @@ header ul a {
 .footerMenuWrap {
   display: grid;
   grid-template-columns: 1fr;
-  /* gap: var(--spacer-hlf); */
   box-sizing: border-box;
   width: 100%;
 }
@@ -375,7 +363,6 @@ header ul a {
 .footer-links {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  /* gap: var(--spacer); */
   max-width: 800px;
   justify-content: start;
   list-style: none;
@@ -442,10 +429,12 @@ header ul a {
   }
 }
 
-@media screen and (min-width: 800px) {
+/* navigation shows in larger screen */
+@media screen and (min-width: 850px) {
   .header-section nav {
     flex-grow: 1;
     position: relative;
+    /* reset the width and top */
     width: auto;
     top: auto;
     background-color: inherit;
@@ -453,10 +442,18 @@ header ul a {
 
   /* show the nav bar and make it next to img logo */
   nav ul.nav-links {
+    /* show the nav links */
     max-height: none;
     overflow: visible;
     display: flex;
     justify-content: flex-end;
+  }
+
+  /* hides the hamburger menu and X button */
+
+  .menuIcon,
+  .menuClose {
+    display: none;
   }
 
   nav ul.nav-links > li {
@@ -478,9 +475,9 @@ header ul a {
 }
 
 @media screen and (min-width: 1000px) {
-  .header-section {
+  /* .header-section {
     padding: 0 var(--spacer-dbl);
-  }
+  } */
 }
 
 @media screen and (min-width: 1100px) {
@@ -628,15 +625,14 @@ blockquote {
 /* -------- contact section------  */
 
 .contact-section {
-  --grid-gap: calc(var(--spacer-dbl) * 2);
+  --grid-gap: var(--spacer-dbl);
   display: grid;
   grid-template-columns: var(--grid-cols);
-  /* grid-template-columns: repeat(auto-fit, minmax(250px, auto)); */
   gap: var(--grid-gap);
   font-weight: var(--fw-m);
   align-items: flex-start;
   justify-content: center;
-  padding: 0 var(--spacer-dbl);
+  padding: var(--spacer-dbl);
   margin: 0 auto;
 }
 
@@ -644,12 +640,15 @@ blockquote {
   grid-column: 1 / -1;
 }
 
-.contact-section article {
+.hours,
+.location,
+.contact {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: var(--spacer);
+  line-height: 1.5;
 }
 
 .contact-section article header {
@@ -657,67 +656,87 @@ blockquote {
   align-items: center;
   justify-content: center;
   gap: var(--spacer);
+  margin-bottom: var(--spacer);
+}
+
+.contact-section article header h2 {
+  margin: 0;
 }
 
 .contact-section article header i {
+  display: inline-block;
   font-size: var(--fs-h2);
   color: var(--tertiary-color);
+  padding-right: 0.2em;
 }
 
 .contact-section article p {
   line-height: 1.5;
 }
 
-/* location */
-
-.location p {
-  max-width: 300px;
-}
-
-/* hours */
-
 .location ul,
 .hours ul,
 .contact ul {
   display: flex;
   flex-direction: column;
-  gap: var(--spacer);
+  gap: var(--spacer-half);
 }
 
-.hours strong {
+/* location */
+.location p,
+.contact p {
+  max-width: 300px;
+}
+
+/* hours */
+.hours {
+  text-align: center;
+}
+
+.hours strong,
+.contact strong {
   font-weight: var(--fw-b);
+  color: var(--neutral-dk-color);
+  display: block;
 }
 
 .hours h3 {
   text-align: center;
+  color: var(--neutral-mid-color);
+  font-size: calc(0.9 * var(--fs-h3));
 }
 
 /* contact */
-/* click here to send us message */
+.location ul li:last-of-type,
 .contact ul li:last-of-type {
-  text-align: center;
+  color: var(--neutral-mid-color);
+  margin-top: var(--spacer);
+}
+
+.contact a[href^="mailto"] {
+  display: inline-block;
+  color: var(--neutral-dk-color);
+  text-decoration: underline;
+  padding: 0;
   font-style: italic;
-  margin-top: var(--spacer-dbl);
+}
+
+.contact-section .btn {
+  margin-top: auto;
+}
+
+.btn.hidden {
+  display: none;
 }
 
 /* Home page media queries*/
 @media screen and (min-width: 600px) {
-  /* menu section grid */
   .menus {
     --grid-cols: repeat(2, 1fr);
   }
 
-  /* contact section grid */
   .contact-section {
     --grid-cols: repeat(2, 1fr);
-  }
-}
-
-@media screen and (min-width: 800px) {
-  /* nav */
-  .menuIcon,
-  .menuClose {
-    display: none;
   }
 }
 
@@ -730,9 +749,15 @@ blockquote {
   .contact-section {
     --grid-cols: repeat(3, 1fr);
   }
-  .menuWrap {
-    max-width: var(--max-width);
-    margin: 0 auto;
+
+  .contact-section article {
+    min-height: 400px;
+  }
+
+  .btn.hidden {
+    display: block;
+    /* hides element and still takes up space */
+    visibility: hidden;
   }
 }
 
@@ -741,7 +766,6 @@ blockquote {
     --fs-base: 22px;
   }
 
-  /* main */
   main {
     max-width: var(--max-width);
     margin: 0 auto;
@@ -754,8 +778,7 @@ blockquote {
   }
 }
 
-/* small screen of home page */
-
+/* homepage small screen */
 @media screen and (max-width: 600px) {
   .home-page .footer-section {
     /* todo */
@@ -792,10 +815,6 @@ blockquote {
     border: var(--border-styles);
     box-shadow: var(--shadow);
   }
-
-  .contact-section article p {
-    line-height: 1.2;
-  }
 }
 
 /* small screen for home page */
@@ -803,9 +822,6 @@ blockquote {
   .sub-menu {
     left: 103px;
     top: -61px;
-  }
-  .sub-menu li a {
-    padding: calc(0.5 * var(--spacer));
   }
 }
 
@@ -905,6 +921,18 @@ blockquote {
   align-items: center;
   margin: 0 var(--spacer-dbl);
   box-sizing: border-box;
+}
+
+/* common category group h2 styles */
+
+/* todo direct children selector */
+.menu-group > h2,
+.menus-container > section > h2 {
+  text-align: center;
+  /* text-transform: capitalize; */
+  grid-column: 1 / -1;
+  font-size: calc(var(--fs-h2) * 1.5);
+  font-weight: var(--fw-b);
 }
 
 .menu-group {
@@ -1094,6 +1122,11 @@ blockquote {
   border-radius: 40px;
   height: 50px;
   box-shadow: var(--shadow);
+}
+
+#search:focus {
+  outline: none;
+  border: 1px solid var(--neutral-mid-color);
 }
 
 .section-nav li a {
@@ -1510,7 +1543,6 @@ blockquote {
   }
 
   /* 5n+2, 3n-2 */
-
   .grid-gallery .grid-item:nth-child(5n + 2) {
     grid-column: span 2;
     grid-row: span 2;
