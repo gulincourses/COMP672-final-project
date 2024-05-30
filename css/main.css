@@ -1165,6 +1165,7 @@ blockquote {
 
 .card-main img {
   max-width: var(--menu-card-img-max-width);
+  padding: var(--spacer-hlf);
 }
 
 .card-main .price {
@@ -1293,7 +1294,8 @@ blockquote {
 /* media query for order online page */
 @media screen and (max-width: 600px) {
   .order-page {
-    --menu-card-img-max-width: 150px;
+    /* todo */
+    --menu-card-img-max-width: 200px;
     --spacer-add-to-cart: var(--spacer);
   }
 
