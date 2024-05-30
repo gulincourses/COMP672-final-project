@@ -1045,6 +1045,8 @@ blockquote {
   padding: var(--spacer);
   margin: 0 var(--spacer-dbl);
 }
+
+/* menu filters styles */
 .section-nav {
   display: flex;
   align-items: flex-start;
