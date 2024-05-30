@@ -1141,11 +1141,6 @@ blockquote {
   display: flex;
 }
 
-.menu-item-card:hover {
-  transition: transform 0.3s ease;
-  transform: scale(1.05);
-}
-
 .card-main {
   display: flex;
   cursor: pointer;
@@ -1153,6 +1148,11 @@ blockquote {
   gap: var(--spacer-dbl);
   width: 100%;
   /* max-width: var(--menu-card-max-width); */
+  transition: transform 0.3s ease;
+}
+
+.card-main:hover {
+  transform: scale(1.05);
 }
 
 .card-main > header {
@@ -1293,8 +1293,7 @@ blockquote {
 /* media query for order online page */
 @media screen and (max-width: 600px) {
   .order-page {
-    /* todo */
-    --menu-card-img-max-width: 200px;
+    --menu-card-img-max-width: 150px;
     --spacer-add-to-cart: var(--spacer);
   }
 
