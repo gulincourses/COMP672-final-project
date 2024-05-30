@@ -1033,7 +1033,7 @@ blockquote {
    ============================== */
 .order-page {
   /* --menu-card-max-width: 500px; */
-  --menu-card-border-radius: 5px;
+  --menu-card-border-radius: 20px;
   --menu-card-img-max-width: 250px;
   --spacer-add-to-cart: var(--spacer) var(--spacer-dbl);
 }
@@ -1324,12 +1324,6 @@ blockquote {
   .menu-item-card {
     background-color: transparent;
     box-shadow: none;
-  }
-}
-
-@media screen and (min-width: 800px) {
-  .menus-container {
-    --menu-card-border-radius: 24px;
   }
 }
 
