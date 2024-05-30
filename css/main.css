@@ -1043,14 +1043,14 @@ blockquote {
   flex-direction: column;
   gap: var(--spacer);
   padding: var(--spacer);
-  /* margin: 0 var(--spacer-dbl); */
+  margin: 0 var(--spacer-dbl);
 }
 .section-nav {
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
   gap: var(--spacer);
-  margin: 0 var(--spacer-dbl);
+  /* margin: 0 var(--spacer-dbl); */
 }
 
 .section-nav li {
@@ -1082,7 +1082,7 @@ blockquote {
   display: block;
   padding: 1em;
   border: 1px solid #ccc;
-  align-self: flex-end;
+  /* align-self: flex-end; */
   margin-top: var(--spacer-dbl);
   background-image: url(../images/icons/icon-search.svg);
   background-position: 20px center;
