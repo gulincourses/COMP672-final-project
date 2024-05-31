@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Bavarian Brauhaus</title>
-    <link rel="stylesheet" href="css/reset.css" type="text/css" />
-    <!-- google fonts -->
 
+    <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
       rel="stylesheet"
     />
+    <!-- google fonts end -->
 
     <!-- font awesome icons -->
     <link
@@ -22,119 +22,263 @@
       type="text/css"
     />
     <!-- end font awesome icons -->
-    <!-- material icons -->
+
+    <!-- slick slider -->
     <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round|Material+Icons+Sharp|Material+Icons+Two+Tone"
       rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
-    <!-- material icons end -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <!-- slick slider end -->
 
-    <!-- fonts end -->
-
+    <link rel="stylesheet" href="css/reset.css" type="text/css" />
     <link rel="stylesheet" href="css/main.css" type="text/css" />
   </head>
-  <body>
-    <header>
-      <p class="banner">7304 Parkway Drive S, Hanover, MD 21076</p>
-      <nav>
-        <img src="images/logo.png" alt="logo" />
-        <ul>
-          <li><a href="index.html">About us</a></li>
-          <li><a href="menu.html">Menu</a></li>
-          <li><a href="about.html">Order Now</a></li>
-          <li><a href="contact.html">Events</a></li>
-          <li><a href="contact.html">Contact us</a></li>
-        </ul>
-      </nav>
+  <body class="home-page">
+    <p id="banner">7304 Parkway Drive S, Hanover, MD 21076</p>
+    <header class="header-section">
+      <section class="menuWrap">
+        <img src="images/logo.svg" class="logo" alt="logo" />
+        <input type="checkbox" id="checkbox" />
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pages/about.html" target="_blank">About us</a></li>
+            <li>
+              <a href="#">Menu</a>
+              <ul class="sub-menu">
+                <li><a href="./pages/lunch.html" target="_blank">Lunch</a></li>
+                <li>
+                  <a href="./pages/dinner.html" target="_blank">Dinner</a>
+                </li>
+                <li><a href="./pages/beers.html" target="_blank">Beers</a></li>
+                <li>
+                  <a href="./pages/desserts.html" target="_blank">Desserts</a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="pages/order.html" target="_blank">Order Now</a></li>
+            <li><a href="pages/gallery.html" target="_blank">Gallery</a></li>
+            <li><a href="pages/contact.html" target="_blank">Contact us</a></li>
+            <li><a href="pages/reserve.html" target="_blank">Reserve</a></li>
+          </ul>
+        </nav>
+        <label for="checkbox">
+          <i class="fa-solid fa-bars menuIcon"></i>
+          <i class="fa-solid fa-xmark menuClose"></i>
+        </label>
+      </section>
     </header>
     <main>
       <section class="hero-section">
         <!-- image slider -->
-        <div class="slider">
-          <img src="images/hero.png" alt="slider1" />
-          <img src="images/slider2.jpg" alt="slider2" />
-          <img src="images/slider3.jpg" alt="slider3" />
-        </div>
+        <article class="slider">
+          <img
+            src="images/dishes/hero-dish-480w.jpg"
+            alt="hero dish"
+            srcset="images/dishes/hero-dish-480w.jpg 480w,
+          images/dishes/hero-dish-800w.jpg 800w,
+          images/dishes/hero-dish.jpg 1200w"
+            sizes="(max-width: 480px) 50vw,
+          (max-width: 800px) 70vw,
+          100vw"
+          />
+          <img
+            src="images/dishes/Apfelstrudel-480w.jpg"
+            srcset="images/dishes/Apfelstrudel-480w.jpg 480w, 
+          images/dishes/Apfelstrudel-800w.jpg 800w, 
+          images/dishes/Apfelstrudel.jpg 1200w"
+            sizes="(max-width: 480px) 50vw, 
+         (max-width: 800px) 70vw, 
+         100vw"
+            alt="apfelstrudel dish"
+          />
+          <img
+            src="images/dishes/Schwarzwurst-480w.jpg"
+            alt="Schwarzwurst"
+            srcset="images/dishes/Schwarzwurst-480w.jpg 480w,
+          images/dishes/Schwarzwurst-800w.jpg 800w,
+          images/dishes/Schwarzwurst.jpg 1200w"
+            sizes="(max-width: 480px) 50vw,
+          (max-width: 800px) 70vw,
+          100vw"
+          />
+          <img
+            src="images/dishes/Sauerbraten-480w.jpg"
+            alt="Sauerbraten"
+            srcset="images/dishes/Sauerbraten-480w.jpg 480w,
+          images/dishes/Sauerbraten-800w.jpg 800w,
+          images/dishes/Sauerbraten.jpg 1200w"
+            sizes="(max-width: 480px) 50vw,
+          (max-width: 800px) 70vw,
+          100vw"
+          />
+          <img
+            src="images/dishes/Schnitzel-480w.jpg"
+            alt="Schnitzel"
+            srcset="images/dishes/Schnitzel-480w.jpg 480w,
+          images/dishes/Schnitzel-800w.jpg 800w,
+          images/dishes/Schnitzel.jpg 1200w"
+            sizes="(max-width: 480px) 50vw,
+          (max-width: 800px) 70vw,
+          100vw"
+          />
+        </article>
       </section>
       <section class="branding-section">
-        <h2>Bavarian Brauhaus</h2>
+        <h1>Bavarian Brauhaus</h1>
         <blockquote>
           Eating and Drinking Holds Body and Soul Together
         </blockquote>
-        <a href="#" class="btn">Reserve a Table</a>
-        <a href="#" class="btn">Order Now</a>
+        <article class="btn-group">
+          <a href="./pages/reserve.html" target="_blank" class="btn"
+            >Reserve a Table</a
+          >
+          <a href="./pages/order.html" target="_blank" class="btn">Order Now</a>
+        </article>
       </section>
       <section class="menu-section">
-        <h2>Our Delicious Menu</h2>
+        <h1>Our Delicious Menu</h1>
         <article class="menus">
-          <figure class="menu-category">
-            <figcaption class="ribbon">Lunch</figcaption>
-            <img src="images/lunch.jpg" alt="lunch" />
-          </figure>
-          <figure class="menu-category">
-            <figcaption class="ribbon">Dinner</figcaption>
-            <img src="images/dinner.jpg" alt="dinner" />
-          </figure>
-          <figure class="menu-category">
-            <figcaption class="ribbon">Beers</figcaption>
-            <img src="images/beers.jpg" alt="beers" />
-          </figure>
-          <figure class="menu-category">
-            <figcaption class="ribbon">Desserts</figcaption>
-            <img src="images/desserts.jpg" alt="desserts" />
-          </figure>
+          <a href="pages/lunch.html" target="_blank">
+            <figure class="menu-category">
+              <figcaption class="ribbon">Lunch</figcaption>
+              <img src="images/menu/lunch-480w.jpg" alt="lunch" />
+            </figure>
+          </a>
+          <a href="pages/dinner.html" target="_blank">
+            <figure class="menu-category">
+              <figcaption class="ribbon">Dinner</figcaption>
+              <img src="images/menu/dinner-480w.jpg" alt="dinner" />
+            </figure>
+          </a>
+          <a href="pages/beers.html" target="_blank">
+            <figure class="menu-category">
+              <figcaption class="ribbon">Beers</figcaption>
+              <img src="images/menu/beers-480w.jpg" alt="beers" />
+            </figure>
+          </a>
+          <a href="pages/desserts.html" target="_blank">
+            <figure class="menu-category">
+              <figcaption class="ribbon">Desserts</figcaption>
+              <img src="images/menu/desserts-480w.jpg" alt="desserts" />
+            </figure>
+          </a>
         </article>
       </section>
       <section class="contact-section">
-        <article>
+        <!-- <h1>How to Reach Us</h1> -->
+        <article class="location">
           <header>
             <i class="fa-solid fa-location-dot"></i>
-            <h3>Location</h3>
+            <h2>Location</h2>
           </header>
-          <p>7304 Parkway Drive S, Hanover, MD 21076</p>
-          <a href="#" class="btn">Get Directions</a>
+          <ul>
+            <li>
+              <p>7304 Parkway Drive S, Hanover, MD 21076</p>
+            </li>
+            <li>
+              <p>(Old Dorsey Road off Coca Cola Drive Exit via Route #100)</p>
+            </li>
+          </ul>
+          <a
+            href="https://maps.app.goo.gl/3rVKa5UQNf3rbozU7"
+            class="btn"
+            target="_blank"
+            >Get Directions</a
+          >
         </article>
-        <article>
+        <article class="hours">
           <header>
-            <i class="fa-solid fa-location-dot"></i>
-            <h3>Hours</h3>
+            <i class="fa-regular fa-clock"></i>
+            <h2>Hours</h2>
           </header>
-          <p>7304 Parkway Drive S, Hanover, MD 21076</p>
+          <ul>
+            <li>
+              <p><strong>Tuesday - Saturday</strong></p>
+              <p>3 pm - 9 pm</p>
+            </li>
+            <li>
+              <p><strong>Sunday & Monday</strong></p>
+              <p>Closed</p>
+            </li>
+            <li>
+              <h3>Happy Hour In the Bar</h3>
+              <p><strong>Tuesday - Friday</strong></p>
+              <p>3 pm - 7 pm</p>
+            </li>
+          </ul>
+          <a href="#" class="btn hidden">placeholder</a>
         </article>
-        <article>
+        <article class="contact">
           <header>
-            <i class="fa-solid fa-location-dot"></i>
-            <h3>Contact us</h3>
+            <i class="fa-solid fa-square-phone"> </i>
+            <h2>Contact us</h2>
           </header>
-          <p>7304 Parkway Drive S, Hanover, MD 21076</p>
+          <ul>
+            <li>
+              <p><strong>Phone: </strong>410-712-0300</p>
+            </li>
+            <li>
+              <p>
+                <strong> Email: </strong>
+                <a href="mailto:support@bariaian.com">support@bariaian.com</a>
+              </p>
+            </li>
+          </ul>
           <a href="#" class="btn">Get in Touch</a>
         </article>
       </section>
     </main>
-    <footer>
-      
-        <ul>
+    <footer class="footer-section">
+      <section class="footerMenuWrap">
+        <ul class="footer-links">
+          <li><a href="pages/events.html" target="_blank">Events</a></li>
+          <li><a href="pages/reserve.html" target="_blank">Reserve</a></li>
+          <li><a href="pages/gallery.html" target="_blank">Gallery</a></li>
+          <li><a href="pages/contact.html" target="_blank">Contact us</a></li>
+          <li><a href="pages/about.html" target="_blank">About us</a></li>
           <li><a href="#">FAQ</a></li>
+          <li><a href="#">Policies</a></li>
           <li><a href="#">Careers</a></li>
-          <li><a href="#">Order Now</a></li>
-          <li><a href="#">Events</a></li>
-          <li><a href="#">Contact us</a></li>
+          <li><a href="#">Membership</a></li>
+          <li><a href="#">Gift Cards</a></li>
         </ul>
-     
-      <ul class="logos">
-        <li>
-          <a href="#"><i class="fab fa-facebook"></i></a>
-        </li>
-        <li>
-          <a href="#"><i class="fa-brands fa-facebook-messenger"></i></a>
-        </li>
-        <li>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-        </li>
-        <li>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-        </li>
-      </ul>
+        <ul class="social-media-icons">
+          <li>
+            <a
+              href="https://www.facebook.com/thebavarianbrauhaus"
+              target="_blank"
+              ><i class="fab fa-facebook"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://www.facebook.com/messages/t/261165247410447"
+              target="_blank"
+              ><i class="fa-brands fa-facebook-messenger"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </li>
+        </ul>
+      </section>
     </footer>
+    <p id="rights">&copy; 2024 Bavarian Brauhaus. All rights reserved.</p>
+
+    <!-- load jquery lib -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

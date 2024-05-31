@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- google fonts end -->
+
+    <!-- font awesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      type="text/css"
+    />
+    <!-- end font awesome icons -->
+    <!-- lightbox css -->
+    <link rel="stylesheet" href="../css/lightbox.min.css" />
+
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" />
+    <link rel="stylesheet" href="../css/main.css" type="text/css" />
+  </head>
+  <body id="gallery">
+    <p id="banner">7304 Parkway Drive S, Hanover, MD 21076</p>
+    <header class="header-section">
+      <section class="menuWrap">
+        <img src="../images/logo.svg" class="logo" alt="logo" />
+        <input type="checkbox" id="checkbox" />
+        <nav>
+          <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about.html" target="_blank">About us</a></li>
+            <li>
+              <a href="#">Menu</a>
+              <ul class="sub-menu">
+                <li><a href="lunch.html" target="_blank">Lunch</a></li>
+                <li>
+                  <a href="dinner.html" target="_blank">Dinner</a>
+                </li>
+                <li><a href="beers.html" target="_blank">Beers</a></li>
+                <li>
+                  <a href="desserts.html" target="_blank">Desserts</a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="order.html" target="_blank">Order Now</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li>
+              <a href="contact.html" target="_blank">Contact us</a>
+            </li>
+            <li><a href="reserve.html" target="_blank">Reserve</a></li>
+          </ul>
+        </nav>
+        <label for="checkbox">
+          <i class="fa-solid fa-bars menuIcon"></i>
+          <i class="fa-solid fa-xmark menuClose"></i>
+        </label>
+      </section>
+    </header>
+    <main>
+      <h1>Our Gallery</h1>
+      <section class="grid-gallery">
+        <!-- image 1 -->
+        <article class="grid-item">
+          <a
+            href="../images/dishes/Apfelstrudel.jpg"
+            data-lightbox="gridImage"
+            data-title="Apfelstrudel"
+          >
+            <img
+              src="../images/dishes/Apfelstrudel-480w.jpg"
+              srcset="../images/dishes/Apfelstrudel-480w.jpg 480w, 
+        ../images/dishes/Apfelstrudel-800w.jpg 800w, 
+        ../images/dishes/Apfelstrudel.jpg 1200w"
+              sizes="(max-width: 480px) 50vw, 
+       (max-width: 800px) 70vw, 
+       100vw"
+              alt="apfelstrudel dish"
+            />
+          </a>
+        </article>
+        <!-- image 2 -->
+        <article class="grid-item">
+          <a
+            href="../images/menu/beers.jpg"
+            data-lightbox="gridImage"
+            data-title="beers"
+          >
+            <img
+              src="../images/menu/beers-480w.jpg"
+              alt="beers"
+              srcset="../images/menu/beers-480w.jpg 480w,
+          ../images/menu/beers-800w.jpg 800w,
+          ../images/menu/beers.jpg 1200w"
+              sizes="(max-width: 480px) 50vw,
+          (max-width: 800px) 70vw,
+          100vw"
+            />
+          </a>
+        </article>
+        <!-- image 3 -->
+        <article class="grid-item">
+          <a
+            href="../images/dishes/forestcake.jpg"
+            data-lightbox="gridImage"
+            data-title="forest cake"
+          >
+            <img
+              src="../images/dishes/forestcake-480w.jpg"
+              alt="forest cake"
+              srcset="../images/dishes/forestcake-480w.jpg 480w, 
+            ../images/dishes/forestcake-800w.jpg 800w, 
+            ../images/dishes/forestcake.jpg 1200w"
+              sizes="(max-width: 480px) 50vw, 
+         (max-width: 800px) 70vw, 
+         100vw"
+            />
+          </a>
+        </article>
+        <!-- image 4 -->
+        <article class="grid-item">
+          <a
+            href="../images/menu/dinner.jpg"
+            data-lightbox="gridImage"
+            data-title="dinner"
+          >
+            <img
+              src="../images/menu/dinner-480w.jpg"
+              alt="dinner"
+              srcset="../images/menu/dinner-480w.jpg 480w,
+          ../images/menu/dinner-800w.jpg 800w,
+          ../images/menu/dinner.jpg 1200w"
+              sizes="(max-width: 480px) 50vw,
+          (max-width: 800px) 70vw,
+          100vw"
+            />
+          </a>
+        </article>
+        <!-- image 5 -->
+        <article class="grid-item">
+          <a
+            href="../images/dishes/germandish.jpg"
+            data-lightbox="gridImage"
+            data-title="Traditional German Cuisine"
+          >
+            <img
+              src="../images/dishes/germandish-480w.jpg"
+              alt="German Cuisine"
+              srcset="../images/dishes/germandish-480w.jpg 480w,
+            ../images/dishes/germandish-800w.jpg 800w,
+            ../images/dishes/germandish.jpg 1200w"
+              sizes="(max-width: 480px) 50vw,
+            (max-width: 800px) 70vw,
+            100vw"
+            />
+          </a>
+        </article>
+        <!-- image 6 -->
+        <article class="grid-item">
+          <a
+            href="../images/dishes/pfannkuchen.jpg"
+            data-lightbox="gridImage"
+            data-title="pfannkuchen"
+          >
+            <img
+              src="../images/dishes/pfannkuchen-480w.jpg"
+              alt="pfannkuchen"
+              srcset="../images/dishes/pfannkuchen-480w.jpg 480w,
+            ../images/dishes/pfannkuchen-800w.jpg 800w,
+            ../images/dishes/pfannkuchen.jpg 1200w"
+              sizes="(max-width: 480px) 50vw,
+            (max-width: 800px) 70vw,
+            100vw"
+            />
+          </a>
+        </article>
+        <!-- image 7 -->
+        <article class="grid-item">
+          <a
+            href="../images/dishes/Rouladen.jpg"
+            data-lightbox="gridImage"
+            data-title="Rouladen"
+          >
+            <img
+              src="../images/dishes/Rouladen-480w.jpg"
+              alt="Rouladen"
+              srcset="../images/dishes/Rouladen-480w.jpg 480w,
+            ../images/dishes/Rouladen-800w.jpg 800w,
+            ../images/dishes/Rouladen.jpg 1200w"
+              sizes="(max-width: 480px) 50vw,
+            (max-width: 800px) 70vw,
+            100vw"
+            />
+          </a>
+        </article>
+        <!-- image 8 -->
+        <article class="grid-item">
+          <a
+            href="../images/dishes/Sauerbraten.jpg"
+            data-lightbox="gridImage"
+            data-title="Sauerbraten"
+          >
+            <img
+              src="../images/dishes/Sauerbraten-480w.jpg"
+              alt="Sauerbraten"
+              srcset="../images/dishes/Sauerbraten-480w.jpg 480w,
+            ../images/dishes/Sauerbraten-800w.jpg 800w,
+            ../images/dishes/Sauerbraten.jpg 1200w"
+              sizes="(max-width: 480px) 50vw,
+            (max-width: 800px) 70vw,
+            100vw"
+            />
+          </a>
+        </article>
+        <!-- image 9 -->
+        <article class="grid-item">
+          <a
+            href="../images/dishes/Schnitzel.jpg"
+            data-lightbox="gridImage"
+            data-title="Schnitzel"
+          >
+            <img
+              src="../images/dishes/Schnitzel-480w.jpg"
+              alt="Schnitzel"
+              srcset="../images/dishes/Schnitzel-480w.jpg 480w,
+            ../images/dishes/Schnitzel-800w.jpg 800w,
+            ../images/dishes/Schnitzel.jpg 1200w"
+              sizes="(max-width: 480px) 50vw,
+            (max-width: 800px) 70vw,
+            100vw"
+            />
+          </a>
+        </article>
+        <!-- image 10 -->
+        <article class="grid-item">
+          <a
+            href="../images/dishes/Schwarzwurst.jpg"
+            data-lightbox="gridImage"
+            data-title="Schwarzwurst"
+          >
+            <img
+              src="../images/dishes/Schwarzwurst-480w.jpg"
+              alt="Schwarzwurst"
+              srcset="../images/dishes/Schwarzwurst-480w.jpg 480w,
+            ../images/dishes/Schwarzwurst-800w.jpg 800w,
+            ../images/dishes/Schwarzwurst.jpg 1200w"
+              sizes="(max-width: 480px) 50vw,
+            (max-width: 800px) 70vw,
+            100vw"
+            />
+          </a>
+        </article>
+        <!-- image 11 -->
+        <article class="grid-item">
+          <a
+            href="../images/events/catering.jpg"
+            data-lightbox="gridImage"
+            data-title="Events and Catering"
+          >
+            <img
+              src="../images/events/catering-480w.jpg"
+              alt="events and catering"
+              srcset="../images/events/catering-480w.jpg 480w,
+            ../images/events/catering-800w.jpg 800w,
+            ../images/events/catering.jpg 1200w"
+              sizes="(max-width: 480px) 50vw,
+            (max-width: 800px) 70vw,
+            100vw"
+            />
+          </a>
+        </article>
+        <!-- image 12 -->
+        <article class="grid-item">
+          <a
+            href="../images/menu/menu-hero.jpg"
+            data-lightbox="gridImage"
+            data-title="Celebration"
+          >
+            <img
+              src="../images/menu/menu-hero-480w.jpg"
+              alt="celebration"
+              srcset="../images/menu/menu-hero-480w.jpg 480w,
+            ../images/menu/menu-hero-800w.jpg 800w,
+            ../images/menu/menu-hero.jpg 1200w"
+              sizes="(max-width: 480px) 50vw,
+            (max-width: 800px) 70vw,
+            100vw"
+            />
+          </a>
+        </article>
+
+        <!-- image 13 -->
+        <article class="grid-item">
+          <a
+            href="../images/dishes/hero-dish.jpg"
+            data-lightbox="gridImage"
+            data-title="Gathering"
+          >
+            <img
+              src="../images/dishes/hero-dish-480w.jpg"
+              alt="Gathering"
+              srcset="../images/dishes/hero-dish-480w.jpg 480w,
+            ../images/dishes/hero-dish-800w.jpg 800w,
+            ../images/dishes/hero-dish.jpg 1200w"
+              sizes="(max-width: 480px) 50vw,
+            (max-width: 800px) 70vw,
+            100vw"
+            />
+          </a>
+        </article>
+      </section>
+    </main>
+    <footer class="footer-section">
+      <section class="footerMenuWrap">
+        <ul class="footer-links">
+          <li><a href="events.html" target="_blank">Events</a></li>
+          <li><a href="reserve.html" target="_blank">Reserve</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li>
+            <a href="contact.html" target="_blank">Contact us</a>
+          </li>
+          <li><a href="about.html" target="_blank">About us</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Policies</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Membership</a></li>
+          <li><a href="#">Gift Cards</a></li>
+        </ul>
+        <ul class="social-media-icons">
+          <li>
+            <a
+              href="https://www.facebook.com/thebavarianbrauhaus"
+              target="_blank"
+              ><i class="fab fa-facebook"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://www.facebook.com/messages/t/261165247410447"
+              target="_blank"
+              ><i class="fa-brands fa-facebook-messenger"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </li>
+        </ul>
+      </section>
+    </footer>
+    <p id="rights">&copy; 2024 Bavarian Brauhaus. All rights reserved.</p>
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../js/lightbox.min.js"></script>
+    <script src="../js/gallery.js"></script>
+  </body>
+</html>
