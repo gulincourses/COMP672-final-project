@@ -5,9 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Bavarian Brauhaus</title>
-    <link rel="stylesheet" href="css/reset.css" type="text/css" />
-    <!-- google fonts -->
 
+    <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,22 +24,19 @@
     <!-- end font awesome icons -->
 
     <!-- slick slider -->
-
-    <!-- Add the slick-theme.css if you want default styling -->
     <link
       rel="stylesheet"
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
-    <!-- Add the slick-theme.css if you want default styling -->
     <link
       rel="stylesheet"
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
     />
-
     <!-- slick slider end -->
 
+    <link rel="stylesheet" href="css/reset.css" type="text/css" />
     <link rel="stylesheet" href="css/main.css" type="text/css" />
   </head>
   <body class="home-page">
@@ -51,20 +47,24 @@
         <input type="checkbox" id="checkbox" />
         <nav>
           <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pages/about.html" target="_blank">About us</a></li>
             <li>
               <a href="#">Menu</a>
               <ul class="sub-menu">
-                <li><a href="#">Lunch</a></li>
-                <li><a href="#">Dinner</a></li>
-                <li><a href="#">Beers</a></li>
-                <li><a href="#">Desserts</a></li>
+                <li><a href="./pages/lunch.html" target="_blank">Lunch</a></li>
+                <li>
+                  <a href="./pages/dinner.html" target="_blank">Dinner</a>
+                </li>
+                <li><a href="./pages/beers.html" target="_blank">Beers</a></li>
+                <li>
+                  <a href="./pages/desserts.html" target="_blank">Desserts</a>
+                </li>
               </ul>
             </li>
-            <li><a href="#">Order Now</a></li>
-            <li><a href="#">Events</a></li>
-            <li><a href="../root/pages/contactUs.html">Contact us</a></li>
+            <li><a href="pages/order.html" target="_blank">Order Now</a></li>
+            <li><a href="pages/gallery.html" target="_blank">Gallery</a></li>
+            <li><a href="../root/pages/contactUs.html" target="_blank">Contact us</a></li>
           </ul>
         </nav>
         <label for="checkbox">
@@ -75,17 +75,58 @@
     </header>
     <main>
       <section class="hero-section">
-        <!-- image sliders -->
+        <!-- image slider -->
         <article class="slider">
           <img
-            src="images/dishes/hero-dish.jpg"
+            src="images/dishes/hero-dish-480w.jpg"
             alt="hero dish"
-            sizes="(min-width: 36em) 33.3vw, 100vw"
+            srcset="images/dishes/hero-dish-480w.jpg 480w,
+          images/dishes/hero-dish-800w.jpg 800w,
+          images/dishes/hero-dish.jpg 1200w"
+            sizes="(max-width: 480px) 50vw,
+          (max-width: 800px) 70vw,
+          100vw"
           />
-          <img src="images/dishes/Apfelstrudel.png" alt="apfelstrudel" />
-          <img src="images/dishes/Kartoffelpuffer.png" alt="kartoffelpuffer" />
-          <img src="images/dishes/Sauerbraten.png" alt="Sauerbraten" />
-          <img src="images/dishes/Schnitzel.png" alt="Schnitzel" />
+          <img
+            src="images/dishes/Apfelstrudel-480w.jpg"
+            srcset="images/dishes/Apfelstrudel-480w.jpg 480w, 
+          images/dishes/Apfelstrudel-800w.jpg 800w, 
+          images/dishes/Apfelstrudel.jpg 1200w"
+            sizes="(max-width: 480px) 50vw, 
+         (max-width: 800px) 70vw, 
+         100vw"
+            alt="apfelstrudel dish"
+          />
+          <img
+            src="images/dishes/Schwarzwurst-480w.jpg"
+            alt="Schwarzwurst"
+            srcset="images/dishes/Schwarzwurst-480w.jpg 480w,
+          images/dishes/Schwarzwurst-800w.jpg 800w,
+          images/dishes/Schwarzwurst.jpg 1200w"
+            sizes="(max-width: 480px) 50vw,
+          (max-width: 800px) 70vw,
+          100vw"
+          />
+          <img
+            src="images/dishes/Sauerbraten-480w.jpg"
+            alt="Sauerbraten"
+            srcset="images/dishes/Sauerbraten-480w.jpg 480w,
+          images/dishes/Sauerbraten-800w.jpg 800w,
+          images/dishes/Sauerbraten.jpg 1200w"
+            sizes="(max-width: 480px) 50vw,
+          (max-width: 800px) 70vw,
+          100vw"
+          />
+          <img
+            src="images/dishes/Schnitzel-480w.jpg"
+            alt="Schnitzel"
+            srcset="images/dishes/Schnitzel-480w.jpg 480w,
+          images/dishes/Schnitzel-800w.jpg 800w,
+          images/dishes/Schnitzel.jpg 1200w"
+            sizes="(max-width: 480px) 50vw,
+          (max-width: 800px) 70vw,
+          100vw"
+          />
         </article>
       </section>
       <section class="branding-section">
@@ -94,29 +135,39 @@
           Eating and Drinking Holds Body and Soul Together
         </blockquote>
         <article class="btn-group">
-          <a href="#" class="btn">Reserve a Table</a>
-          <a href="#" class="btn">Order Now</a>
+          <a href="./pages/reserve.html" target="_blank" class="btn"
+            >Reserve a Table</a
+          >
+          <a href="./pages/order.html" target="_blank" class="btn">Order Now</a>
         </article>
       </section>
       <section class="menu-section">
         <h1>Our Delicious Menu</h1>
         <article class="menus">
-          <figure class="menu-category">
-            <figcaption class="ribbon">Lunch</figcaption>
-            <img src="images/menu/lunch.jpg" alt="lunch" />
-          </figure>
-          <figure class="menu-category">
-            <figcaption class="ribbon">Dinner</figcaption>
-            <img src="images/menu/dinner.jpg" alt="dinner" />
-          </figure>
-          <figure class="menu-category">
-            <figcaption class="ribbon">Beers</figcaption>
-            <img src="images/menu/beers.jpg" alt="beers" />
-          </figure>
-          <figure class="menu-category">
-            <figcaption class="ribbon">Desserts</figcaption>
-            <img src="images/menu/desserts.jpg" alt="desserts" />
-          </figure>
+          <a href="pages/lunch.html" target="_blank">
+            <figure class="menu-category">
+              <figcaption class="ribbon">Lunch</figcaption>
+              <img src="images/menu/lunch-480w.jpg" alt="lunch" />
+            </figure>
+          </a>
+          <a href="pages/dinner.html" target="_blank">
+            <figure class="menu-category">
+              <figcaption class="ribbon">Dinner</figcaption>
+              <img src="images/menu/dinner-480w.jpg" alt="dinner" />
+            </figure>
+          </a>
+          <a href="pages/beers.html" target="_blank">
+            <figure class="menu-category">
+              <figcaption class="ribbon">Beers</figcaption>
+              <img src="images/menu/beers-480w.jpg" alt="beers" />
+            </figure>
+          </a>
+          <a href="pages/desserts.html" target="_blank">
+            <figure class="menu-category">
+              <figcaption class="ribbon">Desserts</figcaption>
+              <img src="images/menu/desserts-480w.jpg" alt="desserts" />
+            </figure>
+          </a>
         </article>
       </section>
       <section class="contact-section">
@@ -134,7 +185,7 @@
               <p>(Old Dorsey Road off Coca Cola Drive Exit via Route #100)</p>
             </li>
           </ul>
-          <a href="#" class="btn">Get Directions</a>
+          <a href="pages/contactUs.html" class="btn">Get Directions</a>
         </article>
         <article class="hours">
           <header>
@@ -173,30 +224,38 @@
               <p>click here to send us a message</p>
             </li>
           </ul>
-          <a href="#" class="btn">Get in Touch</a>
+          <a href="pages/contactUs.html" class="btn">Get in Touch</a>
         </article>
       </section>
     </main>
     <footer class="footer-section">
       <section class="footerMenuWrap">
         <ul class="footer-links">
+          <li><a href="pages/events.html" target="_blank">Events</a></li>
+          <li><a href="pages/reserve.html" target="_blank">Reserve</a></li>
+          <li><a href="pages/gallery.html" target="_blank">Gallery</a></li>
+          <li><a href="pages/contactUs.html" target="_blank">Contact us</a></li>
+          <li><a href="../pages/about.html" target="_blank">About us</a></li>
           <li><a href="#">FAQ</a></li>
-          <li><a href="#">Menu</a></li>
-          <li><a href="#">Gallery</a></li>
-          <li><a href="#">Events</a></li>
-          <li><a href="#">Contact us</a></li>
           <li><a href="#">Policies</a></li>
-          <li><a href="#">About us</a></li>
           <li><a href="#">Careers</a></li>
           <li><a href="#">Membership</a></li>
           <li><a href="#">Gift Cards</a></li>
         </ul>
         <ul class="social-media-icons">
           <li>
-            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a
+              href="https://www.facebook.com/thebavarianbrauhaus"
+              target="_blank"
+              ><i class="fab fa-facebook"></i
+            ></a>
           </li>
           <li>
-            <a href="#"><i class="fa-brands fa-facebook-messenger"></i></a>
+            <a
+              href="https://www.facebook.com/messages/t/261165247410447"
+              target="_blank"
+              ><i class="fa-brands fa-facebook-messenger"></i
+            ></a>
           </li>
           <li>
             <a href="#"><i class="fab fa-twitter"></i></a>
@@ -210,18 +269,9 @@
     <p id="rights">&copy; 2024 Bavarian Brauhaus. All rights reserved.</p>
 
     <!-- load jquery lib -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script>
-      $(document).ready(function(){
-        $('.slider').slick({
-          dots: true,
-          infinite: true,
-          speed: 500,
-          fade: true,
-          cssEase: 'linear'
-        });
-      });
-    </script>
+    <script src="js/main.js"></script>
   </body>
 </html>
