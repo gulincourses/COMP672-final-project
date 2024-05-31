@@ -1616,5 +1616,103 @@ blockquote {
 /* ==============================
    EVENTS PAGE STYLES
    ============================== */
+.events-section {
+  margin-top: 2vh;
+  margin: 0 auto;
+  padding: var(--spacer) var(--spacer-dbl);
+}
+
+.events-section p {
+  font-weight: var(--fw-m);
+  font-size: var(--fs-p);
+}
+
+.events-section h1 {
+  text-align: center;
+  font-size: calc(var(--fs-h1) * 1.2);
+  margin: var(--spacer-dbl);
+}
+.events-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacer);
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease;
+  box-sizing: border-box;
+  line-height: 1.5;
+  margin: var(--spacer) auto;
+}
+
+.events-card img,
+.picture-events img {
+  display: block;
+  margin: var(--spacer) auto;
+  border: calc(1px + 0.5vw) solid white;
+}
+
+.events-card:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.events-card h3 a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  font-weight: var(--fw-b);
+}
+
+.events-card figcaption {
+  text-align: left;
+}
+
+.email-signup-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: var(--spacer-dbl) auto;
+  gap: var(--spacer);
+}
+
+.email-signup-form .formControl {
+  box-sizing: border-box;
+  display: block;
+  padding: calc(0.5 * var(--spacer));
+  font-size: var(--fs-p);
+  font-family: var(--primary-font);
+  color: var(--neutral-mid-color);
+  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 600px;
+}
+
+.email-signup-form input[type="submit"] {
+  padding: calc(0.5 * var(--spacer)) var(--spacer-dbl);
+  font-size: var(--fs-p);
+  font-family: var(--primary-font);
+  color: var(--neutral-lt-color);
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  align-self: center;
+}
+
+/* media queries for events page */
+
+@media screen and (min-width: 600px) {
+  .email-signup-form {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .email-signup-form .formControl {
+    width: auto;
+  }
+}
 
 /* ---END EVENTS PAGE STYLES---- */
