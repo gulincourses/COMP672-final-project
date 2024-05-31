@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Bavarian Brauhaus</title>
+    <title>Contact us</title>
     <link rel="stylesheet" href="../css/reset.css" type="text/css" />
+
     <!-- google fonts -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,27 +23,9 @@
       type="text/css"
     />
     <!-- end font awesome icons -->
-
-    <!-- slick slider -->
-
-    <!-- Add the slick-theme.css if you want default styling -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-    />
-    <!-- Add the slick-theme.css if you want default styling -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
-    />
-
-    <!-- slick slider end -->
-
     <link rel="stylesheet" href="../css/main.css" type="text/css" />
   </head>
-  <body class="home-page">
+  <body class="contact-page">
     <p id="banner">7304 Parkway Drive S, Hanover, MD 21076</p>
     <header class="header-section">
       <section class="menuWrap">
@@ -52,19 +34,23 @@
         <nav>
           <ul class="nav-links">
             <li><a href="../index.html">Home</a></li>
-            <li><a href="#">About us</a></li>
+            <li><a href="about.html" target="_blank">About us</a></li>
             <li>
               <a href="#">Menu</a>
               <ul class="sub-menu">
-                <li><a href="#">Lunch</a></li>
-                <li><a href="#">Dinner</a></li>
-                <li><a href="#">Beers</a></li>
-                <li><a href="#">Desserts</a></li>
+                <li><a href="lunch.html" target="_blank">Lunch</a></li>
+                <li>
+                  <a href="dinner.html" target="_blank">Dinner</a>
+                </li>
+                <li><a href="beers.html" target="_blank">Beers</a></li>
+                <li>
+                  <a href="desserts.html">Desserts</a>
+                </li>
               </ul>
             </li>
-            <li><a href="#">Order Now</a></li>
-            <li><a href="#">Events</a></li>
-            <li><a href="../pages/contactUs.html">Contact us</a></li>
+            <li><a href="order.html" target="_blank">Order Now</a></li>
+            <li><a href="gallery.html" target="_blank">Gallery</a></li>
+            <li><a href="contactUs.html">Contact us</a></li>
           </ul>
         </nav>
         <label for="checkbox">
@@ -74,84 +60,92 @@
       </section>
     </header>
     <main>
-        <section class="contactInfo-section">
+      <section class="contactInfo-section">
            
-           <article class="contactDetails">
-            <h1>Contact Us</h1>
-            <p>Thank you for your interest in Bavarian Brauhaus! Please fill out the form below or feel free to reach out to us via text or call with any questions, comments, or concerns. We're here to assist you !</p><br>
-            <p>Phone: 410-712-0300</p>
-            <p>Email:<a href="mailto:support@bavarian.com" target="_blank"> support@bavarian.com</a></p>
-          </article>
-          <form action="#" id="formInfo" method="post" enctype="text/plain">
-              <fieldset>
-                <legend>Get In Touch:</legend>
-                <ul class="namefield">
-                  <li><label for="firstName">Name:*</label>
-                  <input type="text" id="firstName" name="firstName" value="" class="inputStyle" required ></li>
-                  <li><label for="lastName">Last Name:</label>
-                  <input type="text" id="lastName" name="lastName" value="" class="inputStyle" ></li>
-                </ul>
-                <label for="email">Email address:*</label>
-                <input type="email" id="email" name="email" value="" class="inputStyle" required >
-                <label for="phone">Phone number: (111-222-3333)</label>
-                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="inputStyle">
-                <label for="dropdownList" class="dropdownLabal">What is it about?</label>
-                <select id="dropdownList" name="dropdownList" class="inputStyle dropdownFieldsetInput">
-                  <option value="lunch">Lunch</option>
-                  <option value="dinner">Dinner</option>
-                  <option value="drinks">Beers</option>
-                  <option value="drinks">Desserts</option>
-                </select>
-                <p>Have you tested our dishes?</p>
-                <ul class="radiolist">
-                    <li><input type="radio" name="testdish" id="yes" value="yes">
-                    <label for="yes">Yes</label></li>
-                    <li><input type="radio" name="testdish" id="no" value="no">
-                    <label for="no">No</label></li>
-                  </ul>
-                <p>Reason to contact:</p>
-                <ul class="checklist">
-                  <li><input type="checkbox" name="msgabout" id="food" value="food">
-                  <label for="food">Food</label></li>
-                  <li><input type="checkbox" name="msgabout" id="service" value="service">
-                  <label for="service">Service</label></li>
-                  <li><input type="checkbox" name="msgabout" id="payment" value="payment">
-                  <label for="payment">Payment</label></li>
-                  <li><input type="checkbox" name="msgabout" id="other" value="other">
-                  <label for="other">Other</label></li>
-                </ul>
-                
-                <label for="message">What can we do for you?</label>
-                <textarea name="message" id="message" rows="8" class="inputStyle" ></textarea>
-                <input type="submit" value="Submit" id="submitBtn">
-              </fieldset>
-          </form>
-           
-        </section>
-        <div class="mapWrapper">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3093.1051718056883!2d-76.73607987345953!3d39.17232973571885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7e17dbab7912b%3A0xde8d14262c55b5a4!2s7304%20Parkway%20Dr%20S%2C%20Hanover%2C%20MD%2021076!5e0!3m2!1sen!2sus!4v1716446739214!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+        <article class="contactDetails">
+         <h1>Contact Us</h1>
+         <p>Thank you for your interest in Bavarian Brauhaus! Please fill out the form below or feel free to reach out to us via text or call with any questions, comments, or concerns. We're here to assist you !</p><br>
+         <p>Phone: 410-712-0300</p>
+         <p>Email:<a href="mailto:support@bavarian.com" target="_blank"> support@bavarian.com</a></p>
+       </article>
+       <form action="#" id="formInfo" method="post" enctype="text/plain">
+           <fieldset>
+             <legend>Get In Touch:</legend>
+             <ul class="namefield">
+               <li><label for="firstName">Name:*</label>
+               <input type="text" id="firstName" name="firstName" value="" class="inputStyle" required ></li>
+               <li><label for="lastName">Last Name:</label>
+               <input type="text" id="lastName" name="lastName" value="" class="inputStyle" ></li>
+             </ul>
+             <label for="email">Email address:*</label>
+             <input type="email" id="email" name="email" value="" class="inputStyle" required >
+             <label for="phone">Phone number: (111-222-3333)</label>
+             <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="inputStyle">
+             <label for="dropdownList" class="dropdownLabal">What is it about?</label>
+             <select id="dropdownList" name="dropdownList" class="inputStyle dropdownFieldsetInput">
+               <option value="lunch">Lunch</option>
+               <option value="dinner">Dinner</option>
+               <option value="drinks">Beers</option>
+               <option value="drinks">Desserts</option>
+             </select>
+             <p>Have you tested our dishes?</p>
+             <ul class="radiolist">
+                 <li><input type="radio" name="testdish" id="yes" value="yes">
+                 <label for="yes">Yes</label></li>
+                 <li><input type="radio" name="testdish" id="no" value="no">
+                 <label for="no">No</label></li>
+               </ul>
+             <p>Reason to contact:</p>
+             <ul class="checklist">
+               <li><input type="checkbox" name="msgabout" id="food" value="food">
+               <label for="food">Food</label></li>
+               <li><input type="checkbox" name="msgabout" id="service" value="service">
+               <label for="service">Service</label></li>
+               <li><input type="checkbox" name="msgabout" id="payment" value="payment">
+               <label for="payment">Payment</label></li>
+               <li><input type="checkbox" name="msgabout" id="other" value="other">
+               <label for="other">Other</label></li>
+             </ul>
+             
+             <label for="message">What can we do for you?</label>
+             <textarea name="message" id="message" rows="8" class="inputStyle" ></textarea>
+             <input type="submit" value="Submit" id="submitBtn">
+           </fieldset>
+       </form>
+        
+     </section>
+     <div class="mapWrapper">
+       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3093.1051718056883!2d-76.73607987345953!3d39.17232973571885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7e17dbab7912b%3A0xde8d14262c55b5a4!2s7304%20Parkway%20Dr%20S%2C%20Hanover%2C%20MD%2021076!5e0!3m2!1sen!2sus!4v1716446739214!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+     </div>
     </main>
     <footer class="footer-section">
       <section class="footerMenuWrap">
         <ul class="footer-links">
+          <li><a href="events.html" target="_blank">Events</a></li>
+          <li><a href="reserve.html" target="_blank">Reserve</a></li>
+          <li><a href="gallery.html" target="_blank">Gallery</a></li>
+          <li><a href="contactUs.html">Contact us</a></li>
+          <li><a href="about.html" target="_blank">About us</a></li>
           <li><a href="#">FAQ</a></li>
-          <li><a href="#">Menu</a></li>
-          <li><a href="#">Gallery</a></li>
-          <li><a href="#">Events</a></li>
-          <li><a href="../pages/contactUs.html">Contact us</a></li>
           <li><a href="#">Policies</a></li>
-          <li><a href="#">About us</a></li>
           <li><a href="#">Careers</a></li>
           <li><a href="#">Membership</a></li>
           <li><a href="#">Gift Cards</a></li>
         </ul>
         <ul class="social-media-icons">
           <li>
-            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a
+              href="https://www.facebook.com/thebavarianbrauhaus"
+              target="_blank"
+              ><i class="fab fa-facebook"></i
+            ></a>
           </li>
           <li>
-            <a href="#"><i class="fa-brands fa-facebook-messenger"></i></a>
+            <a
+              href="https://www.facebook.com/messages/t/261165247410447"
+              target="_blank"
+              ><i class="fa-brands fa-facebook-messenger"></i
+            ></a>
           </li>
           <li>
             <a href="#"><i class="fab fa-twitter"></i></a>
@@ -163,21 +157,5 @@
       </section>
     </footer>
     <p id="rights">&copy; 2024 Bavarian Brauhaus. All rights reserved.</p>
-
-    <!-- load jquery lib -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script>
-      $(document).ready(function(){
-        $('.slider').slick({
-          dots: true,
-          infinite: true,
-          speed: 500,
-          fade: true,
-          cssEase: 'linear'
-        });
-      });
-    </script>
-    </body>
+  </body>
 </html>
-  
