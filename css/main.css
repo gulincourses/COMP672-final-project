@@ -2,12 +2,13 @@
   /* font family */
   --primary-font: "Montserrat", sans-serif;
   --headline-font: "Source Serif 4", serif;
+
   /* font weight */
   --fw-l: 300;
   --fw-m: 500;
   --fw-b: 700;
-  /* font size */
 
+  /* font size */
   --fs-base: 16px;
   --fs-body: var(--fs-base);
   --fs-h1: calc(var(--fs-base) * 2);
@@ -38,6 +39,7 @@
 
   /* max width */
   --max-width: 1400px;
+  --line-height: 1.5;
 
   /* grid responsive */
   --grid-cols: 1fr;
@@ -248,7 +250,7 @@ nav ul.nav-links > li {
   border-bottom: solid 1px var(--nav-text);
 }
 
-/* when closed hide some parts*/
+/* checkbox hack for menu */
 #checkbox {
   display: none;
 }
@@ -334,6 +336,7 @@ footer ul li {
 
 footer ul a,
 header ul a {
+  /* prevent line break */
   white-space: nowrap;
 }
 
@@ -352,7 +355,7 @@ header ul a {
 
 .footerMenuWrap {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: var(--grid-cols);
   box-sizing: border-box;
   width: 100%;
 }
@@ -400,22 +403,18 @@ header ul a {
     --fs-footer-nav-links: 18px;
   }
   .footerMenuWrap {
-    grid-template-columns: 3fr 1fr;
+    --grid-cols: 3fr 1fr;
     align-items: start;
+    max-width: var(--max-width);
+    margin: 0 auto;
   }
 
   .footer-links {
     justify-content: flex-start;
-    margin-right: auto;
   }
 
   .social-media-icons {
     justify-content: flex-end;
-    margin-left: auto;
-  }
-  .footerMenuWrap {
-    max-width: var(--max-width);
-    margin: 0 auto;
   }
 }
 
@@ -437,7 +436,6 @@ header ul a {
     background-color: inherit;
   }
 
-  /* show the nav bar and make it next to img logo */
   nav ul.nav-links {
     /* show the nav links */
     max-height: none;
@@ -446,8 +444,7 @@ header ul a {
     justify-content: flex-end;
   }
 
-  /* hides the hamburger menu and X button */
-
+  /* hide the hamburger menu and X button */
   .menuIcon,
   .menuClose {
     display: none;
@@ -475,10 +472,6 @@ header ul a {
   .footerMenuWrap {
     justify-content: space-between;
     gap: var(--spacer-dbl);
-  }
-
-  .social-media-icons {
-    flex-grow: 1;
   }
 }
 
@@ -616,8 +609,7 @@ blockquote {
   text-align: center;
 }
 
-/* -------- contact section------  */
-
+/* ------- contact section------ */
 .contact-section {
   --grid-gap: var(--spacer-dbl);
   display: grid;
@@ -642,7 +634,7 @@ blockquote {
   align-items: center;
   justify-content: center;
   gap: var(--spacer);
-  line-height: 1.5;
+  line-height: var(--line-height);
 }
 
 .contact-section article header {
@@ -665,7 +657,7 @@ blockquote {
 }
 
 .contact-section article p {
-  line-height: 1.5;
+  line-height: var(--line-height);
 }
 
 .location ul,
@@ -706,6 +698,8 @@ blockquote {
   color: var(--neutral-mid-color);
   margin-top: var(--spacer);
 }
+
+/* todo selector attribute selector with start with ^= */
 
 .contact a[href^="mailto"] {
   display: inline-block;
@@ -781,7 +775,7 @@ blockquote {
     margin-bottom: 80px;
   }
 
-  /* reserve and order buttons stick to bottom */
+  /* reserve and order buttons stick to bottom in small screen */
   .btn-group {
     position: fixed;
     bottom: 0;
@@ -861,7 +855,7 @@ blockquote {
 .beers-page ul,
 .desserts-page p,
 .desserts-page ul {
-  line-height: 1.5;
+  line-height: var(--line-height);
   font-size: var(--fs-p);
   color: var(--neutral-mid-color);
 }
@@ -925,7 +919,6 @@ blockquote {
 .menu-group > h2,
 .menus-container > section > h2 {
   text-align: center;
-  /* text-transform: capitalize; */
   grid-column: 1 / -1;
   font-size: calc(var(--fs-h2) * 1.5);
   font-weight: var(--fw-b);
@@ -1067,7 +1060,7 @@ blockquote {
   flex-direction: column;
   gap: var(--spacer);
   padding: var(--spacer);
-  margin: 0 var(--spacer-dbl);
+  margin: var(--spacer-dbl);
 }
 
 /* menu filters styles */
@@ -1076,7 +1069,7 @@ blockquote {
   align-items: flex-start;
   flex-wrap: wrap;
   gap: var(--spacer);
-  /* margin: 0 var(--spacer-dbl); */
+  /* margin: var(--spacer-dbl) 0; */
 }
 
 .section-nav li {
@@ -1108,8 +1101,8 @@ blockquote {
   display: block;
   padding: 1em;
   border: 1px solid #ccc;
-  /* align-self: flex-end; */
   margin-top: var(--spacer-dbl);
+  /* search icon */
   background-image: url(../images/icons/icon-search.svg);
   background-position: 20px center;
   background-repeat: no-repeat;
@@ -1118,6 +1111,7 @@ blockquote {
   border-radius: 40px;
   height: 50px;
   box-shadow: var(--shadow);
+  /* align-self: flex-end; */
 }
 
 #search:focus {
@@ -1153,13 +1147,14 @@ blockquote {
   content: "";
   display: block;
   /* todo */
-  /* make sure jump to the right part for each section */
   margin: 330px 0 0;
   visibility: hidden;
 }
 
+/* todo */
+/* menu filter jump to the right section */
 .menus-container > section > :first-child {
-  margin-top: -142px;
+  margin-top: -120px;
 }
 
 .menu-item-card {
@@ -1178,7 +1173,6 @@ blockquote {
   width: 100%;
   gap: var(--spacer-dbl);
   width: 100%;
-  /* max-width: var(--menu-card-max-width); */
   transition: transform 0.3s ease;
 }
 
@@ -1204,8 +1198,7 @@ blockquote {
   color: #333;
 }
 
-/* aside modal */
-/* overlay */
+/* modal with overlay */
 .modal {
   display: none;
   position: fixed;
@@ -1226,6 +1219,7 @@ blockquote {
 /* modal content */
 .modal-content {
   margin: 0 auto;
+  /* offset header height */
   margin-top: calc(var(--padding-to-top) + var(--spacer));
   width: 100%;
   max-width: 600px;
@@ -1233,12 +1227,12 @@ blockquote {
   padding: var(--spacer) var(--spacer-dbl);
   border-radius: var(--modal-radius);
   box-shadow: var(--shadow);
-  line-height: 1.5;
+  line-height: var(--line-height);
 }
 
 .modal-content label {
   display: block;
-  margin: 1em 0;
+  margin: var(--spacer) 0;
   width: 100%;
 }
 
@@ -1248,7 +1242,7 @@ blockquote {
   box-sizing: border-box;
   display: block;
   width: 100%;
-  padding: 0.5em;
+  padding: var(--spacer-hlf);
   font-size: var(--fs-p);
   font-family: var(--primary-font);
   color: var(--neutral-mid-color);
@@ -1261,7 +1255,7 @@ blockquote {
   font-weight: bold;
   color: var(--neutral-mid-color);
   float: right;
-  margin-top: 10px;
+  margin-top: var(--spacer);
 }
 
 /* increase + and decrease - icon around quantity */
@@ -1397,7 +1391,7 @@ blockquote {
   display: flex;
   flex-direction: column;
   gap: 2em;
-  line-height: 1.5;
+  line-height: var(--line-height);
 }
 
 .time-open strong {
