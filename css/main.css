@@ -1,3 +1,29 @@
+/****************************************
+
+        TABLE OF CONTENTS
+-----------------------------------------
+
+  1. CSS GLOBAL VARIABLES
+  2. GLOBAL STYLES
+  3. HEADER AND FOOTER STYLES
+  4. HOME PAGE STYLES
+  5. ABOUT US STYLES
+  6. CONTACT US STYLES
+  7. LUNCH / DINNER / DESSERTS/ BEERS MENUS PAGE
+  8. ORDER PAGE STYLES
+  9. RESERVATION PAGE STYLES
+  10. GALLERY PAGE STYLES
+  11. EVENTS PAGE STYLES
+
+
+****************************************/
+
+/* ==============================
+   1. CSS GLOBAL VARIABLES
+   ============================== */
+
+/* #region CSS global variables */
+
 :root {
   /* font family */
   --primary-font: "Montserrat", sans-serif;
@@ -46,14 +72,17 @@
   --grid-gap: var(--spacer);
 }
 
+/* #endregion */
+
 /* ==============================
-   GLOBAL STYLES
+   2. GLOBAL STYLES
    ============================== */
 
-/* todo Element selector */
+/* #region general styles */
+
+/* todo selector Element selector */
 body {
   /* local variables */
-
   /* ----------colors----------- */
   --bg: var(--primary-color);
   --heading: var(--secondary-color);
@@ -103,7 +132,7 @@ body {
   /* button padding space */
   --spacer-btn-pd: calc(var(--spacer) * 1.5) var(--spacer-dbl);
   /* border styles*/
-  --radius-border: calc(var(--border-radius) * 2);
+  --radius-border: calc(var(--border-radius) * 3);
   --border-styles: 4px solid var(--neutral-mid-color);
   --spacer-margin: var(--spacer-hlf) 0 var(--spacer) 0;
 
@@ -144,6 +173,13 @@ h3 {
   font-size: var(--fs-h3);
 }
 
+/* main top header styles */
+main > h1 {
+  text-align: center;
+  margin: var(--spacer-dbl);
+  font-size: calc(var(--fs-h1) * 1.2);
+}
+
 /* links */
 
 ul li a {
@@ -172,6 +208,103 @@ ul li a {
   box-sizing: border-box;
 }
 
+/* #region form styles */
+
+label {
+  display: block;
+}
+
+/* input fields */
+.formControl {
+  display: block;
+  box-sizing: border-box;
+  font-family: var(--primary-font);
+  font-size: var(--fs-p);
+  color: var(--neutral-mid-color);
+  height: var(--height-input);
+  padding: var(--spacer);
+  width: 100%;
+  border: solid 2px var(--neutral-mid-color);
+}
+
+/* todo selector attribute selector */
+input[type="submit"] {
+  display: block;
+  font-size: var(--fs-p);
+  font-family: var(--primary-font);
+  color: var(--neutral-lt-color);
+  border: none;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  background-color: var(--secondary-color);
+  border-radius: var(--border-radius);
+  /* padding: var(--spacer-btn-pd); */
+  padding: var(--spacer) var(--spacer-dbl);
+}
+
+/* radio and checkbox */
+
+.radCheck {
+  display: flex;
+  gap: var(--spacer);
+  flex-wrap: wrap;
+  white-space: nowrap;
+}
+
+.radCheck input {
+  accent-color: var(--tertiary-color);
+  height: 30px;
+  width: 30px;
+  margin-right: var(--spacer-hlf);
+}
+
+.radCheck label {
+  align-items: center;
+  display: flex;
+}
+
+/* reservation form and contact form common styles */
+
+#reservation-form .formControl,
+#contact-form .formControl {
+  margin-bottom: var(--spacer);
+  border-radius: var(--border-radius);
+}
+
+#reservation-form input[type="submit"],
+#contact-form input[type="submit"] {
+  --border-radius: 30px;
+  width: 100%;
+  margin-top: calc(var(--spacer-dbl) * 2);
+}
+
+/* form validation */
+/* select form elements that are both required and valid */
+input:required:valid,
+textarea:required:valid,
+select:required:valid {
+  border: 2px solid green;
+}
+
+input:required:invalid,
+textarea:required:invalid,
+select:required:invalid {
+  border: 2px solid red;
+}
+
+/* #endregion */
+
+/* #endregion */
+
+/* END GLOBAL STYLES */
+
+/* ==============================
+   3. HEADER AND FOOTER STYLES
+   ============================== */
+
+/* #region footer and header */
+
 /* top address banner, bottom rights banner */
 /* todo selector ID selector */
 #banner,
@@ -188,10 +321,6 @@ ul li a {
   justify-content: center;
   align-items: center;
 }
-
-/* ==============================
-   HEADER AND FOOTER STYLES
-   ============================== */
 
 #banner {
   position: fixed;
@@ -295,7 +424,6 @@ nav ul.nav-links li {
   background-color: var(--sub-nav-bg);
   min-width: 160px;
   box-shadow: var(--shadow);
-  /* z-index: 999; */
   margin-left: var(--spacer);
 }
 
@@ -308,7 +436,7 @@ nav ul.nav-links li {
   color: var(--sub-nav-text);
 }
 
-/* todo pseudo-class selector */
+/* todo selector pseudo-class selector */
 .sub-menu li:hover {
   color: var(--tertiary-color);
 }
@@ -351,8 +479,6 @@ header ul a {
   box-sizing: border-box;
 }
 
-/* grid box */
-
 .footerMenuWrap {
   display: grid;
   grid-template-columns: var(--grid-cols);
@@ -389,8 +515,7 @@ header ul a {
   color: var(--neutral-lt-color);
 }
 
-/* footer and header media queries */
-
+/* #region footer and header media queries */
 @media screen and (min-width: 600px) {
   .footer-section {
     /* todo */
@@ -475,9 +600,15 @@ header ul a {
   }
 }
 
+/* #endregion header footer media queries end */
+
+/* #endregion */
+
 /* ==============================
-   HOME PAGE STYLES
+   4. HOME PAGE STYLES
    ============================== */
+
+/* #region HOME PAGE STYLES */
 
 /*--------- main--------------- */
 
@@ -489,7 +620,7 @@ main {
 
 /* ----- home page hero image slider-----  */
 
-/* -- slick JQuery Lib-- */
+/* #region slick JQuery styles-- */
 
 /* arrows */
 .slick-prev,
@@ -519,9 +650,9 @@ main {
   color: var(--slick-arrow-color);
 }
 
-/* end JQuery slick styles */
+/* #endregion JQuery slick styles */
 
-/* -------- branding section------ */
+/* #region branding section styles-- */
 
 .branding-section {
   text-align: center;
@@ -554,7 +685,9 @@ blockquote {
   margin: var(--spacer-dbl) 0;
 }
 
-/* -------- menu category section------  */
+/* #endregion branding section ends-- */
+
+/* #region menu category section------  */
 .menu-group {
   margin: calc(var(--spacer-dbl) * 2) 0;
 }
@@ -571,9 +704,9 @@ blockquote {
 
 .menu-category {
   /* used for caption positioning */
+  display: flex;
   position: relative;
   box-sizing: border-box;
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -609,7 +742,9 @@ blockquote {
   text-align: center;
 }
 
-/* ------- contact section------ */
+/* #endregion menu category section end */
+
+/* #region contact section */
 .contact-section {
   --grid-gap: var(--spacer-dbl);
   display: grid;
@@ -719,7 +854,9 @@ blockquote {
   display: none;
 }
 
-/* Home page media queries*/
+/* #endregion contact section ends */
+
+/* #region Home Page media queries*/
 @media screen and (min-width: 600px) {
   .menus {
     --grid-cols: repeat(2, 1fr);
@@ -741,7 +878,7 @@ blockquote {
   }
 
   .contact-section article {
-    min-height: 400px;
+    min-height: calc(var(--fs-base) * 18);
   }
 
   .btn.hidden {
@@ -815,9 +952,15 @@ blockquote {
   }
 }
 
+/* #endregion Home page media queries */
+
+/* #endregion HOME PAGE STYLES END */
+
 /* ==============================
-   ABOUT US STYLES
+  5. ABOUT US STYLES
    ============================== */
+
+/* #region about page */
 
 .aboutUS_container {
   display: flex;
@@ -826,13 +969,9 @@ blockquote {
   margin: 0 auto;
   padding: var(--spacer) var(--spacer-dbl);
   box-sizing: border-box;
+  font-weight: var(--fw-m);
 }
 
-#aboutUS_H1 {
-  margin: var(--spacer-dbl);
-  font-size: calc(var(--fs-h1) * 1.2);
-  text-align: center;
-}
 .aboutUsH2 {
   text-align: center;
   font-weight: var(--fw-b);
@@ -860,7 +999,7 @@ blockquote {
   color: var(--neutral-dk-color);
 }
 
-#aboutUs_lastH2 {
+.about-page main > h3 {
   font-size: var(--fs-h3);
   font-weight: var(--fw-b);
   margin: 0 auto;
@@ -891,13 +1030,105 @@ blockquote {
   }
 }
 
-/* ==============================
-   Contact US STYLES
-   ============================== */
+/* #endregion */
+
+/* END ABOUT US PAGE STYLES */
 
 /* ==============================
-   LUNCH / DINNER / DESSERTS/ BEERS PAGE
+  6. Contact US STYLES
    ============================== */
+
+.contactInfo-section {
+  padding: var(--spacer) var(--spacer-dbl);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: var(--grid-cols);
+}
+
+.contactDetails {
+  padding: var(--spacer);
+  margin: var(--spacer) auto;
+}
+
+.contactDetails p {
+  line-height: 1.7;
+  font-weight: var(--fw-m);
+}
+
+#contact-form {
+  font-size: 20px;
+  box-sizing: border-box;
+  margin: var(--spacer) auto;
+  color: var(--text-color);
+  font-family: var(--primary-font);
+  font-weight: var(--fw-m);
+}
+
+#contact-form label {
+  margin-bottom: var(--spacer-hlf);
+}
+
+label[for="message"] {
+  margin-top: var(--spacer);
+  padding-top: var(--spacer);
+  font-size: calc(var(--fs-h3) * 0.8);
+  color: var(--secondary-color);
+  font-family: var(--headline-font);
+}
+
+#contact-form > fieldset {
+  border: 2px solid var(--neutral-mid-color);
+  padding: var(--spacer-dbl);
+}
+
+#contact-form legend {
+  font-size: var(--fs-h3);
+  color: var(--tertiary-color);
+  font-weight: var(--fw-m);
+  font-family: var(--headline-font);
+}
+
+#contact-form fieldset fieldset legend {
+  padding: var(--spacer) 0;
+  font-size: calc(var(--fs-h3) * 0.8);
+  color: var(--secondary-color);
+}
+
+#spec-reqs li {
+  min-width: 320px;
+}
+
+#contact-med li {
+  min-width: 150px;
+}
+
+.mapWrapper {
+  overflow: hidden;
+  margin: 0 auto;
+  padding: var(--spacer) var(--spacer-dbl);
+}
+.mapWrapper iframe {
+  width: 100%;
+}
+
+@media screen and (min-width: 800px) {
+  .contactInfo-section {
+    --grid-cols: 3fr 4fr;
+    gap: var(--spacer-dbl);
+  }
+
+  #spec-reqs li {
+    min-width: 320px;
+  }
+}
+
+/* END CONTACT US PAGE STYLES */
+
+/* ==============================
+  7. MENUS: LUNCH / DINNER / DESSERTS/ BEERS PAGE
+   ============================== */
+
+/* #region menus pages  */
 
 /* ==============================
    COMMON STYLES of LUNCH/DINNER/DESSERTS/BEERS PAGES
@@ -940,7 +1171,6 @@ blockquote {
 .desserts-page .hero {
   --heading: var(--neutral-lt-color);
   --fs-h1: calc(var(--fs-base) * 5);
-
   min-height: 80vh;
   display: flex;
   align-items: center;
@@ -986,8 +1216,7 @@ blockquote {
 }
 
 /* common category group h2 styles */
-
-/* todo direct children selector */
+/* todo selector direct children selector */
 .menu-group > h2,
 .menus-container > section > h2 {
   text-align: center;
@@ -1043,7 +1272,6 @@ blockquote {
 }
 
 /* lunch menus */
-
 .sides > p {
   grid-column: 1 / -1;
   text-align: center;
@@ -1092,7 +1320,6 @@ blockquote {
 }
 
 /* media queries for lunch/dinner/desserts/beers pages  */
-
 @media screen and (min-width: 600px) {
   .lunch-page,
   .dinner-page,
@@ -1117,9 +1344,14 @@ blockquote {
   }
 }
 
+/* #endregion */
+
 /* ==============================
-   ORDER PAGE STYLES
+  8. ORDER PAGE STYLES
    ============================== */
+
+/* #region Order Page */
+
 .order-page {
   /* --menu-card-max-width: 500px; */
   --menu-card-border-radius: 20px;
@@ -1183,7 +1415,6 @@ blockquote {
   border-radius: 40px;
   height: 50px;
   box-shadow: var(--shadow);
-  /* align-self: flex-end; */
 }
 
 #search:focus {
@@ -1424,11 +1655,15 @@ blockquote {
   }
 }
 
+/* #endregion */
+
 /* END ORDER ONLINE PAGE STYLES */
 
 /* ==============================
-   Reservation PAGE STYLES
+   9. Reservation PAGE STYLES
    ============================== */
+
+/* #region reservation page */
 
 .reservation-page {
   --height-input: 60px;
@@ -1475,59 +1710,12 @@ blockquote {
   margin-bottom: 1em;
 }
 
-#reservation-form label {
-  display: block;
-  margin-bottom: var(--spacer-hlf);
-}
-
-/* input fields */
-#reservation-form .formControl {
-  box-sizing: border-box;
-  display: block;
-  font-family: var(--primary-font);
-  color: var(--neutral-mid-color);
-  border: solid 2px #ccc;
-  font-size: var(--fs-p);
-  border-radius: var(--border-radius);
-  width: 100%;
-  height: var(--height-input);
-  margin-bottom: var(--spacer);
-  padding: var(--spacer);
-}
-
-/* validate user input */
-/* select form elements that are both required and valid */
-#reservation-form input:required:valid,
-#reservation-form textarea:required:valid,
-#reservation-form select:required:valid {
-  border: 2px solid green;
-}
-
-#reservation-form input:required:invalid,
-#reservation-form textarea:required:invalid,
-#reservation-form select:required:invalid {
-  border: 2px solid red;
-}
-
-/* todo attribute selector */
-#reservation-form input[type="submit"] {
-  display: block;
-  text-align: center;
-  text-decoration: none;
-  background-color: var(--secondary-color);
-  font-size: var(--fs-p);
-  color: var(--neutral-lt-color);
-  cursor: pointer;
-  border: none;
-  border-radius: var(--border-radius);
-  padding: var(--spacer-btn-pd);
-  margin-top: calc(2 * var(--spacer-dbl));
-  width: 100%;
-  border-radius: calc(var(--border-radius) * 3);
-}
-
 #reservation-form #people {
   height: 60px;
+}
+
+#reservation-form label {
+  margin-bottom: var(--spacer-hlf);
 }
 
 @media screen and (min-width: 1000px) {
@@ -1539,16 +1727,15 @@ blockquote {
   }
 }
 
+/* #endregion */
+
 /*END RESERVATION PAGE STYLES */
 
 /* ==============================
-   Gallery PAGE STYLES
+  10. Gallery PAGE STYLES
    ============================== */
-#gallery main h1 {
-  text-align: center;
-  margin: var(--spacer-dbl);
-  font-size: calc(var(--fs-h1) * 1.2);
-}
+
+/* #region gallery page */
 
 .grid-gallery {
   display: grid;
@@ -1578,6 +1765,8 @@ blockquote {
 .grid-gallery .grid-item a {
   cursor: zoom-in;
 }
+
+/* JQuery lightbox styles */
 
 .lb-data .lb-caption {
   font-size: var(--fs-p);
@@ -1611,11 +1800,15 @@ blockquote {
   }
 }
 
+/* #endregion */
+
 /* ---END GALLERY PAGE STYLES---- */
 
 /* ==============================
-   EVENTS PAGE STYLES
+ 11.  EVENTS PAGE STYLES
    ============================== */
+
+/* #region events page  */
 .events-section {
   margin-top: 2vh;
   margin: 0 auto;
@@ -1627,11 +1820,6 @@ blockquote {
   font-size: var(--fs-p);
 }
 
-.events-section h1 {
-  text-align: center;
-  font-size: calc(var(--fs-h1) * 1.2);
-  margin: var(--spacer-dbl);
-}
 .events-card {
   display: flex;
   flex-direction: column;
@@ -1680,31 +1868,20 @@ blockquote {
 }
 
 .email-signup-form .formControl {
-  box-sizing: border-box;
-  display: block;
   padding: calc(0.5 * var(--spacer));
-  font-size: var(--fs-p);
-  font-family: var(--primary-font);
   color: var(--neutral-mid-color);
-  border: 1px solid #ccc;
   width: 100%;
   max-width: 600px;
+  border: none;
 }
 
 .email-signup-form input[type="submit"] {
   padding: calc(0.5 * var(--spacer)) var(--spacer-dbl);
-  font-size: var(--fs-p);
-  font-family: var(--primary-font);
-  color: var(--neutral-lt-color);
-  background-color: var(--secondary-color);
-  border: none;
-  border-radius: var(--border-radius);
-  cursor: pointer;
   align-self: center;
+  border-radius: calc(3 * var(--border-radius));
 }
 
 /* media queries for events page */
-
 @media screen and (min-width: 600px) {
   .email-signup-form {
     flex-direction: row;
@@ -1714,5 +1891,7 @@ blockquote {
     width: auto;
   }
 }
+
+/* #endregion */
 
 /* ---END EVENTS PAGE STYLES---- */

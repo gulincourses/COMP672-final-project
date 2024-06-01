@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact us</title>
-    <link rel="stylesheet" href="../css/reset.css" type="text/css" />
 
     <!-- google fonts -->
 
@@ -23,7 +22,10 @@
       type="text/css"
     />
     <!-- end font awesome icons -->
-    <link rel="stylesheet" href="../css/main.css" type="text/css" />
+
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" />
+    <!-- <link rel="stylesheet" href="../css/main.css" type="text/css" /> -->
+    <link rel="stylesheet" href="../css/main.min.css" type="text/css" />
   </head>
   <body class="contact-page">
     <p id="banner">7304 Parkway Drive S, Hanover, MD 21076</p>
@@ -63,7 +65,200 @@
         </label>
       </section>
     </header>
-    <main></main>
+    <main>
+      <h1>Contact Us</h1>
+      <section class="contactInfo-section">
+        <article class="contactDetails">
+          <p>
+            Thank you for your interest in Bavarian Brauhaus! Please fill out
+            the form below or feel free to reach out to us via text or call with
+            any questions, comments, or concerns. We're here to assist you !
+          </p>
+          <p>Phone: 410-712-0300</p>
+          <p>
+            Email:<a href="mailto:support@bavarian.com" target="_blank">
+              support@bavarian.com</a
+            >
+          </p>
+        </article>
+        <form action="#" id="contact-form" method="post" enctype="text/plain">
+          <fieldset>
+            <legend>Get In Touch</legend>
+            <ul>
+              <li>
+                <label for="firstName">Your Name:</label>
+                <input
+                  type="text"
+                  id="firstName"
+                  name="firstName"
+                  class="formControl"
+                  required
+                />
+              </li>
+              <li>
+                <label for="email">Email address:</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="formControl"
+                  required
+                />
+              </li>
+              <li>
+                <label for="phone">Phone number: (111-222-3333)</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                  class="formControl"
+                />
+              </li>
+            </ul>
+            <label for="dropdownList" class="dropdownLabal"
+              >Reasons for contact:
+            </label>
+            <select id="dropdownList" name="dropdownList" class="formControl">
+              <option value="general">General Inquiry</option>
+              <option value="event">Event Booking</option>
+              <option value="catering">Catering Service</option>
+              <option value="feedcomp">Feedback/Complaints</option>
+              <option value="other">Other</option>
+            </select>
+            <fieldset>
+              <legend>Preferred Contact Method:</legend>
+              <ul class="radiolist radCheck" id="contact-med">
+                <li>
+                  <label for="email">
+                    <input
+                      type="radio"
+                      id="email"
+                      name="contactMethod"
+                      value="email"
+                    />
+                    <span>Email</span></label
+                  >
+                </li>
+                <li>
+                  <label for="phone">
+                    <input
+                      type="radio"
+                      id="phone"
+                      name="contactMethod"
+                      value="phone"
+                    />
+                    <span> Phone </span></label
+                  >
+                </li>
+                <li>
+                  <label for="text">
+                    <input
+                      type="radio"
+                      id="text"
+                      name="contactMethod"
+                      value="text"
+                    />
+                    <span>Text</span></label
+                  >
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset>
+              <legend>Specific Requirements:</legend>
+              <ul class="radCheck" id="spec-reqs">
+                <li>
+                  <label for="vegan">
+                    <input
+                      type="checkbox"
+                      id="vegan"
+                      name="preferences"
+                      value="vegan"
+                    />
+                    <span>Vegan/Vegetarian Options</span></label
+                  >
+                </li>
+                <li>
+                  <label for="glutenFree">
+                    <input
+                      type="checkbox"
+                      id="glutenFree"
+                      name="preferences"
+                      value="glutenFree"
+                    />
+                    <span>Gluten-Free Options</span></label
+                  >
+                </li>
+                <li>
+                  <label for="privateRoom">
+                    <input
+                      type="checkbox"
+                      id="privateRoom"
+                      name="preferences"
+                      value="privateRoom"
+                    />
+                    <span>Private Dinning Room</span>
+                  </label>
+                </li>
+                <li>
+                  <label for="wheelchair">
+                    <input
+                      type="checkbox"
+                      id="wheelchair"
+                      name="preferences"
+                      value="wheelchair"
+                    />
+                    <span>Wheelchair Accessible</span>
+                  </label>
+                </li>
+                <li>
+                  <label for="outdoor">
+                    <input
+                      type="checkbox"
+                      id="outdoor"
+                      name="preferences"
+                      value="outdoor"
+                    />
+                    <span>Outdoor Seating</span>
+                  </label>
+                </li>
+                <li>
+                  <label for="kids">
+                    <input
+                      type="checkbox"
+                      id="kids"
+                      name="preferences"
+                      value="kids"
+                    />
+                    <span>Kids Friendly</span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <label for="message">Additional Message</label>
+            <textarea
+              name="message"
+              id="message"
+              rows="10"
+              class="formControl"
+            ></textarea>
+            <input type="submit" value="Send Message" class="submit" />
+          </fieldset>
+        </form>
+      </section>
+      <div class="mapWrapper">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3093.1051718056883!2d-76.73607987345953!3d39.17232973571885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7e17dbab7912b%3A0xde8d14262c55b5a4!2s7304%20Parkway%20Dr%20S%2C%20Hanover%2C%20MD%2021076!5e0!3m2!1sen!2sus!4v1716446739214!5m2!1sen!2sus"
+          width="600"
+          height="450"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </main>
     <footer class="footer-section">
       <section class="footerMenuWrap">
         <ul class="footer-links">

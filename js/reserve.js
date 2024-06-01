@@ -1,5 +1,6 @@
 $(document).ready(function () {
-  $("#date").flatpickr({
+  console.log("Document ready");
+  $("#reservation-date").flatpickr({
     altInput: true,
     altFormat: "F j, Y",
     dateFormat: "Y-m-d",
@@ -11,9 +12,13 @@ $(document).ready(function () {
       },
 
       "2024-07-04",
+      {
+        from: "2024-12-19",
+        to: "2025-01-06",
+      },
     ],
   });
-  $("#time").flatpickr({
+  $("#reservation-time").flatpickr({
     enableTime: true,
     noCalendar: true,
     dateFormat: "h:i K",
@@ -21,4 +26,29 @@ $(document).ready(function () {
     minTime: "15:00",
     maxTime: "21:00",
   });
+
+  // $("#reservation-form").on("submit", function (event) {
+  //   event.preventDefault();
+  //   console.log(this);
+  //   console.log("Reservation Form submitted");
+  //   $(this).addClass("validated");
+  //   console.log("Class 'validated' added to form");
+  // });
+
+  // $(document).on("submit", "#reservation-form", function (event) {
+  //   event.preventDefault();
+  //   console.log(this);
+  //   console.log("Reservation Form submitted");
+  //   $(this).addClass("validated");
+  //   console.log("Class 'validated' added to form");
+  // });
+  // $(document).on("submit", "#reservation-form", function (event) {
+  //   event.preventDefault();
+  //   setTimeout(() => {
+  //     console.log(this);
+  //     console.log("Reservation Form submitted");
+  //     $(this).addClass("validated");
+  //     console.log("Class 'validated' added to form");
+  //   }, 0);
+  // });
 });

@@ -30,13 +30,10 @@
     />
     <!-- end font awesome icons -->
 
-    <!-- JQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <!-- flatpickr -->
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <!-- reset and main css -->
     <link rel="stylesheet" href="../css/reset.css" type="text/css" />
-    <link rel="stylesheet" href="../css/main.css" type="text/css" />
+    <!-- <link rel="stylesheet" href="../css/main.css" type="text/css" /> -->
+    <link rel="stylesheet" href="../css/main.min.css" type="text/css" />
   </head>
   <body class="reservation-page">
     <p id="banner">7304 Parkway Drive S, Hanover, MD 21076</p>
@@ -125,20 +122,20 @@
                 />
               </li>
               <li>
-                <label for="date">Date:</label>
+                <label for="reservation-date">Date:</label>
                 <input
                   type="text"
-                  id="date"
+                  id="reservation-date"
                   class="formControl"
                   placeholder="mm/dd/yyyy"
                   required
                 />
               </li>
               <li>
-                <label for="time">Time:</label>
+                <label for="reservation-time">Time:</label>
                 <input
                   type="text"
-                  id="time"
+                  id="reservation-time"
                   class="formControl"
                   placeholder="3:00 PM"
                   required
@@ -207,6 +204,10 @@
       </section>
     </footer>
     <p id="rights">&copy; 2024 Bavarian Brauhaus. All rights reserved.</p>
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- flatpickr -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="../js/reserve.js"></script>
   </body>
 </html>
