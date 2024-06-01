@@ -868,6 +868,13 @@ legend {
   margin-bottom: 20px;
   margin-top: 5px;
 }
+#formInfo #dropdownList {
+  height: 35px;
+  width: 100%;
+}
+#formInfo input:required:invalid {
+  border: 2px solid red;
+}
 #message {
   height: auto;
  } 
