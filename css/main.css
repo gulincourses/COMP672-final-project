@@ -1039,7 +1039,8 @@ blockquote {
    ============================== */
 
 .contactInfo-section {
-  padding: var(--spacer) var(--spacer-dbl);
+  /* padding: var(--spacer) var(--spacer-dbl); */
+  padding: var(--spacer);
   margin: 0 auto;
   display: grid;
   grid-template-columns: var(--grid-cols);
@@ -1062,6 +1063,8 @@ blockquote {
   color: var(--text-color);
   font-family: var(--primary-font);
   font-weight: var(--fw-m);
+  width: 100%;
+  max-width: 100%;
 }
 
 #contact-form label {
@@ -1078,7 +1081,8 @@ label[for="message"] {
 
 #contact-form > fieldset {
   border: 2px solid var(--neutral-mid-color);
-  padding: var(--spacer-dbl);
+  /* padding: var(--spacer-dbl); */
+  padding: var(--spacer);
 }
 
 #contact-form legend {
@@ -1094,31 +1098,37 @@ label[for="message"] {
   color: var(--secondary-color);
 }
 
-#spec-reqs li {
-  min-width: 320px;
-}
-
-#contact-med li {
-  min-width: 150px;
-}
-
 .mapWrapper {
   overflow: hidden;
   margin: 0 auto;
-  padding: var(--spacer) var(--spacer-dbl);
+  padding: var(--spacer);
 }
 .mapWrapper iframe {
   width: 100%;
+  min-height: 250px;
+}
+
+@media screen and (min-width: 600px) {
+  #contact-med li {
+    min-width: 150px;
+  }
+  #spec-reqs li {
+    min-width: 320px;
+  }
+  #contact-form > fieldset {
+    padding: var(--spacer-dbl);
+  }
+
+  .mapWrapper {
+    padding: var(--spacer) var(--spacer-dbl);
+  }
 }
 
 @media screen and (min-width: 800px) {
   .contactInfo-section {
     --grid-cols: 3fr 4fr;
+    padding: var(--spacer) var(--spacer-dbl);
     gap: var(--spacer-dbl);
-  }
-
-  #spec-reqs li {
-    min-width: 320px;
   }
 }
 
