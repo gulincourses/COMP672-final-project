@@ -853,13 +853,13 @@ legend {
   font-family: var(--headline-font);
 }
 .namefield li{
-  width: 48%;
-  display: inline-block; 
+  width: 49%; 
+  display: inline-block;
 }
 .inputStyle {
   display: block;
   height: 30px;
-  width: 95%;
+  width: 98%;
   border: solid 1px var(--neutral-mid-color); 
   color: var(--neutral-mid-color);
   font-size: var(--fs-p);
@@ -882,12 +882,11 @@ display: inline-block;
 }
 .checklist input, .radiolist input {
   accent-color: var(--secondary-color);
-}
-.dropdownFieldsetInput option {
-  accent-color: var(--secondary-color);
+  height: 20px;
+  width: 20px;
 }
 #submitBtn {
-  width: 95%;
+  width: 100%;
   color: var(--btn-text);
   background-color: var(--btn-bg);
   border-radius: var( --border-radius);
