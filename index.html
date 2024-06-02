@@ -79,8 +79,8 @@
       </section>
     </header>
     <main>
-      <section class="hero-section">
-        <!-- image slider -->
+      <!-- image slider -->
+      <!-- <section class="hero-section">
         <article class="slider">
           <img
             src="images/dishes/hero-dish-480w.jpg"
@@ -133,7 +133,79 @@
           100vw"
           />
         </article>
+      </section> -->
+      <section class="hero-section">
+        <!-- image slider -->
+        <article class="slider">
+          <picture>
+            <source
+              media="(max-width: 480px)"
+              srcset="images/dishes/hero-dish-480w.jpg"
+            />
+            <source
+              media="(min-width: 481px) and (max-width: 800px)"
+              srcset="images/dishes/hero-dish-800w.jpg"
+            />
+            <img src="images/dishes/hero-dish.jpg" alt="hero dish" />
+          </picture>
+          <picture>
+            <source
+              media="(max-width: 480px)"
+              srcset="images/dishes/Apfelstrudel-480w.jpg"
+            />
+            <source
+              media="(min-width: 481px) and (max-width: 800px)"
+              srcset="images/dishes/Apfelstrudel-800w.jpg"
+            />
+            <img src="images/dishes/Apfelstrudel.jpg" alt="apfelstrudel dish" />
+          </picture>
+          <picture>
+            <source
+              media="(max-width: 480px)"
+              srcset="images/dishes/Schwarzwurst-480w.jpg"
+            />
+            <source
+              media="(min-width: 481px) and (max-width: 800px)"
+              srcset="images/dishes/Schwarzwurst-800w.jpg"
+            />
+            <img src="images/dishes/Schwarzwurst.jpg" alt="Schwarzwurst" />
+          </picture>
+          <picture>
+            <source
+              media="(max-width: 480px)"
+              srcset="images/dishes/Rouladen-480w.jpg"
+            />
+            <source
+              media="(min-width: 481px) and (max-width: 800px)"
+              srcset="images/dishes/Rouladen-800w.jpg"
+            />
+            <img src="images/dishes/Rouladen.jpg" alt="Rouladen" />
+          </picture>
+          <picture>
+            <source
+              media="(max-width: 480px)"
+              srcset="images/dishes/Sauerbraten-480w.jpg"
+            />
+            <source
+              media="(min-width: 481px) and (max-width: 800px)"
+              srcset="images/dishes/Sauerbraten-800w.jpg"
+            />
+            <img src="images/dishes/Sauerbraten.jpg" alt="Sauerbraten" />
+          </picture>
+          <picture>
+            <source
+              media="(max-width: 480px)"
+              srcset="images/dishes/Schnitzel-480w.jpg"
+            />
+            <source
+              media="(min-width: 481px) and (max-width: 800px)"
+              srcset="images/dishes/Schnitzel-800w.jpg"
+            />
+            <img src="images/dishes/Schnitzel.jpg" alt="Schnitzel" />
+          </picture>
+        </article>
       </section>
+
       <section class="branding-section">
         <h1>Bavarian Brauhaus</h1>
         <blockquote>
@@ -176,7 +248,6 @@
         </article>
       </section>
       <section class="contact-section">
-        <!-- <h1>How to Reach Us</h1> -->
         <article class="location">
           <header>
             <i class="fa-solid fa-location-dot"></i>
@@ -284,7 +355,6 @@
     <p id="rights">&copy; 2024 Bavarian Brauhaus. All rights reserved.</p>
 
     <!-- load jquery lib -->
-    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="js/main.js"></script>

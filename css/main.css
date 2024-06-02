@@ -72,7 +72,7 @@
   --grid-gap: var(--spacer);
 }
 
-/* #endregion */
+/* #endregion global variables end */
 
 /* ==============================
    2. GLOBAL STYLES
@@ -201,11 +201,10 @@ ul li a {
   font-size: var(--fs-btn);
   font-weight: var(--fw-m);
   text-decoration: none;
-  padding: var(--spacer);
-  margin: var(--spacer) 0;
-  min-width: 250px;
   text-align: center;
   box-sizing: border-box;
+  margin: var(--spacer-dbl) 0;
+  padding: var(--spacer) calc(var(--spacer-dbl) * 2);
 }
 
 /* #region form styles */
@@ -293,9 +292,60 @@ select:required:invalid {
   border: 2px solid red;
 }
 
-/* #endregion */
+/* #endregion form styles end */
 
-/* #endregion */
+/* #endregion global styles end */
+
+/* #region general media queries */
+
+@media screen and (max-width: 600px) {
+  /* todo buttons */
+
+  .btn {
+    padding: var(--spacer) var(--spacer-dbl);
+  }
+
+  /* change styles when fixed on screen bottom */
+  .branding-section .btn,
+  .lunch-page .btn,
+  .dinner-page .btn,
+  .beers-page .btn,
+  .desserts-page .btn {
+    --btn-bg: var(--tertiary-color);
+    --btn-text: var(--neutral-dk-color);
+    --fs-btn: var(--fs-h3);
+    width: 100%;
+    border-radius: 0;
+    margin: 0;
+    border: var(--border-styles);
+    box-shadow: var(--shadow);
+    padding: calc(0.6 * var(--spacer)) 0;
+  }
+
+  /* home page reserve and order buttons*/
+  .branding-section .btn-group {
+    position: fixed;
+    bottom: 0;
+    flex-direction: column;
+    width: 100%;
+    gap: var(--spacer-hlf);
+    z-index: 20;
+    margin: 0;
+  }
+
+  /* menus page button */
+
+  .lunch-page .btn,
+  .dinner-page .btn,
+  .beers-page .btn,
+  .desserts-page .btn {
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+  }
+}
+
+/* #endregion general media queries */
 
 /* END GLOBAL STYLES */
 
@@ -736,6 +786,7 @@ blockquote {
   font-weight: var(--fw-b);
   font-size: var(--fs-h2);
   border-radius: var(--spacer-hlf);
+  font-family: var(--headline-font);
 }
 
 .menu-section > h1,
@@ -910,39 +961,17 @@ blockquote {
 @media screen and (max-width: 600px) {
   .home-page .footer-section {
     /* todo */
-    margin-bottom: 80px;
+    margin-bottom: 56px;
   }
 
-  /* reserve and order buttons stick to bottom in small screen */
-  .btn-group {
-    position: fixed;
-    bottom: 0;
-    flex-direction: column;
-    width: 100%;
-    gap: var(--spacer-hlf);
-    z-index: 20;
-    margin: 0;
-  }
-
-  .btn {
+  /* .btn {
     --spacer-btn-pd: var(--spacer) var(--spacer-dbl);
     min-width: 200px;
-  }
+  } */
 
-  .branding-section .btn {
-    /* theming with variables */
-    /* --btn-bg: var(--secondary-color); */
-    --btn-bg: var(--tertiary-color);
-    --btn-text: var(--neutral-dk-color);
-    --spacer-btn-pd: var(--spacer-dbl) 0;
-    --fs-btn: var(--fs-h3);
+  /* .branding-section .btn */
 
-    width: 100%;
-    border-radius: 0;
-    margin: 0;
-    border: var(--border-styles);
-    box-shadow: var(--shadow);
-  }
+  /* lunch/dinner/beers/desserts btn */
 }
 
 /* small screen for home page */
@@ -1031,13 +1060,15 @@ blockquote {
   }
 }
 
-/* #endregion */
+/* #endregion about us page end*/
 
 /* END ABOUT US PAGE STYLES */
 
 /* ==============================
   6. Contact US STYLES
    ============================== */
+
+/* #region contact us page  */
 
 .contactInfo-section {
   /* padding: var(--spacer) var(--spacer-dbl); */
@@ -1133,6 +1164,8 @@ label[for="message"] {
   }
 }
 
+/* #endregion contact us styles end */
+
 /* END CONTACT US PAGE STYLES */
 
 /* ==============================
@@ -1159,19 +1192,8 @@ label[for="message"] {
   --max-width-menu-group: 600px;
   --size-menu-icon: 60px;
   --width-reserve-btn: 520px;
-}
 
-.lunch-page p,
-.lunch-page ul,
-.dinner-page p,
-.dinner-page ul,
-.beers-page p,
-.beers-page ul,
-.desserts-page p,
-.desserts-page ul {
   line-height: var(--line-height);
-  font-size: var(--fs-p);
-  color: var(--neutral-mid-color);
 }
 
 /* hero */
@@ -1187,8 +1209,6 @@ label[for="message"] {
   align-items: center;
   justify-content: center;
   box-shadow: var(--shadow);
-  text-transform: uppercase;
-  /* padding-top: var(--padding-to-top); */
 }
 
 .hero-center {
@@ -1198,22 +1218,8 @@ label[for="message"] {
   justify-content: center;
 }
 
-.lunch-page .reserve-btn,
-.dinner-page .reserve-btn,
-.beers-page .reserve-btn,
-.desserts-page .reserve-btn {
-  font-size: var(--fs-btn);
-  font-weight: var(--fw-m);
-  text-decoration: none;
-  display: block;
-  text-align: center;
-  cursor: pointer;
-  background-color: var(--secondary-color);
-  color: var(--neutral-lt-color);
-  padding: var(--spacer) var(--spacer-dbl);
-  margin: var(--spacer-dbl) 0;
-  border-radius: calc(var(--border-radius) * 3);
-  /* width: var(--width-reserve-btn); */
+.hero-center h1 {
+  text-transform: uppercase;
 }
 
 .lunch-menus-container,
@@ -1356,7 +1362,7 @@ label[for="message"] {
   }
 }
 
-/* #endregion */
+/* #endregion menus page end */
 
 /* ==============================
   8. ORDER PAGE STYLES
@@ -1667,7 +1673,7 @@ label[for="message"] {
   }
 }
 
-/* #endregion */
+/* #endregion order page end */
 
 /* END ORDER ONLINE PAGE STYLES */
 
@@ -1739,7 +1745,7 @@ label[for="message"] {
   }
 }
 
-/* #endregion */
+/* #endregion reservation page end */
 
 /*END RESERVATION PAGE STYLES */
 
@@ -1812,7 +1818,7 @@ label[for="message"] {
   }
 }
 
-/* #endregion */
+/* #endregion gallery page end */
 
 /* ---END GALLERY PAGE STYLES---- */
 
@@ -1904,6 +1910,6 @@ label[for="message"] {
   }
 }
 
-/* #endregion */
+/* #endregion events page end */
 
 /* ---END EVENTS PAGE STYLES---- */
