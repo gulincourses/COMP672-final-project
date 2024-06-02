@@ -425,6 +425,7 @@ nav ul.nav-links li {
   min-width: 160px;
   box-shadow: var(--shadow);
   margin-left: var(--spacer);
+  z-index: 99;
 }
 
 .sub-menu li {
@@ -1187,6 +1188,7 @@ label[for="message"] {
   justify-content: center;
   box-shadow: var(--shadow);
   text-transform: uppercase;
+  /* padding-top: var(--padding-to-top); */
 }
 
 .hero-center {
