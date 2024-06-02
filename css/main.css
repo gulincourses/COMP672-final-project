@@ -896,11 +896,6 @@ blockquote {
   font-style: italic;
 }
 
-.contact-section .btn {
-  /* make the buttons stay on the bottom of its container */
-  margin-top: auto;
-}
-
 /* placeholder btn for alignment */
 .btn.hidden {
   display: none;
@@ -933,9 +928,14 @@ blockquote {
     min-height: calc(var(--fs-base) * 18);
   }
 
+  .contact-section .btn {
+    /* get directions and get in touch button align */
+    margin-top: auto;
+  }
+
   .btn.hidden {
     display: block;
-    /* hides element and still takes up space */
+    /* hides element remain in flow */
     visibility: hidden;
   }
 }
@@ -963,15 +963,6 @@ blockquote {
     /* todo */
     margin-bottom: 56px;
   }
-
-  /* .btn {
-    --spacer-btn-pd: var(--spacer) var(--spacer-dbl);
-    min-width: 200px;
-  } */
-
-  /* .branding-section .btn */
-
-  /* lunch/dinner/beers/desserts btn */
 }
 
 /* small screen for home page */
