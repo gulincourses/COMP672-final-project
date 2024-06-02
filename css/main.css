@@ -845,6 +845,7 @@ blockquote {
 
 .contact-section article p {
   line-height: var(--line-height);
+  color: var(--neutral-dk-color);
 }
 
 .location ul,
