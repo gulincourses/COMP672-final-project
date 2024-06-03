@@ -278,20 +278,6 @@ input[type="submit"] {
   margin-top: calc(var(--spacer-dbl) * 2);
 }
 
-/* form validation */
-/* select form elements that are both required and valid */
-/* input:required:valid,
-textarea:required:valid,
-select:required:valid {
-  border: 2px solid green;
-}
-
-input:required:invalid,
-textarea:required:invalid,
-select:required:invalid {
-  border: 2px solid red;
-} */
-
 /* custom form validation */
 
 input.custom-invalid,

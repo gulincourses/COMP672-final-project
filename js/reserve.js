@@ -89,10 +89,14 @@ $(document).ready(function () {
 
     if (!people) {
       isValid = false;
-      $("#people").removeClass("custom-valid").addClass("custom-invalid");
+      $("#reservation-people")
+        .removeClass("custom-valid")
+        .addClass("custom-invalid");
       console.log("Party size is empty!");
     } else {
-      $("#people").removeClass("custom-invalid").addClass("custom-valid");
+      $("#reservation-people")
+        .removeClass("custom-invalid")
+        .addClass("custom-valid");
     }
 
     if (isValid) {
