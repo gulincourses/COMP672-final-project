@@ -100,6 +100,8 @@ body {
   --nav-text: var(--neutral-lt-color);
   --nav-hover-text: var(--neutral-dk-color);
   --nav-hover-bg: var(--accent-color);
+  --email-link-color: #0000ee;
+  --email-link-hover: var(--tertiary-color);
 
   /* sub menu links styles */
   --sub-nav-bg: var(--neutral-lt-color);
@@ -279,18 +281,18 @@ input[type="submit"] {
 }
 
 /* form validation */
-input:required:valid,
-textarea:required:valid,
-select:required:valid {
+
+#contact-form input:required:valid,
+#contact-form textarea:required:valid,
+#contact-form select:required:valid {
   border: 2px solid green;
 }
 
-input:required:invalid,
-textarea:required:invalid,
-select:required:invalid {
+#contact-form input:required:invalid,
+#contact-form textarea:required:invalid,
+#contact-form select:required:invalid {
   border: 2px solid red;
 }
-
 
 /* custom form validation */
 
@@ -307,6 +309,28 @@ select.custom-valid {
 }
 
 /* #endregion form styles end */
+
+/* #region email styles */
+
+/* todo selector attribute selector with start with ^= */
+/* email styles */
+a[href^="mailto"] {
+  display: inline-block;
+  color: var(--email-link-color);
+  text-decoration: none;
+  padding: 0;
+}
+
+a[href^="mailto"]:hover {
+  color: var(--email-link-hover);
+  text-decoration: underline;
+}
+
+a[href^="mailto"]:visited {
+  color: var(--email-link-hover);
+}
+
+/* #endregion email styles end */
 
 /* #endregion global styles end */
 
@@ -899,16 +923,6 @@ blockquote {
 .contact ul li:last-of-type {
   color: var(--neutral-mid-color);
   margin-top: var(--spacer);
-}
-
-/* todo selector attribute selector with start with ^= */
-
-.contact a[href^="mailto"] {
-  display: inline-block;
-  color: var(--neutral-dk-color);
-  text-decoration: underline;
-  padding: 0;
-  font-style: italic;
 }
 
 /* placeholder btn for alignment */
@@ -1721,13 +1735,13 @@ label[for="message"] {
 .time-open ul {
   display: flex;
   flex-direction: column;
-  gap: 2em;
+  gap: var(--spacer-dbl);
   line-height: var(--line-height);
 }
 
 .time-open strong {
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-b);
 }
 
 .time-open h3 {
