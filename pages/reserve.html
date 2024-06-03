@@ -32,15 +32,19 @@
 
     <!-- reset and main css -->
     <link rel="stylesheet" href="../css/reset.css" type="text/css" />
-    <!-- <link rel="stylesheet" href="../css/main.css" type="text/css" /> -->
-    <link rel="stylesheet" href="../css/main.min.css" type="text/css" />
+    <link rel="stylesheet" href="../css/main.css" type="text/css" />
+    <!-- <link rel="stylesheet" href="../css/main.min.css" type="text/css" /> -->
   </head>
   <body class="reservation-page">
     <p id="banner">7304 Parkway Drive S, Hanover, MD 21076</p>
     <header class="header-section">
       <section class="menuWrap">
         <a href="../index.html">
-          <img src="../images/logo.svg" class="logo" alt="logo" />
+          <img
+            src="../images/logo.svg"
+            class="logo"
+            alt="Bavarian Brauhaus logo"
+          />
         </a>
         <input type="checkbox" id="checkbox" />
         <nav>
@@ -99,23 +103,23 @@
         </article>
         <article>
           <h1>Reserve a Table</h1>
-          <form action="#" id="reservation-form">
+          <form action="#" method="post" id="reservation-form" novalidate>
             <ul>
               <li>
-                <label for="name">Your Name:</label>
+                <label for="reservation-name">Your Name:</label>
                 <input
                   type="text"
-                  id="name"
+                  id="reservation-name"
                   class="formControl"
                   placeholder="John Smith"
                   required
                 />
               </li>
               <li>
-                <label for="email">Email:</label>
+                <label for="reservation-email">Email:</label>
                 <input
                   type="email"
-                  id="email"
+                  id="reservation-email"
                   class="formControl"
                   placeholder="example@example.com"
                   required
@@ -142,9 +146,14 @@
                 />
               </li>
               <li>
-                <label for="people">How many people: </label>
+                <label for="reservation-people">How many people: </label>
                 <!-- dropdown -->
-                <select name="people" id="people" class="formControl" required>
+                <select
+                  name="people"
+                  id="reservation-people"
+                  class="formControl"
+                  required
+                >
                   <option value="">Select party size</option>
                   <option value="1">1 people</option>
                   <option value="2">2 people</option>
@@ -196,10 +205,14 @@
             ></a>
           </li>
           <li>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="https://x.com/" target="_blank"
+              ><i class="fab fa-twitter"></i
+            ></a>
           </li>
           <li>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
           </li>
         </ul>
       </section>

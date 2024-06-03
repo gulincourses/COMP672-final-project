@@ -280,7 +280,7 @@ input[type="submit"] {
 
 /* form validation */
 /* select form elements that are both required and valid */
-input:required:valid,
+/* input:required:valid,
 textarea:required:valid,
 select:required:valid {
   border: 2px solid green;
@@ -290,6 +290,20 @@ input:required:invalid,
 textarea:required:invalid,
 select:required:invalid {
   border: 2px solid red;
+} */
+
+/* custom form validation */
+
+input.custom-invalid,
+textarea.custom-invalid,
+select.custom-invalid {
+  border: 2px solid red;
+}
+
+input.custom-valid,
+textarea.custom-valid,
+select.custom-valid {
+  border: 2px solid green;
 }
 
 /* #endregion form styles end */

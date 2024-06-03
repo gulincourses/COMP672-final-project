@@ -27,28 +27,83 @@ $(document).ready(function () {
     maxTime: "21:00",
   });
 
-  // $("#reservation-form").on("submit", function (event) {
-  //   event.preventDefault();
-  //   console.log(this);
-  //   console.log("Reservation Form submitted");
-  //   $(this).addClass("validated");
-  //   console.log("Class 'validated' added to form");
-  // });
+  $("#reservation-form").submit(function (event) {
+    event.preventDefault();
 
-  // $(document).on("submit", "#reservation-form", function (event) {
-  //   event.preventDefault();
-  //   console.log(this);
-  //   console.log("Reservation Form submitted");
-  //   $(this).addClass("validated");
-  //   console.log("Class 'validated' added to form");
-  // });
-  // $(document).on("submit", "#reservation-form", function (event) {
-  //   event.preventDefault();
-  //   setTimeout(() => {
-  //     console.log(this);
-  //     console.log("Reservation Form submitted");
-  //     $(this).addClass("validated");
-  //     console.log("Class 'validated' added to form");
-  //   }, 0);
-  // });
+    let name = $("#reservation-name").val();
+    let email = $("#reservation-email").val();
+    let date = $("#reservation-date").val();
+    let time = $("#reservation-time").val();
+    let people = $("#reservation-people").val();
+
+    let isValid = true;
+
+    if (!name) {
+      isValid = false;
+      $("#reservation-name")
+        .removeClass("custom-valid")
+        .addClass("custom-invalid");
+    } else {
+      $("#reservation-name")
+        .removeClass("custom-invalid")
+        .addClass("custom-valid");
+    }
+
+    // const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailPattern = /\S+@\S+\.\S+/;
+    if (!email || !emailPattern.test(email)) {
+      isValid = false;
+      $("#reservation-email")
+        .removeClass("custom-valid")
+        .addClass("custom-invalid");
+      console.log("Email is invalid");
+    } else {
+      $("#reservation-email")
+        .removeClass("custom-invalid")
+        .addClass("custom-valid");
+    }
+
+    if (!date) {
+      isValid = false;
+      $("#reservation-date")
+        .removeClass("custom-valid")
+        .addClass("custom-invalid");
+      console.log("Date is empty!");
+    } else {
+      $("#reservation-date")
+        .removeClass("custom-invalid")
+        .addClass("custom-valid");
+    }
+
+    if (!time) {
+      isValid = false;
+      $("#reservation-time")
+        .removeClass("custom-valid")
+        .addClass("custom-invalid");
+      console.log("Time is empty!");
+    } else {
+      $("#reservation-time")
+        .removeClass("custom-invalid")
+        .addClass("custom-valid");
+    }
+
+    if (!people) {
+      isValid = false;
+      $("#people").removeClass("custom-valid").addClass("custom-invalid");
+      console.log("Party size is empty!");
+    } else {
+      $("#people").removeClass("custom-invalid").addClass("custom-valid");
+    }
+
+    if (isValid) {
+      console.log(
+        `Name: ${name}\nEmail: ${email}\nDate: ${date}\nTime: ${time}\nParty size: ${people}`
+      );
+      alert(
+        `Name: ${name}\nEmail: ${email}\nDate: ${date}\nTime: ${time}\nParty size: ${people} \nYour reservation has been submitted, we will send you a confirmation email once your reservation is confirmed.\nThank you!`
+      );
+    } else {
+      alert("Please validate and fill in all fields shown in red.");
+    }
+  });
 });

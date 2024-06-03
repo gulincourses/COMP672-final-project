@@ -86,14 +86,15 @@ $(document).ready(function () {
   $(".add-to-cart").click(function () {
     console.log("added to card clicked");
     // Get the product name from data attribute
-    // let title = $(this).find("h3").text().toLowerCase();
     let title = $(this).closest(".menu-item-card").find("h3").text().trim();
     // Get the quantity from the sibling input
-    // let quantity = $(this).siblings(".button-group").find(".quantity").val();
     let quantity = $(this).closest(".menu-item-card").find(".quantity").val();
 
     $(this).closest(".modal").hide();
     // Alert the user
-    alert(`Added to cart: ${title} (Quantity: ${quantity})`);
+    // alert(`Added to cart: ${title} (Quantity: ${quantity})`);
+    alert(
+      `Item: ${title}\nQuantity: ${quantity}\nhave been added to your cart!`
+    );
   });
 });
