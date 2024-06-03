@@ -26,8 +26,8 @@
 
 :root {
   /* font family */
-  --primary-font: "Montserrat", sans-serif;
-  --headline-font: "Source Serif 4", serif;
+  --primary-font: "Montserrat", "Arial", sans-serif;
+  --headline-font: "Source Serif 4", "Times New Roman", serif;
 
   /* font weight */
   --fw-l: 300;
