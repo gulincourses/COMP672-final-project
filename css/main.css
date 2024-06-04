@@ -1740,7 +1740,7 @@ label[for="message"] {
 }
 
 .time-open strong {
-  font-size: var(--fs-h3);
+  /* font-size: var(--fs-h3); */
   font-weight: var(--fw-b);
 }
 
