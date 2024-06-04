@@ -100,9 +100,7 @@ $(document).ready(function () {
     }
 
     if (isValid) {
-      console.log(
-        `Name: ${name}\nEmail: ${email}\nDate: ${date}\nTime: ${time}\nParty size: ${people}`
-      );
+      // console.log(`Name: ${name}\nEmail: ${email}\nDate: ${date}\nTime: ${time}\nParty size: ${people}`);
       alert(
         `Name: ${name}\nEmail: ${email}\nDate: ${date}\nTime: ${time}\nParty size: ${people} \nYour reservation has been submitted, we will send you a confirmation email once your reservation is confirmed.\nThank you!`
       );

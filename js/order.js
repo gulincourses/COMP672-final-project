@@ -28,7 +28,7 @@ $(document).ready(function () {
       $(".menu-item-card").each(function () {
         // let title = $(this).find("h3").text().toLowerCase();
         let text = $(this).text().toLowerCase();
-        console.log(text);
+        // console.log(text);
         if (text.includes(searchTerm)) {
           $(this).show();
         } else {
@@ -53,12 +53,12 @@ $(document).ready(function () {
   });
 
   $(".quantity-increase").click(function () {
-    console.log("clicked");
+    // console.log("clicked");
     // $quantity is an object, not a value
     let $quantity = $(this).siblings(".quantity");
     let cur = parseInt($quantity.val());
 
-    console.log(cur);
+    // console.log(cur);
     if (cur < 10) {
       $quantity.val(cur + 1);
     }
@@ -84,7 +84,7 @@ $(document).ready(function () {
 
   // add to cart alert
   $(".add-to-cart").click(function () {
-    console.log("added to card clicked");
+    // console.log("added to card clicked");
     // Get the product name from data attribute
     let title = $(this).closest(".menu-item-card").find("h3").text().trim();
     // Get the quantity from the sibling input
